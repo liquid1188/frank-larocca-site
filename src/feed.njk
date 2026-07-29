@@ -1,0 +1,21 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Frank La Rocca — News</title>
+  <link href="{{ site.url }}/feed.xml" rel="self"/>
+  <link href="{{ site.url }}/"/>
+  <id>{{ site.url }}/</id>
+{%- set newest = collections.news | reverse | first %}
+  <updated>{{ newest.data.date | isoDate }}</updated>
+{%- for post in collections.news | reverse %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ site.url }}{{ post.url }}"/>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <updated>{{ post.data.date | isoDate }}</updated>
+  </entry>
+{%- endfor %}
+</feed>

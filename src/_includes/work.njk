@@ -1,6 +1,9 @@
 ---
 layout: base.njk
+eleventyComputed:
+  description: "{{ title }} by Frank La Rocca{% if forces %} — {{ forces }}{% endif %}. Score preview, recording, and purchase information."
 ---
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicComposition","name":{{ title | dump | safe }},"composer":{"@type":"Person","name":"Frank La Rocca"}}</script>
 <p class="rubric">{{ categories | join(" · ") }}</p>
 <h1>{{ title }}</h1>
 {%- if forces %}<p class="attr">{{ forces }}</p>{%- endif %}
