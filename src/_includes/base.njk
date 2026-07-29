@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} · {% endif %}Frank La Rocca, Composer</title>
   <meta name="description" content="{{ description or 'Sacred choral and instrumental music by Frank La Rocca, Composer-in-Residence at the Benedict XVI Institute.' }}">
+  <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}Frank La Rocca, Composer">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="{{ description or 'Sacred choral and instrumental music by Frank La Rocca.' }}">
+  <link rel="canonical" href="https://franklarocca.com{{ page.url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">

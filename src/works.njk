@@ -5,11 +5,14 @@ permalink: /works/
 ---
 <h1>Works</h1>
 {%- set cats = ["SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] %}
+<nav class="catnav">
+{%- for cat in cats %}<a href="#{{ cat | slugify }}">{{ cat }}</a>{%- endfor %}
+</nav>
 {%- for cat in cats %}
-<p class="rubric">{{ cat }}</p>
+<p class="rubric" id="{{ cat | slugify }}">{{ cat }}</p>
 <ul class="program">
-{%- for w in works %}{%- if cat in w.categories %}
-  <li><span class="t"><a href="/works/{{ w.slug }}/">{{ w.title }}</a></span><span class="leader"></span><span class="f">{{ w.forces }}</span></li>
+{%- for w in collections.work %}{%- if cat in w.data.categories %}
+  <li><span class="t"><a href="{{ w.url }}">{{ w.data.title }}</a></span><span class="leader"></span><span class="f">{{ w.data.forces }}</span></li>
 {%- endif %}{%- endfor %}
 </ul>
 {%- endfor %}

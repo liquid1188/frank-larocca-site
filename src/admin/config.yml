@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: liquid1188/frank-larocca-site
+  branch: main
+media_folder: src/images
+public_folder: /images
+collections:
+  - name: works
+    label: Works
+    folder: src/works-md
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title }
+      - { name: slug, label: URL slug }
+      - { name: categories, label: Categories, widget: select, multiple: true,
+          options: ["SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] }
+      - { name: forces, label: Forces & duration, required: false }
+      - { name: preview, label: Score preview link, required: false }
+      - { name: audio, label: Audio link, required: false }
+      - { name: purchase, label: Purchase link, required: false }
+      - { name: layout, widget: hidden, default: work.njk }
+      - { name: tags, widget: hidden, default: work }
+      - { name: permalink, widget: hidden }
+      - { name: body, label: Program note, widget: markdown, required: false }
+  - name: news
+    label: News
+    folder: src/news
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: Date, widget: datetime }
+      - { name: layout, widget: hidden, default: base.njk }
+      - { name: tags, widget: hidden, default: news }
+      - { name: body, label: Post, widget: markdown }
+  - name: settings
+    label: Site data
+    files:
+      - name: events
+        label: Performances
+        file: src/_data/events.json
+        fields:
+          - name: events
+            label: Events
+            widget: list
+            fields:
+              - { name: work, label: Work }
+              - { name: date, label: Date & time }
+              - { name: venue, label: Venue }
+              - { name: city, label: City }
