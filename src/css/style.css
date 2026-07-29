@@ -84,3 +84,9 @@ blockquote { margin: 1.5rem 0; padding-left: 1.25rem; border-left: 2px solid var
 }
 .site-head nav a[aria-current="page"] { color: var(--rubric); }
 @media (min-width: 60rem) { .quoteband { margin-left: calc((100% - 60rem)/-2 - 1.25rem); margin-right: calc((100% - 60rem)/-2 - 1.25rem); border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); } }
+.album { display: grid; grid-template-columns: 260px 1fr; gap: 1.75rem; align-items: start; margin: 2.5rem 0; }
+.album img { width: 100%; height: auto; border-radius: 2px; box-shadow: 0 1px 4px rgba(34,36,42,.18); }
+.album h2 { margin: .1rem 0 .5rem; font-size: 1.5rem; }
+.portrait { float: right; width: min(300px, 42%); height: auto; margin: 0 0 1rem 1.5rem; border-radius: 2px; }
+main img { max-width: 100%; height: auto; }
+@media (max-width: 640px) { .album { grid-template-columns: 1fr; } .portrait { float: none; width: 100%; margin: 0 0 1.25rem; } }
