@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+<p class="epigraph">Late have I loved you, O Beauty ever ancient, ever new, late have I loved you!</p>
+<p class="epigraph-attr">— St. Augustine, Confessions X</p>
+
+<p class="rubric">The Composer</p>
+<p>Frank La Rocca is Composer-in-Residence at the Benedict XVI Institute for Sacred Music and Divine Liturgy. His <em>Mass of the Americas</em>, recorded by multi-Grammy-winning producer Blanton Alspaugh, debuted at #1 on the Billboard Traditional Classical chart.</p>
+
+<p class="rubric">Upcoming</p>
+<ul class="program">
+{%- for e in events %}
+  <li><span class="t">{{ e.work }}</span><span class="leader"></span><span class="f">{{ e.date }} · {{ e.venue }}, {{ e.city }}</span></li>
+{%- endfor %}
+</ul>
+
+<p class="rubric">The Catalog</p>
+<p><a href="/works/">Forty-one works</a> for chorus, voice, chamber ensemble, and orchestra — with score previews, recordings, and purchase information for each.</p>

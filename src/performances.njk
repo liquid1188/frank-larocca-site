@@ -1,0 +1,14 @@
+---
+layout: base.njk
+title: Performances
+permalink: /performances/
+---
+<h1>Performances</h1>
+<p class="rubric">Upcoming</p>
+<ul class="program">
+{%- for e in events %}
+  <li><span class="t">{{ e.work }}</span><span class="leader"></span><span class="f">{{ e.date }} · {{ e.venue }}, {{ e.city }}</span></li>
+{%- endfor %}
+</ul>
+<p class="rubric">Archive</p>
+<p class="attr"><em>Past performances will be added here.</em></p>

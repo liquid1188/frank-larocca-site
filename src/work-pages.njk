@@ -1,0 +1,20 @@
+---
+layout: base.njk
+pagination:
+  data: works
+  size: 1
+  alias: w
+permalink: "/works/{{ w.slug }}/"
+eleventyComputed:
+  title: "{{ w.title }}"
+---
+<p class="rubric">{{ w.categories | join(" · ") }}</p>
+<h1>{{ w.title }}</h1>
+{%- if w.forces %}<p class="attr">{{ w.forces }}</p>{%- endif %}
+<div class="work-links">
+{%- if w.links.preview %}<a href="{{ w.links.preview }}">Preview score</a>{%- endif %}
+{%- if w.links.audio %}<a href="{{ w.links.audio }}">Listen</a>{%- endif %}
+{%- if w.links.purchase %}<a href="{{ w.links.purchase }}">Purchase</a>{%- endif %}
+</div>
+<p class="rubric" style="margin-top:3rem">Program note</p>
+<p class="attr"><em>Program note forthcoming.</em></p>

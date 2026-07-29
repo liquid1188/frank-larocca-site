@@ -1,0 +1,503 @@
+[
+  {
+    "title": "Alleluia!",
+    "slug": "alleluia",
+    "categories": [
+      "Choral\u2013instrumental"
+    ],
+    "forces": "SATB, Organ, optional brass 2'30\"",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/alleluia_cover",
+      "audio": "https://soundcloud.com/frank-larocca/alleluia"
+    }
+  },
+  {
+    "title": "America the Beautiful",
+    "slug": "america-the-beautiful",
+    "categories": [
+      "SATB a cappella"
+    ],
+    "forces": "",
+    "links": {
+      "purchase": "http://www.sheetmusicplus.com/search?Ntt=Frank+La+Rocca",
+      "audio": "https://www.youtube.com/watch?v=EmP9LvHgcaA"
+    }
+  },
+  {
+    "title": "Anima Christi",
+    "slug": "anima-christi",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "purchase": "http://musicspoke.com/composer/franklarocca/",
+      "audio": "https://www.youtube.com/watch?v=HGPhh1rZDTM"
+    }
+  },
+  {
+    "title": "Ash Wednesday",
+    "slug": "ash-wednesday",
+    "categories": [
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/he_who_ponders_score",
+      "audio": "https://soundcloud.com/frank-larocca/he-who-ponders-the-law-of-the-lord"
+    }
+  },
+  {
+    "title": "Ave Maria",
+    "slug": "ave-maria",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "purchase": "http://musicspoke.com/composer/franklarocca/",
+      "audio": "https://www.youtube.com/watch?v=Vd0whqltE14"
+    }
+  },
+  {
+    "title": "Ave Maris Stella (available TTBB)",
+    "slug": "ave-maris-stella-available-ttbb",
+    "categories": [
+      "SSAA"
+    ],
+    "forces": "",
+    "links": {
+      "purchase": "http://musicspoke.com/composer/franklarocca/",
+      "audio": "https://www.youtube.com/watch?v=FjSQtIWX_S0"
+    }
+  },
+  {
+    "title": "Ave Verum Corpus (2008)",
+    "slug": "ave-verum-corpus-2008",
+    "categories": [
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/ave_verum_corpus_score",
+      "audio": "https://soundcloud.com/frank-larocca/ave-verum-corpus"
+    }
+  },
+  {
+    "title": "Cantate Domino",
+    "slug": "cantate-domino",
+    "categories": [
+      "Choral\u2013instrumental"
+    ],
+    "forces": "SATB and Orchestra 6'",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/cantate_erm_final",
+      "audio": "https://soundcloud.com/frank-larocca/cantate-domino"
+    }
+  },
+  {
+    "title": "Christmas Midnight Mass",
+    "slug": "christmas-midnight-mass",
+    "categories": [
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/in_the_splendor_score",
+      "audio": "https://soundcloud.com/frank-larocca/in-the-splendor-of-the-holy-ones"
+    }
+  },
+  {
+    "title": "Crossing the Rubicon",
+    "slug": "crossing-the-rubicon",
+    "categories": [
+      "Chamber & orchestral"
+    ],
+    "forces": "orchestra 13'",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/crossing_the_rubicon",
+      "audio": "https://soundcloud.com/frank-larocca/crossing-the-rubicon"
+    }
+  },
+  {
+    "title": "Diffusa Est Gratia",
+    "slug": "diffusa-est-gratia",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/diffusa_est_gratia_score_9.14wm",
+      "audio": "https://www.youtube.com/watch?v=eJo-9MFwD6I",
+      "purchase": "https://musicspoke.com/downloads/diffusa-est-gratia/"
+    }
+  },
+  {
+    "title": "Divertimento",
+    "slug": "divertimento",
+    "categories": [
+      "Chamber & orchestral"
+    ],
+    "forces": "two pianos 5'",
+    "links": {
+      "purchase": "http://musicspoke.com/downloads/divertimento/",
+      "audio": "https://soundcloud.com/frank-larocca/divertimento"
+    }
+  },
+  {
+    "title": "Easter Vigil, Easter Day",
+    "slug": "easter-vigil-easter-day",
+    "categories": [
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/christ_our_passover_score",
+      "audio": "https://www.youtube.com/watch?v=WEaLnJD1yTE"
+    }
+  },
+  {
+    "title": "Echo",
+    "slug": "echo",
+    "categories": [
+      "SSAA"
+    ],
+    "forces": "SSAA",
+    "links": {
+      "purchase": "http://musicspoke.com/composer/franklarocca/"
+    }
+  },
+  {
+    "title": "Ego Sum Pastor Bonus",
+    "slug": "ego-sum-pastor-bonus",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "purchase": "https://musicspoke.com/downloads/ego-sum-pastor-bonus/",
+      "preview": "http://issuu.com/compozor/docs/ego_sum_pastor_bonus_score",
+      "audio": "https://soundcloud.com/frank-larocca/ego-sum-pastor-bonus"
+    }
+  },
+  {
+    "title": "Eli, Eli!",
+    "slug": "eli-eli",
+    "categories": [
+      "Choral\u2013instrumental"
+    ],
+    "forces": "SATB and Organ 6'",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/eli__eli_choral_organ4.26.05_rev",
+      "audio": "https://soundcloud.com/frank-larocca/eli-eli"
+    }
+  },
+  {
+    "title": "Exaudi",
+    "slug": "exaudi",
+    "categories": [
+      "SATB a cappella"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/exaudi_wm",
+      "audio": "https://soundcloud.com/frank-larocca/exaudi"
+    }
+  },
+  {
+    "title": "Expectavi Dominum",
+    "slug": "expectavi-dominum",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/expectavi_dominum",
+      "audio": "https://soundcloud.com/frank-larocca/expectavi-dominum",
+      "purchase": "http://www.sheetmusicplus.com/search?Ntt=Frank+La+Rocca"
+    }
+  },
+  {
+    "title": "Fourth Sunday of Advent",
+    "slug": "fourth-sunday-of-advent",
+    "categories": [
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/home/docs/behold__a_virgin_score/edit/info",
+      "audio": "https://soundcloud.com/frank-larocca/behold-a-virgin-shall-conceive"
+    }
+  },
+  {
+    "title": "Holy Thursday, Corpus Christi",
+    "slug": "holy-thursday-corpus-christi",
+    "categories": [
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/this_is_the_body_score",
+      "audio": "https://soundcloud.com/frank-larocca/this-is-the-body"
+    }
+  },
+  {
+    "title": "I Will Lift Up MIne Eyes (Psalm 121)",
+    "slug": "i-will-lift-up-mine-eyes-psalm-121",
+    "categories": [
+      "Choral\u2013instrumental"
+    ],
+    "forces": "SATB and Organ\u00a0\u00a06'",
+    "links": {
+      "purchase": "http://musicspoke.com/downloads/i-will-lift-up-mine-eyes/",
+      "audio": "https://www.youtube.com/watch?v=gSmfsCCUP2M"
+    }
+  },
+  {
+    "title": "In This Place",
+    "slug": "in-this-place",
+    "categories": [
+      "Chamber & orchestral"
+    ],
+    "forces": "clar, vln, pno 11'",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/itp.final.correct_cl_tnsp.mus",
+      "audio": "https://soundcloud.com/frank-larocca/in-this-place"
+    }
+  },
+  {
+    "title": "Laudate Dominum",
+    "slug": "laudate-dominum",
+    "categories": [
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/laudate_dominum",
+      "audio": "https://soundcloud.com/frank-larocca/laudate-dominum"
+    }
+  },
+  {
+    "title": "Laudate Pueri",
+    "slug": "laudate-pueri",
+    "categories": [
+      "Choral\u2013instrumental"
+    ],
+    "forces": "SATB male (or mixed) choir, organ and handbells",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/laudate_pueri"
+    }
+  },
+  {
+    "title": "Magnificat",
+    "slug": "magnificat",
+    "categories": [
+      "SSAA"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/magnificatwm/1",
+      "audio": "https://soundcloud.com/frank-larocca/magnificat",
+      "purchase": "http://www.sheetmusicplus.com/search?Ntt=Frank+La+Rocca"
+    }
+  },
+  {
+    "title": "Meditation",
+    "slug": "meditation",
+    "categories": [
+      "Chamber & orchestral"
+    ],
+    "forces": "piano solo 3' chorus, orchestra, organ, soloists 92'",
+    "links": {
+      "audio": "https://soundcloud.com/frank-larocca/meditation"
+    }
+  },
+  {
+    "title": "Miserere",
+    "slug": "miserere",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/miserere_score",
+      "audio": "https://soundcloud.com/frank-larocca/04-miserere",
+      "purchase": "http://musicspoke.com/composer/franklarocca/"
+    }
+  },
+  {
+    "title": "Ne Irascaris Domine",
+    "slug": "ne-irascaris-domine",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "purchase": "https://musicspoke.com/downloads/ne-irascaris-domine-larocca/"
+    }
+  },
+  {
+    "title": "No Strings",
+    "slug": "no-strings",
+    "categories": [
+      "Chamber & orchestral"
+    ],
+    "forces": "wind ensemble 4'30\"",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/no_strings_score",
+      "audio": "https://soundcloud.com/frank-larocca/nostrings"
+    }
+  },
+  {
+    "title": "Nunc Dimittis",
+    "slug": "nunc-dimittis",
+    "categories": [
+      "SSAA"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/binder2",
+      "audio": "https://soundcloud.com/frank-larocca/nunc-dimittis"
+    }
+  },
+  {
+    "title": "O Eve",
+    "slug": "o-eve",
+    "categories": [
+      "SSAA"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/o_eve_ssaa_wm",
+      "purchase": "http://www.sheetmusicplus.com/look_inside?R=19260147"
+    }
+  },
+  {
+    "title": "O Magnum Mysterium",
+    "slug": "o-magnum-mysterium",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/o_magnum_mysterium",
+      "audio": "https://www.youtube.com/watch?v=3SMLinOVi7c",
+      "purchase": "https://www.giamusic.com/store/resource/o-magnum-mysterium-satb-divisi-print-ww1406"
+    }
+  },
+  {
+    "title": "O Nata Lux",
+    "slug": "o-nata-lux",
+    "categories": [
+      "Choral\u2013instrumental"
+    ],
+    "forces": "SATB and Strings (orchestral or chamber) 7'30\"",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/o_nata_lux_wm",
+      "audio": "https://soundcloud.com/frank-larocca/o-nata-lux"
+    }
+  },
+  {
+    "title": "O Sacrum Convivium",
+    "slug": "o-sacrum-convivium",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "purchase": "http://musicspoke.com/composer/franklarocca/",
+      "audio": "https://www.youtube.com/watch?v=pavIv85zk7A"
+    }
+  },
+  {
+    "title": "O Vos Omnes",
+    "slug": "o-vos-omnes",
+    "categories": [
+      "SATB a cappella"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/o_vos_omnes",
+      "audio": "https://www.youtube.com/watch?v=IjSUX6Qyzmc"
+    }
+  },
+  {
+    "title": "Resurrection Prelude",
+    "slug": "resurrection-prelude",
+    "categories": [
+      "Choral\u2013instrumental"
+    ],
+    "forces": "SATB, Organ, Brass and Timpani 2'",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/rp_wm",
+      "audio": "https://soundcloud.com/frank-larocca/resurrection-prelude"
+    }
+  },
+  {
+    "title": "Secret Thoughts",
+    "slug": "secret-thoughts",
+    "categories": [
+      "Chamber & orchestral"
+    ],
+    "forces": "violoncello solo 10'",
+    "links": {
+      "audio": "https://soundcloud.com/frank-larocca/secret-thoughts"
+    }
+  },
+  {
+    "title": "String Trio",
+    "slug": "string-trio",
+    "categories": [
+      "Chamber & orchestral"
+    ],
+    "forces": "vln, vla, vc 18'",
+    "links": {
+      "audio": "https://soundcloud.com/frank-larocca/string-trio"
+    }
+  },
+  {
+    "title": "The Pure, the Bright, the Beautiful",
+    "slug": "the-pure-the-bright-the-beautiful",
+    "categories": [
+      "SSAA"
+    ],
+    "forces": "SSA, piano accompaniment",
+    "links": {
+      "purchase": "http://www.sheetmusicplus.com/search?Ntt=Frank+La+Rocca"
+    }
+  },
+  {
+    "title": "Ubi Caritas",
+    "slug": "ubi-caritas",
+    "categories": [
+      "SATB a cappella",
+      "Propers & motets"
+    ],
+    "forces": "",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/ubi_caritas",
+      "audio": "https://soundcloud.com/frank-larocca/ubi-caritas"
+    }
+  },
+  {
+    "title": "Veni Sancte Spiritus",
+    "slug": "veni-sancte-spiritus",
+    "categories": [
+      "Chamber & orchestral"
+    ],
+    "forces": "soprano, clar, stg. quartet 10'",
+    "links": {
+      "preview": "http://issuu.com/compozor/docs/veni_issuuwm",
+      "audio": "https://soundcloud.com/frank-larocca/veni-sancte-spiritus"
+    }
+  }
+]

@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: Works
+permalink: /works/
+---
+<h1>Works</h1>
+{%- set cats = ["SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] %}
+{%- for cat in cats %}
+<p class="rubric">{{ cat }}</p>
+<ul class="program">
+{%- for w in works %}{%- if cat in w.categories %}
+  <li><span class="t"><a href="/works/{{ w.slug }}/">{{ w.title }}</a></span><span class="leader"></span><span class="f">{{ w.forces }}</span></li>
+{%- endif %}{%- endfor %}
+</ul>
+{%- endfor %}

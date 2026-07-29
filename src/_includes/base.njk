@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}Frank La Rocca, Composer</title>
+  <meta name="description" content="{{ description or 'Sacred choral and instrumental music by Frank La Rocca, Composer-in-Residence at the Benedict XVI Institute.' }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-head">
+    <a class="wordmark" href="/">Frank La Rocca</a>
+    <nav>
+      <a href="/works/">Works</a>
+      <a href="/performances/">Performances</a>
+      <a href="/recordings/">Recordings</a>
+      <a href="/biography/">Biography</a>
+      <a href="/reviews/">Press</a>
+      <a href="/news/">News</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </header>
+  <main>{{ content | safe }}</main>
+  <footer class="site-foot">
+    <p>© 2026 Frank La Rocca · Composer-in-Residence, Benedict XVI Institute for Sacred Music and Divine Liturgy</p>
+    <p class="colophon"><a href="https://lickitysplitweb.com">Site by Lickity Split Web Design</a></p>
+  </footer>
+</body>
+</html>
