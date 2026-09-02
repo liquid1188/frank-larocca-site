@@ -419,7 +419,7 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .pub-list { list-style: none; margin: 0 0 1rem; padding: 0; max-width: 40rem; }
 .pub-list li { padding: .7rem 0; border-top: 1px solid var(--gold-dim); font-family: var(--display); font-size: 1.35rem; }
 .pub-list a { text-decoration: none; }
-.press-strip img[src*="catholic-thing"] { height: 20px; }
+.press-strip img[src*="catholic-thing"] { height: 30px; }
 .press-strip img[src*="first-things"] { height: 22px; }
 .foot-hair { width: 100%; max-width: 60rem; height: 1px; background: var(--gold-dim); margin: 0 auto 1.2rem; }
 .signin { color: var(--ash); text-decoration: none; opacity: .7; }
@@ -485,3 +485,4 @@ figure.center img { margin: 0 auto; }
 .hero-epigraph span { font-family: var(--body); font-style: normal; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ash); display: block; margin-top: .3rem; }
 @media (max-width: 880px) { .hero-epigraph { margin-bottom: .6rem; } }
 .album[id], [id].section-title, .work-hero[id] { scroll-margin-top: 3rem; }
+.writing .w-logo img[src*="catholic-thing"] { height: 34px; max-width: 160px; }

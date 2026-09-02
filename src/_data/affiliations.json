@@ -54,11 +54,13 @@
     "logo": "/images/affil/gia.svg"
   },
   {
-    "name": "Walton Music",
-    "short": "Walton Music",
+    "name": "Lumen Verum Music",
+    "short": "Lumen Verum Music",
     "role": "Publisher",
-    "url": "https://www.waltonmusic.com/",
-    "logo": "/images/affil/walton.svg"
+    "url": "",
+    "logo": "/images/affil/lumen-verum-music.svg",
+    "raw": false,
+    "square": true
   },
   {
     "name": "Santa Barbara Music Publishing",
@@ -69,13 +71,11 @@
     "wide": true
   },
   {
-    "name": "Lumen Verum Music",
-    "short": "Lumen Verum Music",
+    "name": "Walton Music",
+    "short": "Walton Music",
     "role": "Publisher",
-    "url": "",
-    "logo": "/images/affil/lumen-verum-music.svg",
-    "raw": false,
-    "square": true
+    "url": "https://www.waltonmusic.com/",
+    "logo": "/images/affil/walton.svg"
   },
   {
     "name": "California State University, East Bay",
