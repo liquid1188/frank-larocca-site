@@ -378,7 +378,7 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .press-strip.on-dark li.raw img { filter: grayscale(1) opacity(.85); }
 .press-strip li.small img { height: 22px; }
 .press-strip li.tall img { height: 48px; }
-.press-strip.on-dark li.raw img { filter: none; opacity: .85; }
+.press-strip.on-dark li.raw img { filter: grayscale(1) brightness(1.1) opacity(.85); }
 .hero-credit { margin: 1.4rem 0 0; font-size: .8rem; color: var(--ash); opacity: .75; }
 .foot-epigraph { font-family: var(--display); font-style: italic; font-size: 1.15rem; color: var(--vellum); max-width: 40ch; margin: 0 auto 2rem; }
 .foot-epigraph span { font-style: normal; font-family: var(--body); font-size: .85rem; color: var(--ash); display: block; margin-top: .2rem; }
