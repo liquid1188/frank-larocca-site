@@ -58,6 +58,7 @@ collections:
               - { name: date, label: Date & time as shown }
               - { name: venue, label: Venue }
               - { name: city, label: City }
+              - { name: who, label: Celebrant or conductor, required: false }
               - { name: url, label: Details link, required: false }
       - name: featured
         label: Featured works (home page)

@@ -7,8 +7,30 @@ description: "Perusal scores, performance materials, publishers, and the parish 
 <h1>For directors</h1>
 <p>Most of the catalog is available for perusal online and for purchase from the publishers below. Score previews on each <a href="/works/">work page</a> open the full score on Issuu.</p>
 <h2 class="section-title">Mass of the Americas</h2>
-<p>The full orchestral edition and the parish edition (chorus and organ, all choral parts retained) are administered through the Benedict XVI Institute. Performance materials: <a href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a>.</p>
-<div class="work-links"><a href="{{ site.instituteComposerPage }}">Parish edition at the Institute</a><a href="https://benedictinstitute.org/reverent-liturgy-project/">Request a perusal copy</a><a href="/works/mass-of-the-americas/">About the work</a></div>
+<p>Four editions: Extraordinary Form (Latin, 1962 Missal), Ordinary Form (Spanish, Latin, English, and Nahuatl), a hybrid Ordinary Form with Greek Kyrie and Latin Agnus Dei, and the parish edition for chorus and organ. Scores are licensed per printed copy and delivered electronically with a license to print; order enough for choir, conductor, and organist, sixteen at minimum. Perusal copies of any edition are free on request.</p>
+<form class="form perusal" action="https://formsubmit.co/{{ site.materialsEmail }}" method="POST">
+  <input type="hidden" name="_subject" value="Perusal request, Mass of the Americas">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="{{ site.url }}/directors/?sent=1">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <div class="two-up tight">
+    <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+    <label>Email<input type="email" name="email" required autocomplete="email"></label>
+    <label>Parish, cathedral, or organization<input type="text" name="organization"></label>
+    <label>Your role<input type="text" name="title" placeholder="Music director, pastor, conductor"></label>
+  </div>
+  <fieldset><legend>Edition</legend>
+    <label class="check"><input type="checkbox" name="edition" value="Extraordinary Form"> Extraordinary Form</label>
+    <label class="check"><input type="checkbox" name="edition" value="Ordinary Form"> Ordinary Form</label>
+    <label class="check"><input type="checkbox" name="edition" value="Hybrid"> Hybrid</label>
+    <label class="check"><input type="checkbox" name="edition" value="Parish edition"> Parish edition</label>
+  </fieldset>
+  <label>Message<textarea name="message" rows="4"></textarea></label>
+  <button class="btn primary" type="submit">Request a perusal copy</button>
+  <p class="note sent" hidden>Thank you. Your request has been sent.</p>
+</form>
+<script>if(location.search.indexOf('sent=1')>-1){var s=document.querySelector('.sent');s.hidden=false;s.scrollIntoView();}</script>
+<div class="work-links"><a href="/works/mass-of-the-americas/">About the work</a><a href="https://benedictinstitute.org/mass-of-the-americas-composed-by-frank-la-rocca/">The Mass at the Institute</a></div>
 <h2 class="section-title">Publishers</h2>
 <ul class="pub-list">
 {%- for a in affiliations %}{% if a.role == "Publisher" %}

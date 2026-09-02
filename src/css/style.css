@@ -502,3 +502,9 @@ figure.center img { margin: 0 auto; }
 .reviews-page blockquote > p:first-child:not(.attr) { font-family: var(--display); font-style: italic; font-size: 1.4rem; line-height: 1.25; margin-bottom: .3em; color: var(--vellum); }
 .reviews-page blockquote > p + p:not(.attr) { font-family: var(--body); font-style: normal; font-size: 1.02rem; color: var(--ash); }
 .reviews-page blockquote .attr { font-size: 1rem; }
+.form.perusal { max-width: 44rem; margin: 1.5rem 0 2.5rem; }
+.two-up.tight { gap: 0 1.5rem; }
+.form fieldset { border: 1px solid var(--gold-dim); border-radius: 2px; padding: .6rem 1rem .8rem; margin: 0 0 1rem; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; }
+.form legend { color: var(--ash); font-size: .95rem; padding: 0 .4rem; }
+.form label.check { display: inline-flex; align-items: center; gap: .45rem; margin: 0; color: var(--vellum); }
+.form label.check input { width: auto; margin: 0; accent-color: var(--gold); }

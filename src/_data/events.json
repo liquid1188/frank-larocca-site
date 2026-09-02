@@ -64,5 +64,197 @@
     "date": "October 7, 2025",
     "venue": "Basílica de Santa María de Guadalupe",
     "city": "Mexico City"
+  },
+  {
+    "iso": "2026-04-29",
+    "work": "Mass of the Americas, concert",
+    "date": "April 29, 2026",
+    "venue": "University of Nebraska Omaha",
+    "city": "Omaha, NE",
+    "who": "Richard Carrillo, conductor"
+  },
+  {
+    "iso": "2026-03-08",
+    "work": "Mass of the Americas, Lenten concert and Mass",
+    "date": "March 8, 2026",
+    "venue": "St. Thomas Aquinas Church, UNL Newman Center",
+    "city": "Lincoln, NE",
+    "who": "Bishop James D. Conley"
+  },
+  {
+    "iso": "2026-01-11",
+    "work": "Mass of the Americas, Anglican Mass",
+    "date": "January 11, 2026",
+    "venue": "Church of the Holy Innocents",
+    "city": "London",
+    "who": "English Consort of Voices, Christian Goursad"
+  },
+  {
+    "iso": "2025-12-12",
+    "work": "Mass of the Americas",
+    "date": "December 12, 2025",
+    "venue": "National Shrine Cathedral of Our Lady of Guadalupe",
+    "city": "Dallas, TX",
+    "who": "Bishop Edward J. Burns"
+  },
+  {
+    "iso": "2025-12-12",
+    "work": "Mass of the Americas",
+    "date": "December 12, 2025",
+    "venue": "Cathedral of the Risen Christ",
+    "city": "Lincoln, NE",
+    "who": "Bishop James D. Conley"
+  },
+  {
+    "iso": "2025-12-05",
+    "work": "Mass of the Americas, movements, Spanish Mass for Our Lady of Guadalupe",
+    "date": "December 5, 2025",
+    "venue": "Christ Cathedral",
+    "city": "Garden Grove, CA",
+    "who": "Bishop Kevin W. Vann"
+  },
+  {
+    "iso": "2025-10-08",
+    "work": "Mass of the Americas, concert",
+    "date": "October 8, 2025",
+    "venue": "Shrine of Blessed Miguel Pro",
+    "city": "Mexico City",
+    "who": "Richard Carrillo, conductor"
+  },
+  {
+    "iso": "2025-08-05",
+    "work": "Mass of the Americas, Solemn Pontifical Mass, Extraordinary Form",
+    "date": "August 5, 2025",
+    "venue": "Shrine of Our Lady of Guadalupe",
+    "city": "La Crosse, WI",
+    "who": "Archbishop Cordileone; Cardinal Burke, homilist"
+  },
+  {
+    "iso": "2025-08-01",
+    "work": "Mass of the Americas, concert",
+    "date": "August 1, 2025",
+    "venue": "St. Leo the Great Catholic Church",
+    "city": "Lancaster, PA",
+    "who": "Choir of the Cathedral Basilica of Sts. Peter and Paul, Charlene Angelini"
+  },
+  {
+    "iso": "2025-06-17",
+    "work": "Mass of the Americas, concert",
+    "date": "June 17, 2025",
+    "venue": "Walt Disney Concert Hall",
+    "city": "Los Angeles, CA",
+    "who": "Orquesta Guadalupana Baja California, Ron Wakefield"
+  },
+  {
+    "iso": "2025-06-07",
+    "work": "Mass of the Americas",
+    "date": "June 7, 2025",
+    "venue": "Christ the King Chapel, Christendom College",
+    "city": "Front Royal, VA",
+    "who": "Msgr. Charles Pope"
+  },
+  {
+    "iso": "2024-07-16",
+    "work": "Mass of the Americas, Atlanta premiere",
+    "date": "July 16, 2024",
+    "venue": "Holy Spirit Catholic Church",
+    "city": "Atlanta, GA",
+    "who": "Archbishop Cordileone"
+  },
+  {
+    "iso": "2024-07-14",
+    "work": "Mass of the Americas, selections in concert",
+    "date": "July 14, 2024",
+    "venue": "Cathedral Basilica of St. Francis of Assisi",
+    "city": "Santa Fe, NM",
+    "who": "Joshua Habermann, conductor"
+  },
+  {
+    "iso": "2023-10-03",
+    "work": "Mass of the Americas, Miami premiere",
+    "date": "October 3, 2023",
+    "venue": "Epiphany Catholic Church",
+    "city": "Miami, FL",
+    "who": "Fr. José Alvarez; Richard Carrillo, conductor"
+  },
+  {
+    "iso": "2023-06-24",
+    "work": "Mass of the Americas, Los Angeles premiere",
+    "date": "June 24, 2023",
+    "venue": "St. Andrew Catholic Church, Adeodatus Conference",
+    "city": "Pasadena, CA",
+    "who": "Bishop Timothy E. Freyer"
+  },
+  {
+    "iso": "2022-07-27",
+    "work": "Mass of the Americas, parish edition premiere",
+    "date": "July 27, 2022",
+    "venue": "Napa Institute Conference",
+    "city": "Napa, CA",
+    "who": "Archbishop Cordileone"
+  },
+  {
+    "iso": "2022-06-28",
+    "work": "Mass of the Americas, concert",
+    "date": "June 28, 2022",
+    "venue": "Church of St. Ignatius of Loyola",
+    "city": "Rome",
+    "who": "Richard Sparks, conductor"
+  },
+  {
+    "iso": "2022-05-22",
+    "work": "Mass of the Americas, first Mass of Fr. Joseph Brom",
+    "date": "May 22, 2022",
+    "venue": "St. John Cantius Church",
+    "city": "Chicago, IL",
+    "who": ""
+  },
+  {
+    "iso": "2022-01-15",
+    "work": "Mass of the Americas, Solemn Pontifical Mass",
+    "date": "January 15, 2022",
+    "venue": "Old St. Patrick's Cathedral",
+    "city": "New York, NY",
+    "who": "Archbishop Cordileone; Richard Sparks, conductor"
+  },
+  {
+    "iso": "2019-12-25",
+    "work": "Mass of the Americas",
+    "date": "December 25, 2019",
+    "venue": "Church of St. John the Baptist",
+    "city": "Allentown, NJ",
+    "who": "Jennifer Donelson-Nowicka, conductor"
+  },
+  {
+    "iso": "2019-11-24",
+    "work": "Mass of the Americas, concert",
+    "date": "November 24, 2019",
+    "venue": "Co-Cathedral of the Sacred Heart",
+    "city": "Houston, TX",
+    "who": "Richard Lopez, conductor"
+  },
+  {
+    "iso": "2019-11-16",
+    "work": "Mass of the Americas, Solemn Pontifical Mass, Extraordinary Form",
+    "date": "November 16, 2019",
+    "venue": "Basilica of the National Shrine of the Immaculate Conception",
+    "city": "Washington, DC",
+    "who": "Archbishop Cordileone; Richard Sparks, conductor"
+  },
+  {
+    "iso": "2019-02-28",
+    "work": "Mass of the Americas, Mexican National Liturgy Conference",
+    "date": "February 28, 2019",
+    "venue": "Parroquia Santa María Estrella del Mar",
+    "city": "Tijuana",
+    "who": "Archbishop Francisco Moreno Barrón; Archbishop Cordileone, homilist"
+  },
+  {
+    "iso": "2018-12-08",
+    "work": "Mass of the Americas, world premiere",
+    "date": "December 8, 2018",
+    "venue": "Cathedral of St. Mary of the Assumption",
+    "city": "San Francisco, CA",
+    "who": "Archbishop Cordileone; Ash Walker, conductor"
   }
 ]

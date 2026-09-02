@@ -19,9 +19,10 @@ description: "Upcoming and recent performances of music by Frank La Rocca, inclu
 {%- else %}
 <p class="note">No performances are scheduled at the moment. For performance materials, see <a href="/directors/">For directors</a>.</p>
 {%- endif %}
-<h2 class="section-title">Recent</h2>
+<h2 class="section-title">Past celebrations and performances</h2>
+<p class="note">The <em>Mass of the Americas</em> has been sung in cathedrals and churches across the Americas and in Rome and London since its 2018 premiere. Video of the Mass has been seen more than 600,000 times on YouTube.</p>
 <ul class="dates past">
 {%- for e in past | sort(true, false, "iso") %}
-  <li><span class="when">{{ e.date }}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}</p></div></li>
+  <li><span class="when">{{ e.date }}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}{% if e.who %} · {{ e.who }}{% endif %}</p></div></li>
 {%- endfor %}
 </ul>
