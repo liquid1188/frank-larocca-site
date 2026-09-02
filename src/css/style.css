@@ -339,15 +339,15 @@ blockquote .attr { font-style: normal; }
 .portrait.small { width: min(30%, 240px); margin-top: 0; }
 
 /* feature photo band */
-.feature { position: relative; min-height: 520px; display: grid; align-content: end; background: var(--nave); overflow: hidden; }
-.feature-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.feature { position: relative; min-height: 640px; display: grid; align-content: end; background: var(--nave); overflow: hidden; }
+.feature-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 12%; }
 .feature::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(21,18,28,.96) 0, rgba(21,18,28,.6) 45%, rgba(21,18,28,.15) 100%); }
 .feature .wrap { position: relative; z-index: 2; padding-top: 6rem; padding-bottom: 3.5rem; width: 100%; }
 .feature-copy { max-width: 40rem; }
 .feature-copy h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); margin-bottom: .4em; }
 .feature-copy p { color: var(--vellum); opacity: .9; }
 .feature .credit { position: absolute; z-index: 2; right: var(--gutter); bottom: .6rem; margin: 0; font-size: .75rem; color: var(--ash); opacity: .8; max-width: 60%; text-align: right; }
-@media (max-width: 720px) { .feature { min-height: 440px; } .feature-img { object-position: center 30%; } .feature::before { background: linear-gradient(to top, rgba(21,18,28,.97) 0, rgba(21,18,28,.85) 55%, rgba(21,18,28,.25) 100%); } .feature .wrap { padding-top: 10rem; padding-bottom: 2rem; } .feature .credit { position: relative; right: auto; bottom: auto; padding: 0 var(--gutter) 1rem; max-width: none; text-align: left; } }
+@media (max-width: 720px) { .feature { min-height: 540px; } .feature-img { object-position: center 10%; } .feature::before { background: linear-gradient(to top, rgba(21,18,28,.97) 0, rgba(21,18,28,.85) 55%, rgba(21,18,28,.25) 100%); } .feature .wrap { padding-top: 10rem; padding-bottom: 2rem; } .feature .credit { position: relative; right: auto; bottom: auto; padding: 0 var(--gutter) 1rem; max-width: none; text-align: left; } }
 .watch-one { max-width: 56rem; }
 .watch-one .embed { margin: 0; }
 .qmark { display: block; font-family: var(--display); font-size: 6rem; line-height: .6; color: rgba(183,52,44,.75); margin: 0 auto .1em; }
@@ -381,7 +381,8 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .press-strip li.small img { height: 22px; }
 .press-strip li.tall img { height: 48px; }
 .press-strip.on-dark li.raw img { filter: grayscale(1) brightness(1.1) opacity(.85); }
-.hero-credit { margin: 1.4rem 0 0; font-size: .8rem; color: var(--ash); opacity: .75; }
+.hero-credit { position: absolute; right: var(--gutter); bottom: .6rem; z-index: 3; margin: 0; font-size: .78rem; color: var(--ash); opacity: .8; }
+@media (max-width: 880px) { .hero-credit { right: var(--gutter); bottom: 2.8rem; } }
 .foot-epigraph { font-family: var(--display); font-style: italic; font-size: 1.15rem; color: var(--vellum); max-width: 40ch; margin: 0 auto 2rem; }
 .foot-epigraph span { font-style: normal; font-family: var(--body); font-size: .85rem; color: var(--ash); display: block; margin-top: .2rem; }
 @media (max-width: 720px) {
@@ -433,3 +434,46 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .pull cite a:hover, .quotes-two cite a:hover, blockquote .attr a:hover { color: var(--rubric); }
 .press-strip.on-dark li:hover img { filter: brightness(0) invert(1) opacity(1); }
 .press-strip.on-dark li.raw:hover img { filter: grayscale(1) brightness(1.15) opacity(1); }
+
+/* posts: standard typesetting */
+.post .wrap { max-width: 46rem; }
+.post h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+.post p { font-size: 1.12rem; line-height: 1.7; max-width: none; }
+.post p strong { color: var(--gold); font-weight: 500; }
+.post img { width: 100%; max-width: 100%; margin: 1.5rem 0 2rem; }
+.post .note { margin-bottom: 1.5rem; }
+
+/* writing list with logos */
+.writing { list-style: none; margin: 0; padding: 0; max-width: 60rem; }
+.writing li { display: grid; grid-template-columns: 4rem minmax(0,1fr) 120px; gap: 1rem 1.5rem; align-items: center; padding: .9rem 0; border-top: 1px solid var(--gold-dim); }
+.writing .w-year { color: var(--gold); font-size: .95rem; }
+.writing .w-body a { font-family: var(--display); font-size: 1.3rem; line-height: 1.15; text-decoration: none; display: block; }
+.writing .w-body a:hover { color: var(--gold); }
+.writing .w-outlet { display: block; color: var(--ash); font-size: .92rem; margin-top: .15rem; }
+.writing .w-logo { display: flex; justify-content: flex-end; }
+.writing .w-logo img { height: 26px; width: auto; max-width: 120px; filter: brightness(0) invert(1) opacity(.7); }
+@media (max-width: 640px) { .writing li { grid-template-columns: 3.4rem minmax(0,1fr); } .writing .w-logo { grid-column: 2; justify-content: flex-start; } }
+
+/* balanced rows: eleven affiliations as six and five, eight press as four and four */
+.logo-row { max-width: 68rem; margin: 0 auto; }
+.logo-row li { flex: 0 0 auto; width: calc(100% / 6 - 3rem); display: flex; justify-content: center; }
+@media (max-width: 900px) { .logo-row li { width: calc(100% / 3 - 2rem); } }
+.affil-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.6rem 1.5rem; }
+.affil-grid li { flex: 0 0 auto; width: calc(100% / 6 - 1.5rem); text-align: center; }
+.affil-grid .affil-logo { justify-content: center; }
+@media (max-width: 900px) { .affil-grid li { width: calc(100% / 3 - 1.5rem); } }
+.press-strip li { flex: 0 0 auto; width: calc(25% - 2.4rem); justify-content: center; }
+@media (max-width: 720px) { .press-strip li { width: calc(50% - 1.8rem); } }
+.press-strip.on-dark li { width: auto; }
+.center { margin-left: auto; margin-right: auto; text-align: center; }
+figure.center { display: block; }
+figure.center img { margin: 0 auto; }
+.epigraph-close.center { max-width: 34ch; }
+.band-lede { color: var(--ink-2); margin: -1rem 0 2rem; font-size: 1.02rem; }
+
+/* motion: gentle reveal and lift */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+.card, .album { transition: transform .35s ease; }
+.card:hover, .album:hover { transform: translateY(-3px); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .card:hover, .album:hover { transform: none; } }

@@ -11,8 +11,9 @@ permalink: /news/
 </div>
 
 <h2 class="section-title">Interviews, profiles, and writing</h2>
-<ul class="dates">
+<ul class="writing">
 {%- for w in writing | sort(true, false, "year") %}
-  <li><span class="when">{{ w.year }}</span><div><div class="what"><a href="{{ w.url }}" style="text-decoration:none">{{ w.title }}</a></div><p class="where">{{ w.outlet }}</p></div></li>
+  {%- set logo = "" %}{%- for o in press %}{% if o.logo and (o.name in w.outlet) %}{% set logo = o.logo %}{% endif %}{% endfor %}
+  <li><span class="w-year">{{ w.year }}</span><div class="w-body"><a href="{{ w.url }}">{{ w.title }}</a><span class="w-outlet">{{ w.outlet }}</span></div><span class="w-logo">{% if logo %}<img src="{{ logo }}" alt="" loading="lazy">{% endif %}</span></li>
 {%- endfor %}
 </ul>

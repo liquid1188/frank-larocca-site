@@ -75,7 +75,7 @@
   {
     "name": "First Things",
     "logo": "/images/press/logo-first-things.svg",
-    "home": false
+    "home": true
   },
   {
     "name": "The Catholic Thing",
