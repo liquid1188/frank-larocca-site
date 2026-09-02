@@ -1,7 +1,7 @@
 [
   {
-    "title": "Frank La Rocca's Search for the Sacred",
-    "outlet": "Benedict XVI Institute, three-part profile",
+    "title": "Frank La Rocca's Search for the Sacred (Part 1)",
+    "outlet": "Benedict XVI Institute, Maggie Gallagher",
     "year": 2018,
     "url": "https://benedictinstitute.org/2018/06/frank-la-roccas-search-sacred/",
     "kind": "Profile"
@@ -89,5 +89,19 @@
     "year": 2022,
     "url": "https://onepeterfive.com/modern-sacred-music-at-its-best-the-mass-of-the-americas/",
     "kind": "Review"
+  },
+  {
+    "title": "The Crucifix and the Crack in the Door (Part 2)",
+    "outlet": "Benedict XVI Institute, Maggie Gallagher",
+    "year": 2018,
+    "url": "https://benedictinstitute.org/2018/07/frank-la-rocca-crucifix-crack-door/",
+    "kind": "Profile"
+  },
+  {
+    "title": "Frank La Rocca Comes Home (Part 3)",
+    "outlet": "Benedict XVI Institute, Maggie Gallagher",
+    "year": 2018,
+    "url": "https://benedictinstitute.org/2018/08/frank-la-rocca-comes-home-part-3/",
+    "kind": "Profile"
   }
 ]

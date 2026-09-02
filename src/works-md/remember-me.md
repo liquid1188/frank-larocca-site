@@ -9,3 +9,5 @@ tags: work
 layout: work.njk
 permalink: "/works/remember-me/"
 ---
+
+On Christina Rossetti's "Remember." Premiered by the California State University, East Bay Singers, June 2018.
