@@ -461,7 +461,8 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .writing .w-body a:hover { color: var(--gold); }
 .writing .w-outlet { display: block; color: var(--ash); font-size: .92rem; margin-top: .15rem; }
 .writing .w-logo { display: flex; justify-content: flex-end; }
-.writing .w-logo img { height: 26px; width: auto; max-width: 120px; filter: brightness(0) invert(1) opacity(.7); }
+.writing .w-logo img { height: auto; max-height: 26px; width: auto; max-width: 120px; filter: brightness(0) invert(1) opacity(.7); }
+.writing .w-logo.raw img { filter: grayscale(1) brightness(1.1) opacity(.85); }
 @media (max-width: 640px) { .writing li { grid-template-columns: 3.4rem minmax(0,1fr); } .writing .w-logo { grid-column: 2; justify-content: flex-start; } }
 
 /* balanced rows: eleven affiliations as six and five, eight press as four and four */
@@ -512,3 +513,18 @@ figure.center img { margin: 0 auto; }
 .form label.check input { width: auto; margin: 0; accent-color: var(--gold); }
 .tracks { color: var(--ash); font-size: .92rem; line-height: 1.5; }
 .form-thanks { padding: 1rem 1.25rem; border: 1px solid var(--gold); color: var(--vellum); font-size: 1.05rem; max-width: 44rem; }
+
+/* small screens: even logo sizes */
+@media (max-width: 720px) {
+  .press-strip.on-dark { gap: 1.4rem 1rem; }
+  .press-strip.on-dark li { width: calc(50% - 1rem); justify-content: center; }
+  .press-strip.on-dark img { height: auto; max-height: 28px; max-width: 100%; }
+  .press-strip.on-dark img[src*="new-yorker"], .press-strip.on-dark img[src*="dappled"], .press-strip.on-dark img[src*="expedition"], .press-strip.on-dark img[src*="logo-arg"] { max-height: 22px; }
+  .affil-grid { gap: 1.4rem 1rem; }
+  .affil-grid li { width: calc(33.333% - 1rem); }
+  .affil-logo { height: 48px; }
+  .affil-logo img { max-width: 100%; max-height: 40px; }
+  .affil-logo.square img { max-height: 48px; }
+  .affil-grid .affil-role { font-size: .78rem; line-height: 1.3; }
+  .writing .w-logo img { max-height: 22px; max-width: 110px; }
+}
