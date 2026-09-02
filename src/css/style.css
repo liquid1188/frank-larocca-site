@@ -509,3 +509,4 @@ figure.center img { margin: 0 auto; }
 .form label.check { display: inline-flex; align-items: center; gap: .45rem; margin: 0; color: var(--vellum); }
 .form label.check input { width: auto; margin: 0; accent-color: var(--gold); }
 .tracks { color: var(--ash); font-size: .92rem; line-height: 1.5; }
+.form-thanks { padding: 1rem 1.25rem; border: 1px solid var(--gold); color: var(--vellum); font-size: 1.05rem; max-width: 44rem; }
