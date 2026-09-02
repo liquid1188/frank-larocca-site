@@ -1,32 +1,69 @@
 [
   {
     "name": "The Wall Street Journal",
-    "logo": "/images/press/logo-wsj.png"
+    "logo": "/images/press/logo-wsj.png",
+    "home": true
+  },
+  {
+    "name": "The New Yorker",
+    "logo": "/images/press/logo-new-yorker.svg",
+    "home": true
   },
   {
     "name": "American Record Guide",
-    "logo": ""
+    "logo": "/images/press/logo-arg.png",
+    "home": true
   },
   {
     "name": "Fanfare",
-    "logo": ""
+    "logo": "",
+    "home": false
   },
   {
     "name": "Billboard",
     "logo": "/images/press/logo-billboard.png",
-    "small": true
+    "small": true,
+    "home": true
   },
   {
     "name": "National Catholic Register",
-    "logo": "/images/press/logo-ncr.png"
+    "logo": "/images/press/logo-ncr.png",
+    "home": true
   },
   {
     "name": "Catholic World Report",
     "logo": "/images/press/logo-catholic-world-report.png",
-    "raw": true
+    "raw": true,
+    "home": true
   },
   {
     "name": "EWTN",
-    "logo": "/images/press/logo-ewtn.png"
+    "logo": "/images/press/logo-ewtn.png",
+    "home": true
+  },
+  {
+    "name": "OnePeterFive",
+    "logo": "",
+    "home": false
+  },
+  {
+    "name": "Dappled Things",
+    "logo": "",
+    "home": false
+  },
+  {
+    "name": "Catholic Arts Today",
+    "logo": "",
+    "home": false
+  },
+  {
+    "name": "Expedition Audio",
+    "logo": "",
+    "home": false
+  },
+  {
+    "name": "New Liturgical Movement",
+    "logo": "",
+    "home": false
   }
 ]

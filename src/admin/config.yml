@@ -124,6 +124,7 @@ collections:
               - { name: name, label: Name }
               - { name: logo, label: Logo image, widget: image, required: false }
               - { name: raw, label: Show logo in its own colours (no silhouette), widget: boolean, required: false }
+              - { name: home, label: Show on the home page strip, widget: boolean, required: false }
       - name: affiliations
         label: Affiliations
         file: src/_data/affiliations.json

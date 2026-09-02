@@ -55,7 +55,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     {%- endif %}{% endfor %}
     </div>
     <ul class="press-strip" aria-label="Reviewed in">
-    {%- for o in press %}<li class="{% if o.raw %}raw {% endif %}{% if o.small %}small{% endif %}">{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
+    {%- for o in press %}{% if o.home %}<li class="{% if o.raw %}raw {% endif %}{% if o.small %}small{% endif %}">{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}">{% else %}{{ o.name }}{% endif %}</li>{% endif %}{% endfor %}
     </ul>
   </div>
 </section>
