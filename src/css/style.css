@@ -370,7 +370,8 @@ blockquote .attr { font-style: normal; }
 .press-strip li.raw img { filter: grayscale(1) opacity(.8); }
 .logo-row li.raw img { filter: grayscale(1) opacity(.85); }
 .logo-row li.square img { height: 64px; }
-.logo-row li.wide img { max-width: 320px; height: 40px; }
+.logo-row img[src*="lumen-verum"] { height: 60px; max-width: 140px; }
+.logo-row li.wide img { max-width: 190px; height: auto; }
 
 blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style: normal; }
 
@@ -456,7 +457,8 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 
 /* balanced rows: eleven affiliations as six and five, eight press as four and four */
 .logo-row { max-width: 68rem; margin: 0 auto; }
-.logo-row li { flex: 0 0 auto; width: calc(100% / 6 - 3rem); display: flex; justify-content: center; }
+.logo-row li { flex: 0 0 auto; width: calc(100% / 6 - 3rem); display: flex; justify-content: center; align-items: center; }
+.logo-row li a { display: flex; justify-content: center; align-items: center; width: 100%; }
 @media (max-width: 900px) { .logo-row li { width: calc(100% / 3 - 2rem); } }
 .affil-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.6rem 1.5rem; }
 .affil-grid li { flex: 0 0 auto; width: calc(100% / 6 - 1.5rem); text-align: center; }
@@ -485,3 +487,8 @@ figure.center img { margin: 0 auto; }
 .hero-epigraph span { font-family: var(--body); font-style: normal; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ash); display: block; margin-top: .3rem; }
 @media (max-width: 880px) { .hero-epigraph { position: relative; left: auto; top: auto; transform: none; width: auto; max-width: 40ch; margin: .2rem auto .6rem; padding: 0 var(--gutter); } }
 .album[id], [id].section-title, .work-hero[id] { scroll-margin-top: 3rem; }
+.soon { min-height: 60vh; display: grid; align-content: center; text-align: center; padding: 4rem 0; }
+.soon .wrap { max-width: 44rem; }
+.soon-mark { width: 240px; height: auto; margin: 0 auto 2rem; }
+.soon h1 { font-size: clamp(2rem, 4vw, 3rem); }
+.soon p { margin-left: auto; margin-right: auto; }
