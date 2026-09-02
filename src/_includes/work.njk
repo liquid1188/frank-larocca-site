@@ -1,23 +1,22 @@
 ---
 layout: base.njk
 eleventyComputed:
-  description: "{{ title }} by Frank La Rocca{% if forces %} — {{ forces }}{% endif %}. Score preview, recording, and purchase information."
+  description: "{{ title }} by Frank La Rocca{% if forces %}, {{ forces }}{% endif %}. Score preview, recording, and purchase information."
 ---
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicComposition","name":{{ title | dump | safe }},"composer":{"@type":"Person","name":"Frank La Rocca"}}</script>
-<p class="rubric">{{ categories | join(" · ") }}</p>
+<p class="kicker">{{ categories | join(", ") }}</p>
 <h1>{{ title }}</h1>
-{%- if forces %}<p class="attr">{{ forces }}</p>{%- endif %}
+{%- if forces or year %}<p class="attr">{{ forces }}{% if forces and year %}, {% endif %}{{ year }}</p>{%- endif %}
 <div class="work-links">
-{%- if preview %}<a href="{{ preview }}">Preview score</a>{%- endif %}
+{%- if preview %}<a href="{{ preview }}">Preview the score</a>{%- endif %}
 {%- if audio %}<a href="{{ audio }}">Listen</a>{%- endif %}
 {%- if purchase %}<a href="{{ purchase }}">Purchase</a>{%- endif %}
+{%- if recording %}<a href="{{ recording }}">Recording</a>{%- endif %}
 </div>
-{%- if audio and "youtu" in audio %}
-{%- set vid = audio | replace("https://www.youtube.com/watch?v=", "") | replace("https://youtu.be/", "") %}
-<div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{{ vid }}" title="{{ title }} — recording" allowfullscreen></iframe></div>
-{%- endif %}
 {%- if content | trim %}
-<p class="rubric" style="margin-top:3rem">Program note</p>
-{{ content | safe }}
+<div style="margin-top:2rem">{{ content | safe }}</div>
 {%- endif %}
-<p style="margin-top:3rem"><a class="backlink" href="/works/">← All works</a></p>
+{%- if audio and "youtu" in audio %}
+<div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{{ audio | ytid }}" title="{{ title }}, recording" allowfullscreen></iframe></div>
+{%- endif %}
+<p style="margin-top:2.5rem"><a class="backlink" href="/works/">All works</a></p>

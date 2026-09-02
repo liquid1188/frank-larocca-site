@@ -2,14 +2,15 @@
 layout: base.njk
 title: Works
 permalink: /works/
+description: "Catalog of works by Frank La Rocca: Mass settings, motets and propers, choral and instrumental music, with score previews and recordings."
 ---
 <h1>Works</h1>
-{%- set cats = ["SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] %}
-<nav class="catnav">
-{%- for cat in cats %}<a href="#{{ cat | slugify }}">{{ cat }}</a>{%- endfor %}
-</nav>
+{%- set cats = ["Mass settings & large works", "SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] %}
+<ul class="catnav">
+{%- for cat in cats %}<li><a href="#{{ cat | slugify }}">{{ cat }}</a></li>{%- endfor %}
+</ul>
 {%- for cat in cats %}
-<p class="rubric" id="{{ cat | slugify }}">{{ cat }}</p>
+<h2 class="section-title" id="{{ cat | slugify }}">{{ cat }}</h2>
 <ul class="program">
 {%- for w in collections.work %}{%- if cat in w.data.categories %}
   <li><span class="t"><a href="{{ w.url }}">{{ w.data.title }}</a></span><span class="leader"></span><span class="f">{{ w.data.forces }}</span></li>

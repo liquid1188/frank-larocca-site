@@ -4,37 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} · {% endif %}Frank La Rocca, Composer</title>
-  <meta name="description" content="{{ description or 'Sacred choral and instrumental music by Frank La Rocca, Composer-in-Residence at the Benedict XVI Institute.' }}">
+  <meta name="description" content="{{ description or 'Sacred choral and instrumental music by Frank La Rocca, Composer-in-Residence at the Benedict XVI Institute for Sacred Music and Divine Worship.' }}">
   <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}Frank La Rocca, Composer">
   <meta property="og:type" content="website">
   <meta property="og:description" content="{{ description or 'Sacred choral and instrumental music by Frank La Rocca.' }}">
-  <link rel="canonical" href="https://franklarocca.com{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/images/frank-la-rocca-portrait.jpg">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Alegreya:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   {%- if site.setupMode %}<meta name="robots" content="noindex, nofollow">{% endif %}
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/favicon-180.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Frank La Rocca","jobTitle":"Composer","url":"https://franklarocca.com/","affiliation":{"@type":"Organization","name":"Benedict XVI Institute for Sacred Music and Divine Liturgy"}}</script>
+  <link rel="alternate" type="application/atom+xml" title="Frank La Rocca — News" href="/feed.xml">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Frank La Rocca","jobTitle":"Composer","url":"{{ site.url }}/","image":"{{ site.url }}/images/frank-la-rocca-portrait.jpg","affiliation":{"@type":"Organization","name":"Benedict XVI Institute for Sacred Music and Divine Worship"}}</script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="site-head">
-    <a class="wordmark" href="/">Frank La Rocca</a>
-    <nav>
-      <a href="/works/"{% if "/works" in page.url %} aria-current="page"{% endif %}>Works</a>
-      <a href="/performances/"{% if "/performances" in page.url %} aria-current="page"{% endif %}>Performances</a>
-      <a href="/recordings/"{% if "/recordings" in page.url %} aria-current="page"{% endif %}>Recordings</a>
-      <a href="/biography/"{% if "/biography" in page.url %} aria-current="page"{% endif %}>Biography</a>
-      <a href="/reviews/"{% if "/reviews" in page.url %} aria-current="page"{% endif %}>Press</a>
-      <a href="/news/"{% if "/news" in page.url %} aria-current="page"{% endif %}>News</a>
-      <a href="/contact/"{% if "/contact" in page.url %} aria-current="page"{% endif %}>Contact</a>
-    </nav>
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Frank La Rocca, home">{% include "mark.njk" %}<span>Frank La Rocca</span></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="site-nav" id="nav">
+        <a href="/works/"{% if "/works" in page.url %} aria-current="page"{% endif %}>Works</a>
+        <a href="/recordings/"{% if "/recordings" in page.url %} aria-current="page"{% endif %}>Recordings</a>
+        <a href="/performances/"{% if "/performances" in page.url %} aria-current="page"{% endif %}>Performances</a>
+        <a href="/biography/"{% if "/biography" in page.url %} aria-current="page"{% endif %}>Biography</a>
+        <a href="/reviews/"{% if "/reviews" in page.url %} aria-current="page"{% endif %}>Press</a>
+        <a href="/news/"{% if "/news" in page.url %} aria-current="page"{% endif %}>News</a>
+        <a href="/contact/"{% if "/contact" in page.url %} aria-current="page"{% endif %}>Contact</a>
+      </nav>
+    </div>
   </header>
-  <main>{{ content | safe }}</main>
+  <main>{% if layout == "base.njk" and page.url != "/" and not fullwidth %}<div class="page{% if tags and 'news' in tags %} post{% endif %}"><div class="wrap">{{ content | safe }}</div></div>{% else %}{{ content | safe }}{% endif %}</main>
   <footer class="site-foot">
-    <p>© 2026 Frank La Rocca · Composer-in-Residence, Benedict XVI Institute for Sacred Music and Divine Liturgy</p>
-    <p class="colophon"><a href="https://lickitysplitweb.com">Site by Lickity Split Web Design</a></p>
+    <div class="wrap">
+      <div>
+        <a class="brand" href="/">{% include "mark.njk" %}<span>Frank La Rocca</span></a>
+        <p>Composer-in-Residence, Benedict XVI Institute for Sacred Music and Divine Worship.</p>
+        <p>© 2026 Frank La Rocca</p>
+        <p class="colophon"><a href="https://lickitysplitweb.com">Site by Lickity Split Web Design</a></p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/works/">Works</a><a href="/recordings/">Recordings</a><a href="/performances/">Performances</a><a href="/biography/">Biography</a><a href="/reviews/">Press</a><a href="/news/">News</a><a href="/contact/">Contact</a>
+      </nav>
+    </div>
   </footer>
+  <script>
+    (function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('nav');if(!b)return;
+    b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Close':'Menu';});})();
+  </script>
 </body>
 </html>

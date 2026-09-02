@@ -2,13 +2,24 @@
 layout: base.njk
 title: Performances
 permalink: /performances/
+description: "Upcoming and recent performances of music by Frank La Rocca."
 ---
 <h1>Performances</h1>
-<p class="rubric">Upcoming</p>
-<ul class="program">
-{%- for e in events %}
-  <li><span class="t">{{ e.work }}</span><span class="leader"></span><span class="f">{{ e.date }} · {{ e.venue }}, {{ e.city }}</span></li>
+{%- set upcoming = [] %}{% set past = [] %}
+{%- for e in events %}{% if e.iso >= today %}{% set upcoming = (upcoming.push(e), upcoming) %}{% else %}{% set past = (past.push(e), past) %}{% endif %}{% endfor %}
+<h2 class="section-title">Upcoming</h2>
+{%- if upcoming | length %}
+<ul class="dates">
+{%- for e in upcoming %}
+  <li><span class="when">{{ e.date }}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}</p></div></li>
 {%- endfor %}
 </ul>
-<p class="rubric">Archive</p>
-<p class="attr"><em>Past performances will be added here.</em></p>
+{%- else %}
+<p class="note">No performances are scheduled at the moment. For performance materials, see <a href="/contact/">Contact</a>.</p>
+{%- endif %}
+<h2 class="section-title">Recent</h2>
+<ul class="dates past">
+{%- for e in past | reverse %}
+  <li><span class="when">{{ e.date }}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}</p></div></li>
+{%- endfor %}
+</ul>

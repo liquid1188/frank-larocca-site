@@ -1,24 +1,120 @@
 ---
 layout: base.njk
+description: "Frank La Rocca, composer of sacred choral and instrumental music. Composer-in-Residence at the Benedict XVI Institute and composer of the Mass of the Americas."
 ---
-<p class="epigraph">Late have I loved you, O Beauty ever ancient, ever new, late have I loved you!</p>
-<p class="epigraph-attr">— St. Augustine, Confessions X</p>
-
-<p class="rubric">The Composer</p>
-<p>Frank La Rocca is Composer-in-Residence at the Benedict XVI Institute for Sacred Music and Divine Liturgy. His <em>Mass of the Americas</em>, recorded by multi-Grammy-winning producer Blanton Alspaugh, debuted at #1 on the Billboard Traditional Classical chart.</p>
-
-<p class="rubric">Upcoming</p>
-<ul class="program">
-{%- for e in events %}
-  <li><span class="t">{{ e.work }}</span><span class="leader"></span><span class="f">{{ e.date }} · {{ e.venue }}, {{ e.city }}</span></li>
-{%- endfor %}
-</ul>
-
-
-<section class="quoteband">
-  <p class="bandquote">&ldquo;Perhaps the most significant Catholic composition of our lifetimes.&rdquo;</p>
-  <p class="epigraph-attr">— Michael Olbash, on the <em>Mass of the Americas</em></p>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>Frank<br>La Rocca</h1>
+      <p class="role">Composer of sacred music</p>
+      <p class="lede">Composer-in-Residence at the Benedict XVI Institute for Sacred Music and Divine Worship. His <em>Mass of the Americas</em> debuted at number one on the Billboard Traditional Classical chart.</p>
+      <div class="actions">
+        <button class="btn primary" id="listen" aria-expanded="false" aria-controls="player">Listen to the Mass of the Americas</button>
+        <a class="btn" href="/works/">Browse the catalog</a>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <img src="/images/frank-la-rocca-portrait.jpg" alt="Frank La Rocca" width="1600" height="2142" fetchpriority="high">
+    </div>
+  </div>
+  <div class="staff"></div>
 </section>
 
-<p class="rubric">The Catalog</p>
-<p><a href="/works/">Forty-one works</a> for chorus, voice, chamber ensemble, and orchestra — with score previews, recordings, and purchase information for each.</p>
+<div class="player" id="player">
+  <div class="wrap">
+    <div class="embed"><iframe data-src="https://www.youtube-nocookie.com/embed/JECDSmQU7AQ?autoplay=1" title="Mass of the Americas, preview" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+    <p class="meta"><strong>Mass of the Americas</strong>Benedict XVI Choir and Orchestra, Richard Sparks, conductor. Cappella Records, 2022. <a href="/recordings/">All recordings</a></p>
+  </div>
+</div>
+
+<section class="band light pull">
+  <div class="wrap">
+    <blockquote>
+      <p>Perhaps the most significant Catholic composition of our lifetimes.</p>
+      <cite>Michael Olbash, on the <em>Mass of the Americas</em></cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="band-head"><h2>Selected works</h2><a class="more" href="/works/">All {{ collections.work | length }} works</a></div>
+    <div class="works-grid">
+      <ul>
+      {%- for slug in featured %}{% set w = collections.work | bySlug(slug) %}{% if w and loop.index0 < 3 %}
+        <li>
+          <a class="title" href="{{ w.url }}">{{ w.data.title }}</a>
+          <span class="forces">{{ w.data.forces or (w.data.categories | join(", ")) }}</span>
+          <span class="links">{% if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% endif %}{% if w.data.preview %}<a href="{{ w.data.preview }}">Score</a>{% endif %}</span>
+        </li>
+      {%- endif %}{% endfor %}
+      </ul>
+      <ul>
+      {%- for slug in featured %}{% set w = collections.work | bySlug(slug) %}{% if w and loop.index0 >= 3 %}
+        <li>
+          <a class="title" href="{{ w.url }}">{{ w.data.title }}</a>
+          <span class="forces">{{ w.data.forces or (w.data.categories | join(", ")) }}</span>
+          <span class="links">{% if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% endif %}{% if w.data.preview %}<a href="{{ w.data.preview }}">Score</a>{% endif %}</span>
+        </li>
+      {%- endif %}{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band light">
+  <div class="wrap">
+    <div class="band-head"><h2>Recordings</h2><a class="more" href="/recordings/">All recordings</a></div>
+    <div class="albums">
+      <div class="album">
+        <img src="/images/mass-of-the-americas-cover.jpg" alt="Album cover, Mass of the Americas" width="1200" height="1200" loading="lazy">
+        <div>
+          <h3>Mass of the Americas</h3>
+          <p class="label">Cappella Records, 2022</p>
+          <p>Benedict XVI Choir and Orchestra, Richard Sparks. Sung in Latin, Spanish, and Nahuatl.</p>
+          <p class="links"><a href="https://cappellarecords.com/recording/frank-la-rocca-mass-of-the-americas/">Cappella Records</a></p>
+        </div>
+      </div>
+      <div class="album">
+        <img src="/images/requiem-forgotten-cover.jpg" alt="Album cover, Requiem for the Forgotten and Messe des Malades" width="1200" height="1200" loading="lazy">
+        <div>
+          <h3>Requiem for the Forgotten<br>Messe des Malades</h3>
+          <p class="label">Cappella Records, 2024</p>
+          <p>Benedict XVI Choir and Orchestra, Richard Sparks. A Requiem for the homeless, and a Mass for the sick.</p>
+          <p class="links"><a href="https://cappellarecords.com/recording/requiem-for-the-forgotten-messe-des-malades/">Cappella Records</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap two-up">
+    {%- set upcoming = [] %}{% set past = [] %}
+    {%- for e in events %}{% if e.iso >= today %}{% set upcoming = (upcoming.push(e), upcoming) %}{% else %}{% set past = (past.push(e), past) %}{% endif %}{% endfor %}
+    <div>
+      <div class="band-head"><h2>{% if upcoming | length %}Upcoming{% else %}Recent performances{% endif %}</h2><a class="more" href="/performances/">All performances</a></div>
+      <ul class="dates{% if not upcoming | length %} past{% endif %}">
+      {%- set shown = upcoming if upcoming | length else (past | reverse) %}
+      {%- for e in shown | batch(3) | first %}
+        <li><span class="when">{{ e.iso | shortDate }}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}</p></div></li>
+      {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <div class="band-head"><h2>News</h2><a class="more" href="/news/">All news</a></div>
+      <ul class="dates">
+      {%- for post in collections.news | reverse | batch(3) | first %}
+        <li><span class="when">{{ post.data.date | shortDate }}</span><div><div class="what"><a href="{{ post.url }}" style="text-decoration:none">{{ post.data.title }}</a></div></div></li>
+      {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){var b=document.getElementById('listen'),p=document.getElementById('player'),f=p.querySelector('iframe');
+  b.addEventListener('click',function(){var o=p.classList.toggle('open');b.setAttribute('aria-expanded',o);
+    if(o){if(!f.src)f.src=f.dataset.src;b.textContent='Close the player';p.scrollIntoView({behavior:'smooth',block:'start'});}
+    else{f.src='';f.removeAttribute('src');b.textContent='Listen to the Mass of the Americas';}});})();
+</script>
