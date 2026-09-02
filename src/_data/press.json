@@ -43,27 +43,29 @@
   },
   {
     "name": "OnePeterFive",
-    "logo": "",
-    "home": false
+    "logo": "/images/press/logo-onepeterfive-dark.png",
+    "home": false,
+    "raw": true
   },
   {
     "name": "Dappled Things",
-    "logo": "",
+    "logo": "/images/press/logo-dappled-things.png",
     "home": false
   },
   {
     "name": "Catholic Arts Today",
-    "logo": "",
+    "logo": "/images/press/logo-catholic-arts-today.png",
     "home": false
   },
   {
     "name": "Expedition Audio",
-    "logo": "",
+    "logo": "/images/press/logo-expedition-audio.png",
     "home": false
   },
   {
     "name": "New Liturgical Movement",
-    "logo": "",
-    "home": false
+    "logo": "/images/press/logo-new-liturgical-movement.png",
+    "home": false,
+    "tall": true
   }
 ]
