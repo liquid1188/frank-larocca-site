@@ -23,6 +23,9 @@ collections:
       - { name: purchase, label: Purchase link, required: false }
       - { name: recording, label: Recording page link, required: false }
       - { name: directors, label: Performance materials link, required: false }
+      - { name: hero, label: Header photo, widget: image, required: false }
+      - { name: heroAlt, label: Header photo description, required: false }
+      - { name: heroCaption, label: Header photo caption, required: false }
       - { name: layout, widget: hidden, default: work.njk }
       - { name: tags, widget: hidden, default: work }
       - { name: permalink, widget: hidden }
@@ -165,3 +168,4 @@ collections:
           - { name: institute, label: Benedict XVI Institute link }
           - { name: instituteComposerPage, label: Institute composer page }
           - { name: projectGuadalupe, label: Project Guadalupe link }
+          - { name: instituteDonate, label: Support the Institute link }

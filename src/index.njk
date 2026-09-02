@@ -14,7 +14,10 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
       </div>
     </div>
     <div class="hero-portrait">
-      <img src="/images/frank-la-rocca-headshot.jpg" alt="Frank La Rocca" width="1978" height="1920" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 880px)" srcset="/images/frank-la-rocca.jpg">
+        <img src="/images/frank-la-rocca-headshot.jpg" alt="Frank La Rocca" width="1978" height="1920" fetchpriority="high">
+      </picture>
     </div>
   </div>
   <div class="staff"></div>
@@ -27,26 +30,22 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
   </div>
 </div>
 
-<section class="band watch">
+<section class="feature" style="--img:url('/images/mass-of-the-americas-nyc-2022.jpg')">
   <div class="wrap">
-    {%- set feat = videos | selectattr("featured") | first %}
-    <div class="watch-grid">
-      <div class="watch-main">
-        <div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{{ feat.id }}" title="{{ feat.title }}" allowfullscreen></iframe></div>
-        <p class="watch-cap"><strong>{{ feat.title }}</strong> {{ feat.source }}</p>
-      </div>
-      <ul class="watch-list">
-      {%- for v in videos %}{% if not v.featured %}
-        <li><a href="https://www.youtube.com/watch?v={{ v.id }}"><img src="https://img.youtube.com/vi/{{ v.id }}/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><span><strong>{{ v.title }}</strong>{{ v.source }}</span></a></li>
-      {%- endif %}{% endfor %}
-      </ul>
+    <div class="feature-copy">
+      <p class="kicker">Mass of the Americas</p>
+      <h2>A Mass for Our Lady of Guadalupe and the Immaculate Conception</h2>
+      <p>Commissioned by Archbishop Cordileone, sung in Latin, Spanish, and Nahuatl, and celebrated from the National Shrine in Washington to the Basilica of Guadalupe in Mexico City.</p>
+      <div class="actions"><a class="btn primary" href="/works/mass-of-the-americas/">About the Mass</a><a class="btn" href="{{ site.instituteDonate }}">Support the Institute</a></div>
     </div>
   </div>
+  <p class="credit">Mass of the Americas, New York, 2022. Photograph by Jeffrey Bruno, courtesy of the Benedict XVI Institute.</p>
 </section>
 
 <section class="band light pull">
   <div class="wrap">
-    <blockquote>
+    <blockquote class="marked">
+      <span class="qmark" aria-hidden="true">&ldquo;</span>
       <p>{{ endorsements[0].quote }}</p>
       <cite>{{ endorsements[0].name }}, {{ endorsements[0].title }}</cite>
     </blockquote>
@@ -58,6 +57,17 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     <ul class="press-strip" aria-label="Reviewed in">
     {%- for o in press %}<li>{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}" loading="lazy">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
     </ul>
+  </div>
+</section>
+
+<section class="band watch">
+  <div class="wrap">
+    {%- set feat = videos | selectattr("featured") | first %}
+    <div class="band-head"><h2>In his own words</h2><a class="more" href="/listen/">More videos</a></div>
+    <div class="watch-one">
+      <div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{{ feat.id }}" title="{{ feat.title }}" allowfullscreen></iframe></div>
+      <p class="watch-cap"><strong>{{ feat.title }}</strong> {{ feat.source }}</p>
+    </div>
   </div>
 </section>
 

@@ -6,6 +6,12 @@ description: "Hear Frank La Rocca's music: recordings on SoundCloud and performa
 ---
 <h1>Listen</h1>
 <p class="note">Recordings and performances of his music, in one place. For albums, see <a href="/recordings/">Recordings</a>; for scores and per-work recordings, see <a href="/works/">Works</a>.</p>
+<h2 class="section-title">Selected videos</h2>
+<div class="cards">
+{%- for v in videos %}
+  <a class="card" href="https://www.youtube.com/watch?v={{ v.id }}"><span class="card-art"><img src="https://img.youtube.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"></span><span class="card-title">{{ v.title }}</span><span class="card-meta">{{ v.source }}</span></a>
+{%- endfor %}
+</div>
 <h2 class="section-title">Performances on YouTube</h2>
 <div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list={{ site.youtubeUploads }}" title="Frank La Rocca on YouTube" allowfullscreen></iframe></div>
 <p class="note"><a href="{{ site.social.youtube }}">Frank La Rocca on YouTube</a></p>
