@@ -1,8 +1,31 @@
 [
-  { "name": "The Wall Street Journal", "logo": "" },
-  { "name": "American Record Guide", "logo": "" },
-  { "name": "Fanfare", "logo": "" },
-  { "name": "Billboard", "logo": "" },
-  { "name": "National Catholic Register", "logo": "" },
-  { "name": "Catholic World Report", "logo": "" }
+  {
+    "name": "The Wall Street Journal",
+    "logo": ""
+  },
+  {
+    "name": "American Record Guide",
+    "logo": ""
+  },
+  {
+    "name": "Fanfare",
+    "logo": ""
+  },
+  {
+    "name": "Billboard",
+    "logo": ""
+  },
+  {
+    "name": "National Catholic Register",
+    "logo": "/images/press/logo-ncr.png"
+  },
+  {
+    "name": "Catholic World Report",
+    "logo": "/images/press/logo-catholic-world-report.png",
+    "raw": true
+  },
+  {
+    "name": "EWTN",
+    "logo": "/images/press/logo-ewtn.png"
+  }
 ]

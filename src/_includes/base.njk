@@ -40,7 +40,6 @@
     </div>
   </header>
   <main>{% if layout == "base.njk" and page.url != "/" and not fullwidth %}<div class="page{% if tags and 'news' in tags %} post{% endif %}"><div class="wrap">{{ content | safe }}</div></div>{% else %}{{ content | safe }}{% endif %}</main>
-  <div class="staff foot-staff" aria-hidden="true"></div>
   <footer class="site-foot">
     <div class="wrap">
       <a class="foot-brand" href="/">{% include "mark-wide.njk" %}<span class="foot-name">Frank La Rocca</span><span class="foot-role">Composer of sacred music</span></a>

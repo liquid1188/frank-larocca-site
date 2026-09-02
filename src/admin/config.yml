@@ -119,6 +119,7 @@ collections:
             fields:
               - { name: name, label: Name }
               - { name: logo, label: Logo image, widget: image, required: false }
+              - { name: raw, label: Show logo in its own colours (no silhouette), widget: boolean, required: false }
       - name: affiliations
         label: Affiliations
         file: src/_data/affiliations.json
@@ -132,6 +133,9 @@ collections:
               - { name: role, label: Role }
               - { name: url, label: Link, required: false }
               - { name: logo, label: Logo image, widget: image, required: false }
+              - { name: raw, label: Show logo in its own colours (no silhouette), widget: boolean, required: false }
+              - { name: square, label: Square logo (show larger), widget: boolean, required: false }
+              - { name: wide, label: Wide logo, widget: boolean, required: false }
       - name: writing
         label: Interviews & writing
         file: src/_data/writing.json

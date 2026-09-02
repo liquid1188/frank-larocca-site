@@ -1,11 +1,68 @@
 [
-  { "name": "Benedict XVI Institute for Sacred Music and Divine Worship", "short": "Benedict XVI Institute", "role": "Composer-in-Residence", "url": "https://benedictinstitute.org/", "logo": "" },
-  { "name": "Cappella Records", "short": "Cappella Records", "role": "Recording label", "url": "https://cappellarecords.com/", "logo": "" },
-  { "name": "Catholic Institute of Sacred Music", "short": "Catholic Institute of Sacred Music", "role": "Faculty", "url": "https://catholicinstituteofsacredmusic.org/", "logo": "" },
-  { "name": "Boosey & Hawkes", "short": "Boosey & Hawkes", "role": "Publisher", "url": "https://www.boosey.com/", "logo": "" },
-  { "name": "GIA Publications", "short": "GIA", "role": "Publisher", "url": "https://www.giamusic.com/", "logo": "" },
-  { "name": "Walton Music", "short": "Walton Music", "role": "Publisher", "url": "https://www.waltonmusic.com/", "logo": "" },
-  { "name": "Santa Barbara Music Publishing", "short": "Santa Barbara Music", "role": "Publisher", "url": "https://sbmp.com/ComposerPage.php?ComposerNum=0079", "logo": "" },
-  { "name": "Lumen Verum Music", "short": "Lumen Verum Music", "role": "Publisher", "url": "", "logo": "" },
-  { "name": "California State University, East Bay", "short": "CSU East Bay", "role": "Professor Emeritus", "url": "https://www.csueastbay.edu/", "logo": "" }
+  {
+    "name": "Benedict XVI Institute for Sacred Music and Divine Worship",
+    "short": "Benedict XVI Institute",
+    "role": "Composer-in-Residence",
+    "url": "https://benedictinstitute.org/",
+    "logo": "/images/affil/bxvi.svg"
+  },
+  {
+    "name": "Cappella Records",
+    "short": "Cappella Records",
+    "role": "Recording label",
+    "url": "https://cappellarecords.com/",
+    "logo": "/images/affil/cappella-red.png",
+    "square": true
+  },
+  {
+    "name": "Catholic Institute of Sacred Music",
+    "short": "Catholic Institute of Sacred Music",
+    "role": "Faculty",
+    "url": "https://catholicinstituteofsacredmusic.org/",
+    "logo": "",
+    "raw": true
+  },
+  {
+    "name": "Boosey & Hawkes",
+    "short": "Boosey & Hawkes",
+    "role": "Publisher",
+    "url": "https://www.boosey.com/",
+    "logo": "/images/affil/boosey.svg"
+  },
+  {
+    "name": "GIA Publications",
+    "short": "GIA",
+    "role": "Publisher",
+    "url": "https://www.giamusic.com/",
+    "logo": "/images/affil/gia.svg"
+  },
+  {
+    "name": "Walton Music",
+    "short": "Walton Music",
+    "role": "Publisher",
+    "url": "https://www.waltonmusic.com/",
+    "logo": "/images/affil/walton.svg"
+  },
+  {
+    "name": "Santa Barbara Music Publishing",
+    "short": "Santa Barbara Music",
+    "role": "Publisher",
+    "url": "https://sbmp.com/ComposerPage.php?ComposerNum=0079",
+    "logo": "/images/affil/sbmp.png",
+    "wide": true
+  },
+  {
+    "name": "Lumen Verum Music",
+    "short": "Lumen Verum Music",
+    "role": "Publisher",
+    "url": "",
+    "logo": ""
+  },
+  {
+    "name": "California State University, East Bay",
+    "short": "CSU East Bay",
+    "role": "Professor Emeritus",
+    "url": "https://www.csueastbay.edu/",
+    "logo": "/images/affil/csueb.svg"
+  }
 ]
