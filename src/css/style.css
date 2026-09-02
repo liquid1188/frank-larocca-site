@@ -43,9 +43,7 @@ em { font-style: italic; }
   background: repeating-linear-gradient(to bottom, rgba(183,52,44,.42) 0 1px, transparent 1px 8px);
   background-size: 100% 25px; background-repeat: no-repeat; background-position: 0 1px;
 }
-.staff::after {
-  content: ""; position: absolute; top: 5px; left: 61.8%; width: 8px; height: 8px; background: var(--gold);
-}
+.staff-neumes { position: absolute; top: 0; left: 61.8%; height: 26px; width: auto; }
 .staff.on-light::before { background: repeating-linear-gradient(to bottom, rgba(183,52,44,.35) 0 1px, transparent 1px 8px); background-size: 100% 25px; background-repeat: no-repeat; background-position: 0 1px; }
 
 /* ---------- header ---------- */
@@ -369,3 +367,5 @@ blockquote .attr { font-style: normal; }
 .logo-row li.raw img { filter: grayscale(1) opacity(.85); }
 .logo-row li.square img { height: 64px; }
 .logo-row li.wide img { max-width: 320px; height: 40px; }
+
+blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style: normal; }
