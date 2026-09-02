@@ -77,13 +77,6 @@
     "kind": "Feature"
   },
   {
-    "title": "World Premiere of New Sacred Music: The Hymns of Corpus Christi",
-    "outlet": "Benedict XVI Institute",
-    "year": 2024,
-    "url": "https://benedictinstitute.org/2024/08/world-premiere-of-new-sacred-music-the-hymns-of-corpus-christi/",
-    "kind": "Feature"
-  },
-  {
     "title": "Modern Sacred Music at Its Best: the Mass of the Americas",
     "outlet": "OnePeterFive, Mark Nowakowski",
     "year": 2022,
@@ -173,5 +166,54 @@
     "year": 2024,
     "url": "https://cappellarecords.com/review/la-rocca-requiem-for-the-forgotten-messe-des-malades-american-record-guide-review/",
     "kind": "Review"
+  },
+  {
+    "title": "Sacred Music and the Vocation of the Composer",
+    "outlet": "Catholic World Report, Carl E. Olson",
+    "year": 2016,
+    "url": "https://www.catholicworldreport.com/2016/03/21/sacred-music-and-the-vocation-of-the-composer/",
+    "kind": "Interview"
+  },
+  {
+    "title": "Frank La Rocca and Richard Sparks on the Mass of the Americas",
+    "outlet": "Presto Music",
+    "year": 2022,
+    "url": "https://www.prestomusic.com/classical/articles/5023--interview-frank-la-rocca-and-richard-sparks-on-the-mass-of-the-americas",
+    "kind": "Interview"
+  },
+  {
+    "title": "Frank La Rocca: The Composer Who Turns Faith into Music",
+    "outlet": "Huxley",
+    "year": 2025,
+    "url": "https://huxley.media/en/frank-la-rocca-the-composer-who-turns-faith-into-music/",
+    "kind": "Interview"
+  },
+  {
+    "title": "Sacred Music and Its Contribution to the Liturgy",
+    "outlet": "Faith and Leadership podcast, Caritas Media, with Gerry Jacob",
+    "year": 2023,
+    "url": "https://www.caritasmedia.org/franklarocca-sacred-music",
+    "kind": "Podcast"
+  },
+  {
+    "title": "Catholic Art in a Secularized World: Meet Dana Gioia and Frank La Rocca",
+    "outlet": "Religion Unplugged, Roseanne T. Sullivan",
+    "year": 2023,
+    "url": "https://religionunplugged.com/news/2023/5/19/catholic-art-in-a-secularized-world-meet-dana-gioia-and-frank-la-rocca",
+    "kind": "Profile"
+  },
+  {
+    "title": "Defending St. Junípero Serra with Holy Water, the Rosary, and the Arts",
+    "outlet": "Benedict XVI Institute, Roseanne T. Sullivan",
+    "year": 2022,
+    "url": "https://benedictinstitute.org/2022/10/defending-st-junipero-serra-with-holy-water-the-rosary-and-the-arts/",
+    "kind": "Feature"
+  },
+  {
+    "title": "Modern Sacred Music at Its Best",
+    "outlet": "California Catholic Daily",
+    "year": 2022,
+    "url": "https://www.cal-catholic.com/la-roccas-mass-gets-a-professional-recording/",
+    "kind": "Feature"
   }
 ]

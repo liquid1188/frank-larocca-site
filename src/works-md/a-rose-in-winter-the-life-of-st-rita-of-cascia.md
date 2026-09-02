@@ -9,3 +9,5 @@ tags: work
 layout: work.njk
 permalink: "/works/a-rose-in-winter-the-life-of-st-rita-of-cascia/"
 ---
+
+Commissioned by Alfred Calabrese, Director of Music at St. Rita Catholic Church in Dallas, and first performed there in May 2016. Awarded the American Prize in Composition in 2018.
