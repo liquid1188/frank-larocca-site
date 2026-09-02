@@ -11,7 +11,8 @@
       "amazon": "https://www.amazon.com/Frank-Rocca-Benedict-Choir-Orchestra/dp/B0B82ZFQYL",
       "spotify": "",
       "apple": "",
-      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_nJXFIZMRq6C8O2DRGI7bqdXkiVbB9t8p4"
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_nJXFIZMRq6C8O2DRGI7bqdXkiVbB9t8p4",
+      "videos": "https://www.youtube.com/playlist?list=PLgth7UAnTn5_zIp4s0AXQjDshFn35qdRI"
     },
     "preview": "JECDSmQU7AQ"
   },
@@ -26,7 +27,7 @@
       "label": "https://cappellarecords.com/recording/requiem-for-the-forgotten-messe-des-malades/",
       "amazon": "",
       "spotify": "",
-      "apple": "",
+      "apple": "https://classical.music.apple.com/us/album/1731077268",
       "youtube": ""
     },
     "preview": "MEdQ-TwAXGA",

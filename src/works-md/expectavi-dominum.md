@@ -11,3 +11,5 @@ tags: work
 layout: work.njk
 permalink: "/works/expectavi-dominum/"
 ---
+
+An errata list for the printed score is available on request from [Lumen Verum Music](mailto:lumenverummusic@gmail.com?subject=Expectavi%20Dominum%20errata).

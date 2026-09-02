@@ -57,7 +57,7 @@
   },
   {
     "id": "Ie7DGKSvE8U",
-    "title": "Ave Maria",
+    "title": "Ave Maria II",
     "source": "St. Patrick's Seminary Chapel, 2022",
     "kind": "performance",
     "selected": true
@@ -146,5 +146,17 @@
     "title": "Transcendence in Music and the Use of Ancient Text",
     "source": "Biola University, CCCA Cultural Conversation",
     "kind": "talk"
+  },
+  {
+    "id": "nf4dZFrUe2w",
+    "title": "While All the Earth in Darkness Sleeps",
+    "source": "Text by James Matthew Wilson",
+    "kind": "performance"
+  },
+  {
+    "id": "Wfd9TwMdCgA",
+    "title": "Ave Verum Corpus II",
+    "source": "",
+    "kind": "performance"
   }
 ]
