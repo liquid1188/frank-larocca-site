@@ -51,7 +51,8 @@
     "short": "GIA",
     "role": "Publisher",
     "url": "https://www.giamusic.com/",
-    "logo": "/images/affil/gia.svg"
+    "logo": "/images/affil/gia.svg",
+    "square": true
   },
   {
     "name": "Lumen Verum Music",

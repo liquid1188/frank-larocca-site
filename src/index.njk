@@ -111,9 +111,12 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
 <section class="band affil">
   <div class="wrap">
     <div class="band-head"><h2>Affiliations</h2></div>
+    {%- set logos = [] %}{% for a in affiliations %}{% if a.logo %}{% set logos = (logos.push(a), logos) %}{% endif %}{% endfor %}
+    {%- for row in logos | batch(6) %}
     <ul class="logo-row">
-    {%- for a in affiliations %}{% if a.logo %}<li class="{% if a.raw %}raw {% endif %}{% if a.mono %}mono {% endif %}{% if a.square %}square {% endif %}{% if a.wide %}wide{% endif %}"><a href="{{ a.url }}" title="{{ a.name }}, {{ a.role }}"><img src="{{ a.logo }}" alt="{{ a.name }}"></a></li>{% endif %}{% endfor %}
+    {%- for a in row %}<li class="{% if a.raw %}raw {% endif %}{% if a.mono %}mono {% endif %}{% if a.square %}square {% endif %}{% if a.wide %}wide{% endif %}"><a href="{{ a.url }}" title="{{ a.name }}, {{ a.role }}"><img src="{{ a.logo }}" alt="{{ a.name }}"></a></li>{% endfor %}
     </ul>
+    {%- endfor %}
   </div>
 </section>
 
