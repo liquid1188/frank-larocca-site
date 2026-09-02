@@ -13,6 +13,7 @@ description: "Recordings of Frank La Rocca's music on Cappella Records and Enhar
     <h2>{{ r.title | replace(" · ", "<br>") | safe }}</h2>
     <p class="label">{{ r.label }}, {{ r.year }}</p>
     <p>{{ r.blurb }}</p>
+    {% if r.tracks %}<p class="tracks">{{ r.tracks }}</p>{% endif %}
     <div class="work-links">{% include "streaming.njk" %}</div>
   </div>
 </div>

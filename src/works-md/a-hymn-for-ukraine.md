@@ -10,3 +10,5 @@ tags: work
 layout: work.njk
 permalink: "/works/a-hymn-for-ukraine/"
 ---
+
+Sung as the Commemoration of the *Requiem for the Forgotten*, and recorded on the Cappella album.

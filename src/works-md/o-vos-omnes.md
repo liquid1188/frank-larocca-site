@@ -9,3 +9,5 @@ tags: work
 layout: work.njk
 permalink: "/works/o-vos-omnes/"
 ---
+
+The Meditation of the *Requiem for the Forgotten*, recorded on the Cappella album.

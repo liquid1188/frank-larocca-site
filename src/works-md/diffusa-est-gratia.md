@@ -11,3 +11,5 @@ tags: work
 layout: work.njk
 permalink: "/works/diffusa-est-gratia/"
 ---
+
+Offertory for the Feast of the Purification. Recorded on the Cappella album with the *Requiem for the Forgotten* and *Messe des Malades*.

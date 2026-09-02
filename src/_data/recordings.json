@@ -13,9 +13,11 @@
       "apple": "",
       "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_nJXFIZMRq6C8O2DRGI7bqdXkiVbB9t8p4",
       "videos": "https://www.youtube.com/playlist?list=PLgth7UAnTn5_zIp4s0AXQjDshFn35qdRI",
-      "notes": "https://cappellarecords.com/assets/uploads/2022/08/753459697405_DBooklet.pdf"
+      "notes": "https://cappellarecords.com/assets/uploads/2022/08/753459697405_DBooklet.pdf",
+      "stream": "https://listn.fm/laroccamass/"
     },
-    "preview": "JECDSmQU7AQ"
+    "preview": "JECDSmQU7AQ",
+    "tracks": "El Cántico del Alba · Kyrie · Gloria · Offertory (Ave Maria) · Sanctus and Benedictus · Agnus Dei · Ave Verum Corpus · Aue Maria (Nahuatl) · Salve Regina · Alma Redemptoris Mater · Ave Regina Cælorum · Regina Cæli"
   },
   {
     "id": "requiem",
@@ -23,16 +25,19 @@
     "label": "Cappella Records, CR-430",
     "year": 2024,
     "cover": "/images/requiem-forgotten-cover.jpg",
-    "blurb": "Benedict XVI Choir and Orchestra, Richard Sparks, conductor. The Requiem commemorates the displaced and the homeless; the Messe des Malades was inspired by the composer's late sister Carin.",
+    "blurb": "Benedict XVI Choir and Orchestra, Richard Sparks, with soloists Chelsea Helm, Savannah Porter, Cecilia Duarte, Helen Karloski, Timothy Hodges, Michael Hawes, and John Ramseyer. The Requiem (2020 to 2023), for SATB choir, low strings, organ, and harp, commemorates the displaced and the homeless and sets a poem on the Ukrainian priest Andrei Ischak, martyred by the Bolsheviks. The Messe des Malades (2022), for choir and organ, was inspired by the composer's late sister Carin, who lived with multiple sclerosis. With Diffusa est gratia. Sung in Latin and English. Debuted at number two on the Billboard Traditional Classical chart.",
     "links": {
       "label": "https://cappellarecords.com/recording/requiem-for-the-forgotten-messe-des-malades/",
-      "amazon": "",
+      "amazon": "https://www.amazon.com/Requiem-Forgotten-Malades-Frank-Rocca/dp/B0CTMVVMBY",
       "spotify": "",
       "apple": "https://classical.music.apple.com/us/album/1731077268",
-      "youtube": ""
+      "youtube": "",
+      "notes": "https://cappellarecords.com/assets/uploads/2024/01/753459808627_iTunesBooklet.pdf",
+      "stream": "https://listn.fm/laroccarequiem"
     },
     "preview": "MEdQ-TwAXGA",
-    "preview2": "G65VyOtRlWw"
+    "preview2": "G65VyOtRlWw",
+    "tracks": "Messe des Malades: Kyrie · Gloria · Alleluia · Ego sum Pastor bonus (the Anointing of the Sick) · Sanctus and Benedictus · Agnus Dei. Diffusa est gratia. Requiem for the Forgotten: Introit · Kyrie · Commemoration, A Hymn for Ukraine · Offertory, I will lift up mine eyes · Sanctus and Benedictus · Agnus Dei · Meditation, O vos omnes · Procession to the place of rest, Pie Jesu"
   },
   {
     "id": "in-this-place",
