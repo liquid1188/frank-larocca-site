@@ -129,7 +129,9 @@ em { font-style: italic; }
 .player.open { display: block; }
 .player .wrap { padding-top: 1.5rem; padding-bottom: 1.5rem; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 1rem 2rem; align-items: start; }
 .player .embed { margin: 0; }
-.player .meta { font-size: 1rem; color: var(--ash); max-width: 30ch; }
+.player .meta { font-size: 1rem; color: var(--ash); max-width: 34ch; }
+.player .meta p { margin: 0 0 1rem; font-size: .98rem; }
+.player .actions .btn { font-size: .92rem; padding: .55rem .9rem; }
 .player .meta strong { font-family: var(--display); font-weight: 500; font-size: 1.35rem; color: var(--vellum); display: block; margin-bottom: .2rem; }
 @media (max-width: 880px) { .player .wrap { grid-template-columns: 1fr; } }
 .embed { margin: 2rem 0; aspect-ratio: 16 / 9; background: #000; border-radius: 2px; overflow: hidden; }
