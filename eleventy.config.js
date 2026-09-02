@@ -12,5 +12,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("bySlug", (coll, slug) => coll.find((w) => w.data.slug === slug || w.fileSlug === slug));
   eleventyConfig.addFilter("ytid", (u) => (u || "").replace("https://www.youtube.com/watch?v=", "").replace("https://youtu.be/", "").split("&")[0]);
   eleventyConfig.addGlobalData("today", () => new Date().toISOString().slice(0, 10));
+  eleventyConfig.addGlobalData("buildId", () => Date.now().toString(36));
   return { dir: { input: "src", includes: "_includes", output: "_site" } };
 }
