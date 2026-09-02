@@ -20,8 +20,9 @@
     "role": "Faculty",
     "url": "https://catholicinstituteofsacredmusic.org/",
     "logo": "/images/affil/cism.png",
-    "raw": true,
-    "square": true
+    "raw": false,
+    "square": true,
+    "mono": true
   },
   {
     "name": "Composers, Inc.",
@@ -73,7 +74,7 @@
     "role": "Publisher",
     "url": "",
     "logo": "/images/affil/lumen-verum-music.svg",
-    "raw": true,
+    "raw": false,
     "square": true
   },
   {
