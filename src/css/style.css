@@ -492,3 +492,6 @@ figure.center img { margin: 0 auto; }
 .soon-mark { width: 240px; height: auto; margin: 0 auto 2rem; }
 .soon h1 { font-size: clamp(2rem, 4vw, 3rem); }
 .soon p { margin-left: auto; margin-right: auto; }
+.reviews-page blockquote > p:first-child:not(.attr) { font-family: var(--display); font-style: italic; font-size: 1.4rem; line-height: 1.25; margin-bottom: .3em; color: var(--vellum); }
+.reviews-page blockquote > p + p:not(.attr) { font-family: var(--body); font-style: normal; font-size: 1.02rem; color: var(--ash); }
+.reviews-page blockquote .attr { font-size: 1rem; }
