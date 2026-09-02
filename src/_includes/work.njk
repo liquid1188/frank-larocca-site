@@ -12,9 +12,9 @@ eleventyComputed:
 {%- if preview %}<a href="{{ preview }}">Preview the score</a>{%- endif %}
 {%- if audio %}<a href="{{ audio }}">{% if "music.youtube" in audio %}Listen to the album{% else %}Listen{% endif %}</a>{%- endif %}
 {%- if video %}<a href="{{ video }}">{% if playlist %}Watch the whole Mass{% else %}Watch{% endif %}</a>{%- endif %}
-{%- if purchase %}<a href="{{ purchase }}">Purchase</a>{%- endif %}
+{%- if purchase %}<a href="{{ purchase }}">{% if "cappella" in purchase %}Buy the album{% else %}Purchase{% endif %}</a>{%- endif %}
 {%- if recording %}<a href="{{ recording }}">Recording</a>{%- endif %}
-{%- if directors %}<a href="{{ directors }}">Parish edition</a>{%- endif %}
+{%- if directors %}<a href="{{ directors }}">Scores and parish edition</a>{%- endif %}
 </div>
 {%- if content | trim %}
 <div style="margin-top:2rem">{{ content | safe }}</div>

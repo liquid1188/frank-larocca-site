@@ -13,7 +13,7 @@ audio: "https://music.youtube.com/playlist?list=OLAK5uy_nJXFIZMRq6C8O2DRGI7bqdXk
 video: "https://www.youtube.com/watch?v=RrAwtnGkX6U&list=PLgth7UAnTn5_zIp4s0AXQjDshFn35qdRI"
 playlist: "PLgth7UAnTn5_zIp4s0AXQjDshFn35qdRI"
 thumb: "https://www.youtube.com/watch?v=fdhVcmgygEU"
-purchase: "https://benedictinstitute.org/larocca/"
+purchase: "https://cappellarecords.com/recording/frank-la-rocca-mass-of-the-americas/"
 recording: "/recordings/#mass-of-the-americas"
 tags: work
 layout: work.njk
