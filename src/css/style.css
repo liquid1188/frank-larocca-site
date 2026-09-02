@@ -234,7 +234,6 @@ blockquote .attr { font-style: normal; }
 .site-foot nav a { text-decoration: none; color: var(--ash); font-size: 1rem; padding: .4rem .1rem; display: inline-block; }
 .site-foot nav a:hover { color: var(--gold); }
 .foot-inst { max-width: 46ch; margin: 0 auto 1.2rem; font-size: .92rem; }
-.foot-rule { width: 100%; max-width: 60rem; height: 1px; background: var(--gold-dim); margin: 0 auto 1.6rem; }
 .foot-small { margin: 0 0 .35em; font-size: .9rem; max-width: none; }
 .colophon a { text-decoration: none; border-bottom: 1px solid var(--gold-dim); }
 .colophon a:hover { color: var(--gold); }
