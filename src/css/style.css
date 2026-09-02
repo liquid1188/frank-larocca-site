@@ -426,3 +426,5 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .epigraph-close span { display: block; font-family: var(--body); font-style: normal; font-size: .9rem; color: var(--ash); margin-top: .3rem; }
 @media (max-width: 720px) { .site-foot nav { gap: 0 1.1rem; } .site-foot nav a { font-size: .95rem; padding: .3rem .1rem; } }
 .logo-row li.mono img, .affil-logo.mono img { filter: grayscale(1) brightness(1.05) opacity(.8); }
+.site-foot nav .row { display: flex; justify-content: center; gap: 0 1.4rem; }
+@media (max-width: 900px) { .site-foot nav { flex-direction: column; gap: .15rem; } .site-foot nav .row { gap: 0 1.3rem; } }
