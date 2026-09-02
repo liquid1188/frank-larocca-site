@@ -72,7 +72,9 @@
     "short": "Lumen Verum Music",
     "role": "Publisher",
     "url": "",
-    "logo": ""
+    "logo": "/images/affil/lumen-verum-music.svg",
+    "raw": true,
+    "square": true
   },
   {
     "name": "California State University, East Bay",
