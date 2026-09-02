@@ -6,6 +6,7 @@ categories:
 forces: "chorus and orchestra"
 purchase: "https://cappellarecords.com/recording/requiem-for-the-forgotten-messe-des-malades/"
 recording: "/recordings/#requiem"
+video: "https://www.youtube.com/watch?v=G65VyOtRlWw"
 tags: work
 layout: work.njk
 permalink: "/works/messe-des-malades/"

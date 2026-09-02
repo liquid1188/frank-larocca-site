@@ -96,7 +96,9 @@ collections:
               - { name: id, label: YouTube video id }
               - { name: title, label: Title }
               - { name: source, label: Source or credit }
-              - { name: featured, label: Featured (the large one), widget: boolean, required: false }
+              - { name: kind, label: Kind, widget: select, options: ["performance", "requiem", "talk"] }
+              - { name: selected, label: Selected performance (top of Listen page), widget: boolean, required: false }
+              - { name: featured, label: Featured on the home page, widget: boolean, required: false }
       - name: endorsements
         label: Endorsements
         file: src/_data/endorsements.json
