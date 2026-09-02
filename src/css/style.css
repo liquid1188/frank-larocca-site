@@ -224,9 +224,9 @@ blockquote .attr { font-style: normal; }
 .site-foot { padding: 3.5rem 0 2.5rem; color: var(--ash); font-size: .98rem; text-align: center; }
 .site-foot .wrap { display: flex; flex-direction: column; align-items: center; }
 .foot-brand { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--vellum); margin-bottom: 2.2rem; }
-.foot-brand svg { width: 272px; height: 80px; margin-bottom: 1.2rem; max-width: 80vw; }
-.foot-name { font-family: var(--display); font-size: 2.2rem; font-weight: 500; line-height: 1; letter-spacing: .005em; }
-.foot-rule { display: block; width: 260px; max-width: 70vw; height: 1px; margin: .9rem auto .7rem; background: linear-gradient(90deg, transparent, var(--gold-dim) 15%, var(--gold-dim) 85%, transparent); position: relative; }
+.foot-brand svg { width: 272px; height: 80px; margin-bottom: 0; max-width: 80vw; }
+.foot-name { font-family: var(--display); font-size: 2.2rem; font-weight: 500; line-height: 1; letter-spacing: .005em; margin-top: .2rem; }
+.foot-rule { display: block; width: 272px; max-width: 80vw; height: 1px; margin: .8rem auto .8rem; background: linear-gradient(90deg, transparent, var(--gold-dim) 15%, var(--gold-dim) 85%, transparent); position: relative; }
 .foot-rule::after { content: ""; position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; background: var(--gold); transform: translate(-50%, -50%) rotate(45deg); }
 .foot-role { font-family: var(--body); font-size: .74rem; color: var(--gold); letter-spacing: .28em; text-transform: uppercase; }
 .foot-brand:hover { color: var(--vellum); }
