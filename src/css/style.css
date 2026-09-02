@@ -219,15 +219,22 @@ blockquote .attr { font-style: normal; }
 .post h1 + em, .post h1 + p em:first-child { color: var(--ash); }
 
 /* ---------- footer ---------- */
-.site-foot { border-top: 1px solid var(--gold-dim); padding: 3rem 0 2.5rem; color: var(--ash); font-size: .98rem; }
-.site-foot .wrap { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 1.5rem 3rem; align-items: start; }
-.site-foot .brand { margin-bottom: .6rem; }
-.site-foot p { margin: 0 0 .3em; max-width: 44ch; }
-.site-foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; max-width: 24rem; justify-content: flex-end; }
-.site-foot nav a { text-decoration: none; color: var(--ash); }
-.site-foot .colophon { margin-top: 1.5rem; font-size: .9rem; }
-.site-foot .colophon a { text-decoration: none; border-bottom: 1px solid var(--gold-dim); }
-@media (max-width: 720px) { .site-foot .wrap { grid-template-columns: 1fr; } .site-foot nav { justify-content: flex-start; } }
+.foot-staff { margin-top: 2rem; }
+.site-foot { padding: 3.5rem 0 2.5rem; color: var(--ash); font-size: .98rem; text-align: center; }
+.site-foot .wrap { display: flex; flex-direction: column; align-items: center; }
+.foot-brand { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--vellum); margin-bottom: 2.2rem; }
+.foot-brand svg { width: 72px; height: 72px; margin-bottom: 1.1rem; filter: drop-shadow(0 6px 24px rgba(201,166,86,.18)); }
+.foot-name { font-family: var(--display); font-size: 2.2rem; font-weight: 500; line-height: 1; letter-spacing: .005em; }
+.foot-role { font-family: var(--display); font-size: 1.1rem; color: var(--gold); margin-top: .45rem; letter-spacing: .04em; }
+.foot-brand:hover { color: var(--vellum); }
+.site-foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.6rem; margin-bottom: 1.6rem; }
+.site-foot nav a { text-decoration: none; color: var(--ash); font-size: 1rem; }
+.site-foot nav a:hover { color: var(--gold); }
+.foot-inst { max-width: 46ch; margin: 0 auto 2rem; font-size: .95rem; }
+.foot-rule { width: 100%; max-width: 60rem; height: 1px; background: var(--gold-dim); margin: 0 auto 1.6rem; }
+.foot-small { margin: 0 0 .35em; font-size: .9rem; max-width: none; }
+.colophon a { text-decoration: none; border-bottom: 1px solid var(--gold-dim); }
+.colophon a:hover { color: var(--gold); }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 .albums.stack { grid-template-columns: 1fr; max-width: 60rem; }
@@ -262,7 +269,9 @@ blockquote .attr { font-style: normal; }
 
 /* press strip */
 .press-strip { list-style: none; margin: 3rem auto 0; padding: 1.5rem 0 0; border-top: 1px solid var(--hair); display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 2.4rem; max-width: 60rem; }
-.press-strip li { font-family: var(--display); font-size: 1.25rem; color: var(--ink-2); letter-spacing: .01em; }
+.press-strip li { font-family: var(--display); font-size: 1.25rem; color: var(--ink-2); letter-spacing: .01em; display: flex; align-items: center; }
+.press-strip img { height: 30px; width: auto; max-width: 180px; filter: grayscale(1) contrast(1.1) opacity(.62); }
+.press-strip img:hover { filter: grayscale(1) contrast(1.1) opacity(.9); }
 
 /* bio archive photo */
 .archive { margin: 3rem 0 0; max-width: 300px; clear: both; }

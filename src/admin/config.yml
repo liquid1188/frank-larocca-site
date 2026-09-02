@@ -51,3 +51,13 @@ collections:
               - { name: date, label: Date & time }
               - { name: venue, label: Venue }
               - { name: city, label: City }
+      - name: press
+        label: Press strip
+        file: src/_data/press.json
+        fields:
+          - name: press
+            label: Publications
+            widget: list
+            fields:
+              - { name: name, label: Name }
+              - { name: logo, label: Logo image, widget: image, required: false }

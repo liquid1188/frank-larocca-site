@@ -34,7 +34,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
       <cite>Michael Olbash, on the <em>Mass of the Americas</em></cite>
     </blockquote>
     <ul class="press-strip" aria-label="Reviewed in">
-      <li>American Record Guide</li><li>Fanfare</li><li>Billboard</li><li>Catholic World Report</li><li>New Liturgical Movement</li>
+    {%- for o in press %}<li>{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}" loading="lazy">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
     </ul>
   </div>
 </section>

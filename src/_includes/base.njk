@@ -39,17 +39,17 @@
     </div>
   </header>
   <main>{% if layout == "base.njk" and page.url != "/" and not fullwidth %}<div class="page{% if tags and 'news' in tags %} post{% endif %}"><div class="wrap">{{ content | safe }}</div></div>{% else %}{{ content | safe }}{% endif %}</main>
+  <div class="staff foot-staff" aria-hidden="true"></div>
   <footer class="site-foot">
     <div class="wrap">
-      <div>
-        <a class="brand" href="/">{% include "mark.njk" %}<span>Frank La Rocca</span></a>
-        <p>Composer-in-Residence, Benedict XVI Institute for Sacred Music and Divine Worship.</p>
-        <p>© 2026 Frank La Rocca</p>
-        <p class="colophon"><a href="https://lickitysplitweb.com">Site by Lickity Split Web Design</a></p>
-      </div>
+      <a class="foot-brand" href="/">{% include "mark.njk" %}<span class="foot-name">Frank La Rocca</span><span class="foot-role">Composer of sacred music</span></a>
       <nav aria-label="Footer">
-        <a href="/works/">Works</a><a href="/recordings/">Recordings</a><a href="/performances/">Performances</a><a href="/biography/">Biography</a><a href="/reviews/">Press</a><a href="/news/">News</a><a href="/contact/">Contact</a>
+        <a href="/">Home</a><a href="/works/">Works</a><a href="/recordings/">Recordings</a><a href="/performances/">Performances</a><a href="/biography/">Biography</a><a href="/reviews/">Press</a><a href="/news/">News</a><a href="/contact/">Contact</a>
       </nav>
+      <p class="foot-inst">Composer-in-Residence, Benedict XVI Institute for Sacred Music and Divine Worship</p>
+      <div class="foot-rule"></div>
+      <p class="foot-small">© 2026 Frank La Rocca</p>
+      <p class="foot-small colophon"><a href="https://lickitysplitweb.com">Site by Lickity Split Web Design</a></p>
     </div>
   </footer>
   <script>
