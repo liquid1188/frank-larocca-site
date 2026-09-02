@@ -209,7 +209,7 @@ em { font-style: italic; }
 blockquote { margin: 0 0 2rem; padding: 0 0 0 1.25rem; border-left: 2px solid var(--gold); max-width: var(--measure); }
 blockquote p { font-size: 1.15rem; }
 blockquote .attr { font-style: normal; }
-.portrait { float: right; width: min(40%, 380px); margin: .4rem 0 1.5rem 2.5rem; border-radius: 2px; filter: saturate(.85); }
+.portrait { float: right; width: min(34%, 340px); margin: .4rem 0 1.5rem 2.5rem; border-radius: 2px; filter: saturate(.85); }
 @media (max-width: 640px) { .portrait { float: none; width: 100%; max-width: 360px; margin: 0 0 1.5rem; } }
 .note { color: var(--ash); font-size: 1rem; }
 .news-list article { padding: 1.2rem 0; border-top: 1px solid var(--gold-dim); max-width: 60rem; }
@@ -409,3 +409,10 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .affil-grid .affil-role { display: block; font-size: .9rem; color: var(--ash); }
 .affil-grid li:hover img { opacity: 1; }
 .logo-row li.raw img { filter: none; opacity: .9; }
+
+.lede-bio { font-family: var(--display); font-size: 1.5rem; line-height: 1.35; max-width: 34ch; margin-bottom: 1.5rem; }
+.pub-list { list-style: none; margin: 0 0 1rem; padding: 0; max-width: 40rem; }
+.pub-list li { padding: .7rem 0; border-top: 1px solid var(--gold-dim); font-family: var(--display); font-size: 1.35rem; }
+.pub-list a { text-decoration: none; }
+.press-strip img[src*="catholic-thing"] { height: 20px; }
+.press-strip img[src*="first-things"] { height: 22px; }

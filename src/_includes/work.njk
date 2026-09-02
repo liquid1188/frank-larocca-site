@@ -23,4 +23,13 @@ eleventyComputed:
 {%- if vid %}
 <div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{{ vid | ytid }}" title="{{ title }}, recording" allowfullscreen></iframe></div>
 {%- endif %}
+{%- set cat = categories | first %}
+{%- set related = [] %}
+{%- for w in collections.work %}{% if w.data.slug != slug and cat in w.data.categories and related.length < 6 %}{% set related = (related.push(w), related) %}{% endif %}{% endfor %}
+{%- if related | length %}
+<h2 class="section-title" style="margin-top:3rem">More {{ cat | lower }}</h2>
+<div class="cards">
+{%- for w in related %}{% include "card.njk" %}{% endfor %}
+</div>
+{%- endif %}
 <p style="margin-top:2.5rem"><a class="backlink" href="/works/">All works</a></p>

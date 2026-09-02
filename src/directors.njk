@@ -10,9 +10,9 @@ description: "Perusal scores, performance materials, publishers, and the parish 
 <p>The full orchestral edition and the parish edition (chorus and organ, all choral parts retained) are administered through the Benedict XVI Institute. Performance materials: <a href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a>.</p>
 <div class="work-links"><a href="{{ site.instituteComposerPage }}">Parish edition at the Institute</a><a href="https://benedictinstitute.org/reverent-liturgy-project/">Request a perusal copy</a><a href="/works/mass-of-the-americas/">About the work</a></div>
 <h2 class="section-title">Publishers</h2>
-<ul class="dates">
+<ul class="pub-list">
 {%- for a in affiliations %}{% if a.role == "Publisher" %}
-  <li><span class="when">Scores</span><div><div class="what">{% if a.url %}<a href="{{ a.url }}" style="text-decoration:none">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}</div></div></li>
+  <li>{% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}</li>
 {%- endif %}{% endfor %}
 </ul>
 <h2 class="section-title">Commissions and unpublished works</h2>
