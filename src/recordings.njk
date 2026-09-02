@@ -6,36 +6,17 @@ description: "Recordings of Frank La Rocca's music on Cappella Records and Enhar
 ---
 <h1>Recordings</h1>
 <div class="albums stack">
-
-<div class="album" id="mass-of-the-americas">
-  <img src="/images/mass-of-the-americas-cover.jpg" alt="Album cover: Frank La Rocca — Mass of the Americas, Cappella Records" width="1200" height="1200" loading="eager" fetchpriority="high">
+{%- for r in recordings %}
+<div class="album" id="{{ r.id }}">
+  {% if r.cover %}<img src="{{ r.cover }}" alt="Album cover, {{ r.title }}" width="1200" height="1200" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">{% else %}<div class="cover-blank"></div>{% endif %}
   <div>
-    <h2>Mass of the Americas</h2>
-    <p class="label">Cappella Records, CR-425, 2022</p>
-    <p>Benedict XVI Choir and Orchestra, Richard Sparks, conductor. Produced by multi-Grammy-winning producer Blanton Alspaugh and Soundmirror. Sung in Latin, Spanish, and Nahuatl. Debuted at #1 on the Billboard Traditional Classical chart.</p>
-    <div class="work-links"><a href="https://cappellarecords.com/recording/frank-la-rocca-mass-of-the-americas/">Album page</a></div>
+    <h2>{{ r.title | replace(" · ", "<br>") | safe }}</h2>
+    <p class="label">{{ r.label }}, {{ r.year }}</p>
+    <p>{{ r.blurb }}</p>
+    <div class="work-links">{% include "streaming.njk" %}</div>
   </div>
 </div>
-
-<div class="album" id="requiem">
-  <img src="/images/requiem-forgotten-cover.jpg" alt="Album cover: Frank La Rocca — Requiem for the Forgotten; Messe des Malades, Cappella Records" width="1200" height="1200" loading="lazy">
-  <div>
-    <h2>Requiem for the Forgotten<br>Messe des Malades</h2>
-    <p class="label">Cappella Records, CR-430, 2024</p>
-    <p>Benedict XVI Choir and Orchestra, Richard Sparks, conductor. The Requiem commemorates the displaced and the homeless; the Messe des Malades was inspired by the composer's late sister Carin.</p>
-    <div class="work-links"><a href="https://cappellarecords.com/recording/requiem-for-the-forgotten-messe-des-malades/">Album page</a></div>
-  </div>
-</div>
-
-<div class="album">
-  <div></div>
-  <div>
-    <h2>In This Place</h2>
-    <p class="label">Enharmonic Records, 2013</p>
-    <p>Frank La Rocca's debut solo CD. A 2013 Critic's Choice at American Record Guide; reached the top ten in classical CD sales on Amazon.</p>
-  </div>
-</div>
-
+{%- endfor %}
 </div>
 <h2 class="section-title">Earlier recordings</h2>
 <p><em>Canti d'Innocenza</em> (SCI); <em>String Trio</em> and <em>Secret Thoughts</em> (CRI); and a cappella choral works recorded by the San Francisco Girls Chorus, Young Women's Choral Projects, Tucson Girls Chorus, the Meistersingers, and Vanguard Voices.</p>

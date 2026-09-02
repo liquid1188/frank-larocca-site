@@ -1,0 +1,14 @@
+{%- set icons = {
+  youtube: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9l6 3.1-6 3.1Z"/></svg>',
+  soundcloud: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1 13.5h1v3.9H1zm2-1.4h1v5.3H3zm2-1h1v6.3H5zm2-1.2h1v7.5H7zm2 .4h1v7.1H9zm2-2.9h1v10h-1zm2 .8c.9-.6 2-1 3.2-1A5.5 5.5 0 0 1 20.6 12a3.2 3.2 0 1 1 .2 6.4H13z"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8Z"/></svg>',
+  x: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.8 3h3l-6.7 7.7L22 21h-6.2l-4.8-6.3L5.4 21h-3l7.2-8.2L2 3h6.3l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg>',
+  mail: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 6.5h18v11H3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="m3 7 9 6 9-6"/></svg>'
+} %}
+<ul class="socials" aria-label="Elsewhere">
+  <li><a href="{{ site.social.youtube }}" aria-label="YouTube" title="YouTube">{{ icons.youtube | safe }}</a></li>
+  <li><a href="{{ site.social.soundcloud }}" aria-label="SoundCloud" title="SoundCloud">{{ icons.soundcloud | safe }}</a></li>
+  <li><a href="{{ site.social.facebook }}" aria-label="Facebook" title="Facebook">{{ icons.facebook | safe }}</a></li>
+  <li><a href="{{ site.social.x }}" aria-label="X" title="X">{{ icons.x | safe }}</a></li>
+  <li><a href="/contact/" aria-label="Contact" title="Contact">{{ icons.mail | safe }}</a></li>
+</ul>

@@ -286,3 +286,28 @@ blockquote .attr { font-style: normal; }
 .more-review[open] summary { color: var(--gold); }
 .review-body { margin-top: 1.2rem; }
 .review-body p { font-size: 1.05rem; color: var(--ash); }
+
+/* socials */
+.socials { list-style: none; margin: 0 0 1.8rem; padding: 0; display: flex; gap: 1.4rem; justify-content: center; }
+.socials a { display: inline-flex; width: 26px; height: 26px; color: var(--ash); }
+.socials a:hover { color: var(--gold); }
+.socials svg { width: 100%; height: 100%; }
+
+/* affiliations */
+.affil-strip { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.2rem 2rem; }
+.affil-strip li a { text-decoration: none; display: block; }
+.affil-strip img { height: 34px; width: auto; max-width: 200px; filter: grayscale(1) contrast(1.1) opacity(.65); margin-bottom: .3rem; }
+.affil-name { display: block; font-family: var(--display); font-size: 1.35rem; line-height: 1.15; color: var(--ink); }
+.affil-role { display: block; font-size: .9rem; color: var(--ink-2); margin-top: .15rem; }
+.affil-strip li a:hover .affil-name { color: var(--rubric); }
+
+/* forms */
+.form label { display: block; margin-bottom: 1rem; font-size: .98rem; color: var(--ash); }
+.form input, .form textarea { display: block; width: 100%; margin-top: .35rem; font: inherit; font-size: 1.05rem; color: var(--vellum); background: var(--nave-2); border: 1px solid var(--gold-dim); border-radius: 2px; padding: .6rem .75rem; }
+.form input:focus, .form textarea:focus { outline: none; border-color: var(--gold); }
+.form button { margin-top: .4rem; }
+.form .sent { margin-top: 1rem; color: var(--gold); }
+.cover-blank { aspect-ratio: 1; background: var(--nave-2); border-radius: 2px; background-image: repeating-linear-gradient(to bottom, var(--gold-dim) 0 1px, transparent 1px 9px); background-size: 100% 37px; background-repeat: no-repeat; background-position: 0 40%; }
+.band.light .cover-blank { background-color: #e6dfd0; }
+.embed.tall { aspect-ratio: auto; height: 460px; }
+.album .links a { text-decoration: none; border-bottom: 1px solid var(--gold-dim); }

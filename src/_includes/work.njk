@@ -10,13 +10,16 @@ eleventyComputed:
 <div class="work-links">
 {%- if preview %}<a href="{{ preview }}">Preview the score</a>{%- endif %}
 {%- if audio %}<a href="{{ audio }}">Listen</a>{%- endif %}
+{%- if video %}<a href="{{ video }}">Watch</a>{%- endif %}
 {%- if purchase %}<a href="{{ purchase }}">Purchase</a>{%- endif %}
 {%- if recording %}<a href="{{ recording }}">Recording</a>{%- endif %}
+{%- if directors %}<a href="{{ directors }}">Parish edition</a>{%- endif %}
 </div>
 {%- if content | trim %}
 <div style="margin-top:2rem">{{ content | safe }}</div>
 {%- endif %}
-{%- if audio and "youtu" in audio %}
-<div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{{ audio | ytid }}" title="{{ title }}, recording" allowfullscreen></iframe></div>
+{%- set vid = video if video else (audio if (audio and "youtu" in audio) else "") %}
+{%- if vid %}
+<div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{{ vid | ytid }}" title="{{ title }}, recording" allowfullscreen></iframe></div>
 {%- endif %}
 <p style="margin-top:2.5rem"><a class="backlink" href="/works/">All works</a></p>

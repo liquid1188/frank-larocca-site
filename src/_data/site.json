@@ -1,1 +1,19 @@
-{ "url": "https://franklarocca.com", "setupMode": true }
+{
+  "url": "https://franklarocca.com",
+  "setupMode": true,
+  "contactEmail": "lumenverummusic@gmail.com",
+  "materialsEmail": "lumenverummusic@gmail.com",
+  "pressAddress": "2965 N. Mountain Avenue, Claremont, CA 91711",
+  "pressPhone": "510.914.3243",
+  "social": {
+    "youtube": "https://www.youtube.com/@FrankLaRocca",
+    "soundcloud": "https://soundcloud.com/frank-larocca",
+    "facebook": "https://www.facebook.com/Frank-La-Rocca-Composer-48894522445/",
+    "x": "https://x.com/compozor",
+    "issuu": "https://issuu.com/compozor"
+  },
+  "youtubeUploads": "UUwsbg8FlGKrB7gi3FJNo1Hw",
+  "institute": "https://benedictinstitute.org/",
+  "instituteComposerPage": "https://benedictinstitute.org/larocca/",
+  "projectGuadalupe": "https://www.projectguadalupe.org/"
+}

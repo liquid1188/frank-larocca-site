@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: For directors
+permalink: /directors/
+description: "Perusal scores, performance materials, publishers, and the parish edition of the Mass of the Americas for choir directors and music directors."
+---
+<h1>For directors</h1>
+<p>Most of the catalog is available for perusal online and for purchase from the publishers below. Score previews on each <a href="/works/">work page</a> open the full score on Issuu.</p>
+<h2 class="section-title">Mass of the Americas</h2>
+<p>The full orchestral edition and the parish edition (chorus and organ, all choral parts retained) are administered through the Benedict XVI Institute. Performance materials: <a href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a>.</p>
+<div class="work-links"><a href="{{ site.instituteComposerPage }}">Parish edition at the Institute</a><a href="/works/mass-of-the-americas/">About the work</a></div>
+<h2 class="section-title">Publishers</h2>
+<ul class="dates">
+{%- for a in affiliations %}{% if a.role == "Publisher" %}
+  <li><span class="when">Scores</span><div><div class="what">{% if a.url %}<a href="{{ a.url }}" style="text-decoration:none">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}</div></div></li>
+{%- endif %}{% endfor %}
+</ul>
+<h2 class="section-title">Commissions and unpublished works</h2>
+<p>For commissions, works not yet in print, or questions about forces and editions, write through the <a href="/contact/">contact page</a>.</p>

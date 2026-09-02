@@ -9,3 +9,10 @@ permalink: /news/
   <article><h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3><time datetime="{{ post.data.date | isoDate }}">{{ post.data.date | readableDate }}</time></article>
 {%- endfor %}
 </div>
+
+<h2 class="section-title">Interviews, profiles, and writing</h2>
+<ul class="dates">
+{%- for w in writing | sort(true, false, "year") %}
+  <li><span class="when">{{ w.year }}</span><div><div class="what"><a href="{{ w.url }}" style="text-decoration:none">{{ w.title }}</a></div><p class="where">{{ w.outlet }}</p></div></li>
+{%- endfor %}
+</ul>

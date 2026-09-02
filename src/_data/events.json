@@ -1,6 +1,9 @@
 [
-  { "iso": "2026-02-07", "work": "Messe des Malades", "date": "February 7, 2026, 11 am", "venue": "Cathedral of Christ the Light", "city": "Oakland, CA" },
-  { "iso": "2026-02-20", "work": "Miserere, Solemn Pontifical Mass", "date": "February 20, 2026", "venue": "Shrine of St. Francis of Assisi", "city": "San Francisco, CA" },
+  { "iso": "2026-12-12", "work": "Mass of the Americas", "date": "December 12, 2026", "venue": "Basilica of Saint Mary", "city": "Alexandria, VA", "url": "https://www.projectguadalupe.org/" },
+  { "iso": "2026-05-17", "work": "Mass of the Americas", "date": "May 17, 2026, 3 pm", "venue": "St. Thomas Aquinas Chapel, University of St. Thomas", "city": "St. Paul, MN" },
+  { "iso": "2026-03-13", "work": "Mass of the Americas", "date": "March 13, 2026", "venue": "Ave Maria University, Academy of Catholic Scholars and Artists", "city": "Ave Maria, FL" },
   { "iso": "2026-03-11", "work": "Mass of the Americas", "date": "March 11, 2026, 4 pm", "venue": "Ave Maria Basilica", "city": "Ave Maria, FL" },
-  { "iso": "2026-05-17", "work": "Mass of the Americas", "date": "May 17, 2026, 3 pm", "venue": "St. Thomas Aquinas Chapel, University of St. Thomas", "city": "St. Paul, MN" }
+  { "iso": "2026-02-20", "work": "Miserere, Solemn Pontifical Mass", "date": "February 20, 2026", "venue": "Shrine of St. Francis of Assisi", "city": "San Francisco, CA" },
+  { "iso": "2026-02-07", "work": "Messe des Malades", "date": "February 7, 2026, 11 am", "venue": "Cathedral of Christ the Light", "city": "Oakland, CA" },
+  { "iso": "2025-10-07", "work": "Mass of the Americas, celebrated by Archbishop Cordileone", "date": "October 7, 2025", "venue": "Basílica de Santa María de Guadalupe", "city": "Mexico City" }
 ]

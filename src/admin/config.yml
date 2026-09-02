@@ -17,10 +17,12 @@ collections:
           options: ["Mass settings & large works", "SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] }
       - { name: forces, label: Forces & duration, required: false }
       - { name: year, label: Year, required: false }
-      - { name: recording, label: Recording page link, required: false }
       - { name: preview, label: Score preview link, required: false }
-      - { name: audio, label: Audio link, required: false }
+      - { name: audio, label: Audio link (YouTube or SoundCloud), required: false }
+      - { name: video, label: Video link (YouTube), required: false }
       - { name: purchase, label: Purchase link, required: false }
+      - { name: recording, label: Recording page link, required: false }
+      - { name: directors, label: Performance materials link, required: false }
       - { name: layout, widget: hidden, default: work.njk }
       - { name: tags, widget: hidden, default: work }
       - { name: permalink, widget: hidden }
@@ -48,9 +50,38 @@ collections:
             fields:
               - { name: iso, label: Date (YYYY-MM-DD, used for sorting) }
               - { name: work, label: Work }
-              - { name: date, label: Date & time }
+              - { name: date, label: Date & time as shown }
               - { name: venue, label: Venue }
               - { name: city, label: City }
+              - { name: url, label: Details link, required: false }
+      - name: featured
+        label: Featured works (home page)
+        file: src/_data/featured.json
+        fields:
+          - { name: featured, label: Work slugs, widget: list, field: { name: slug, label: Slug } }
+      - name: recordings
+        label: Recordings
+        file: src/_data/recordings.json
+        fields:
+          - name: recordings
+            label: Albums
+            widget: list
+            fields:
+              - { name: id, label: Anchor id }
+              - { name: title, label: Title }
+              - { name: label, label: Label and catalogue number }
+              - { name: year, label: Year, widget: number }
+              - { name: cover, label: Cover image, widget: image, required: false }
+              - { name: blurb, label: Description, widget: text }
+              - name: links
+                label: Links
+                widget: object
+                fields:
+                  - { name: label, label: Label page, required: false }
+                  - { name: spotify, label: Spotify, required: false }
+                  - { name: apple, label: Apple Music, required: false }
+                  - { name: amazon, label: Amazon, required: false }
+                  - { name: youtube, label: YouTube Music, required: false }
       - name: press
         label: Press strip
         file: src/_data/press.json
@@ -61,3 +92,52 @@ collections:
             fields:
               - { name: name, label: Name }
               - { name: logo, label: Logo image, widget: image, required: false }
+      - name: affiliations
+        label: Affiliations
+        file: src/_data/affiliations.json
+        fields:
+          - name: affiliations
+            label: Organisations
+            widget: list
+            fields:
+              - { name: name, label: Full name }
+              - { name: short, label: Short name }
+              - { name: role, label: Role }
+              - { name: url, label: Link, required: false }
+              - { name: logo, label: Logo image, widget: image, required: false }
+      - name: writing
+        label: Interviews & writing
+        file: src/_data/writing.json
+        fields:
+          - name: writing
+            label: Items
+            widget: list
+            fields:
+              - { name: title, label: Title }
+              - { name: outlet, label: Outlet }
+              - { name: year, label: Year, widget: number }
+              - { name: url, label: Link }
+              - { name: kind, label: Kind }
+      - name: site
+        label: Site settings
+        file: src/_data/site.json
+        fields:
+          - { name: url, label: Site URL }
+          - { name: setupMode, label: Setup mode (hide from search engines), widget: boolean }
+          - { name: contactEmail, label: Contact form delivers to }
+          - { name: materialsEmail, label: Performance materials email }
+          - { name: pressAddress, label: Press address }
+          - { name: pressPhone, label: Press phone }
+          - name: social
+            label: Social links
+            widget: object
+            fields:
+              - { name: youtube, label: YouTube }
+              - { name: soundcloud, label: SoundCloud }
+              - { name: facebook, label: Facebook }
+              - { name: x, label: X }
+              - { name: issuu, label: Issuu }
+          - { name: youtubeUploads, label: YouTube uploads playlist id }
+          - { name: institute, label: Benedict XVI Institute link }
+          - { name: instituteComposerPage, label: Institute composer page }
+          - { name: projectGuadalupe, label: Project Guadalupe link }

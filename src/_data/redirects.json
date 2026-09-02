@@ -1,0 +1,6 @@
+[
+  { "from": "/blog", "to": "/news/" }, { "from": "/cd-recordings", "to": "/recordings/" },
+  { "from": "/chamber-orchestral", "to": "/works/" }, { "from": "/choral", "to": "/works/" }, { "from": "/choral-propers", "to": "/works/" },
+  { "from": "/choralinstrumental", "to": "/works/" }, { "from": "/ssaa", "to": "/works/" }, { "from": "/concerts", "to": "/performances/" },
+  { "from": "/media", "to": "/listen/" }
+]

@@ -7,7 +7,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     <div class="hero-copy">
       <h1>Frank<br>La Rocca</h1>
       <p class="role">Composer of sacred music</p>
-      <p class="lede">Composer-in-Residence at the Benedict XVI Institute. His <em>Mass of the Americas</em> debuted at number one on the Billboard Traditional Classical chart.</p>
+      <p class="lede">Composer-in-Residence at the <a href="{{ site.instituteComposerPage }}">Benedict XVI Institute</a>. His <em>Mass of the Americas</em> debuted at number one on the Billboard Traditional Classical chart.</p>
       <div class="actions">
         <button class="btn primary" id="listen" aria-expanded="false" aria-controls="player">Listen to the Mass of the Americas</button>
         <a class="btn" href="/works/">Browse the catalog</a>
@@ -52,25 +52,26 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
   <div class="wrap">
     <div class="band-head"><h2>Recordings</h2><a class="more" href="/recordings/">All recordings</a></div>
     <div class="albums">
+    {%- for r in recordings | batch(2) | first %}
       <div class="album">
-        <img src="/images/mass-of-the-americas-cover.jpg" alt="Album cover, Mass of the Americas" width="1200" height="1200" loading="lazy">
+        {% if r.cover %}<img src="{{ r.cover }}" alt="Album cover, {{ r.title }}" width="1200" height="1200" loading="lazy">{% else %}<div class="cover-blank"></div>{% endif %}
         <div>
-          <h3>Mass of the Americas</h3>
-          <p class="label">Cappella Records, 2022</p>
-          <p>Benedict XVI Choir and Orchestra, Richard Sparks. Sung in Latin, Spanish, and Nahuatl.</p>
-          <p class="links"><a href="https://cappellarecords.com/recording/frank-la-rocca-mass-of-the-americas/">Cappella Records</a></p>
+          <h3>{{ r.title | replace(" · ", "<br>") | safe }}</h3>
+          <p class="label">{{ r.label }}, {{ r.year }}</p>
+          <p class="links">{% include "streaming.njk" %}</p>
         </div>
       </div>
-      <div class="album">
-        <img src="/images/requiem-forgotten-cover.jpg" alt="Album cover, Requiem for the Forgotten and Messe des Malades" width="1200" height="1200" loading="lazy">
-        <div>
-          <h3>Requiem for the Forgotten<br>Messe des Malades</h3>
-          <p class="label">Cappella Records, 2024</p>
-          <p>Benedict XVI Choir and Orchestra, Richard Sparks. A Requiem for the homeless, and a Mass for the sick.</p>
-          <p class="links"><a href="https://cappellarecords.com/recording/requiem-for-the-forgotten-messe-des-malades/">Cappella Records</a></p>
-        </div>
-      </div>
+    {%- endfor %}
     </div>
+  </div>
+</section>
+
+<section class="band light affil">
+  <div class="wrap">
+    <div class="band-head"><h2>Affiliations</h2></div>
+    <ul class="affil-strip">
+    {%- for a in affiliations %}<li>{% if a.url %}<a href="{{ a.url }}">{% endif %}{% if a.logo %}<img src="{{ a.logo }}" alt="{{ a.name }}" loading="lazy">{% else %}<span class="affil-name">{{ a.short }}</span>{% endif %}<span class="affil-role">{{ a.role }}</span>{% if a.url %}</a>{% endif %}</li>{% endfor %}
+    </ul>
   </div>
 </section>
 
@@ -81,7 +82,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     <div>
       <div class="band-head"><h2>{% if upcoming | length %}Upcoming{% else %}Recent performances{% endif %}</h2><a class="more" href="/performances/">All performances</a></div>
       <ul class="dates{% if not upcoming | length %} past{% endif %}">
-      {%- set shown = upcoming if upcoming | length else (past | reverse) %}
+      {%- set shown = (upcoming | sort(false, false, "iso")) if upcoming | length else (past | sort(true, false, "iso")) %}
       {%- for e in shown | batch(3) | first %}
         <li><span class="when">{{ e.iso | shortDate }}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}</p></div></li>
       {%- endfor %}

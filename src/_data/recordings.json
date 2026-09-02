@@ -1,0 +1,11 @@
+[
+  { "id": "mass-of-the-americas", "title": "Mass of the Americas", "label": "Cappella Records, CR-425", "year": 2022, "cover": "/images/mass-of-the-americas-cover.jpg",
+    "blurb": "Benedict XVI Choir and Orchestra, Richard Sparks, conductor. Produced by multi-Grammy-winning producer Blanton Alspaugh and Soundmirror. Sung in Latin, Spanish, and Nahuatl. Debuted at number one on the Billboard Traditional Classical chart.",
+    "links": { "label": "https://cappellarecords.com/recording/frank-la-rocca-mass-of-the-americas/", "amazon": "https://www.amazon.com/Frank-Rocca-Benedict-Choir-Orchestra/dp/B0B82ZFQYL", "spotify": "", "apple": "", "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_nJXFIZMRq6C8O2DRGI7bqdXkiVbB9t8p4" } },
+  { "id": "requiem", "title": "Requiem for the Forgotten · Messe des Malades", "label": "Cappella Records, CR-430", "year": 2024, "cover": "/images/requiem-forgotten-cover.jpg",
+    "blurb": "Benedict XVI Choir and Orchestra, Richard Sparks, conductor. The Requiem commemorates the displaced and the homeless; the Messe des Malades was inspired by the composer's late sister Carin.",
+    "links": { "label": "https://cappellarecords.com/recording/requiem-for-the-forgotten-messe-des-malades/", "amazon": "", "spotify": "", "apple": "", "youtube": "" } },
+  { "id": "in-this-place", "title": "In This Place", "label": "Enharmonic Records", "year": 2013, "cover": "",
+    "blurb": "Frank La Rocca's debut solo CD with the Artists Vocal Ensemble. A 2013 Critic's Choice at American Record Guide; reached the top ten in classical CD sales on Amazon.",
+    "links": { "label": "", "amazon": "https://www.amazon.com/This-Place-Artists-Vocal-Ensemble/dp/B00AOCMRX2/", "spotify": "", "apple": "", "youtube": "" } }
+]

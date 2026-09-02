@@ -2,9 +2,31 @@
 layout: base.njk
 title: Contact
 permalink: /contact/
+description: "Contact composer Frank La Rocca for commissions, performances, and press."
 ---
 <h1>Contact</h1>
-<h2 class="section-title">Commissions and performance inquiries</h2>
-<p class="note">Contact details to be confirmed with the composer.</p>
-<h2 class="section-title">Mass of the Americas</h2>
-<p>Performance materials and the parish edition: <a href="mailto:lumenverummusic@gmail.com">lumenverummusic@gmail.com</a></p>
+<div class="two-up">
+  <div>
+    <form class="form" action="https://formsubmit.co/{{ site.contactEmail }}" method="POST">
+      <input type="hidden" name="_subject" value="franklarocca.com contact">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="{{ site.url }}/contact/?sent=1">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>Subject<input type="text" name="subject"></label>
+      <label>Message<textarea name="message" rows="7" required></textarea></label>
+      <button class="btn primary" type="submit">Send</button>
+      <p class="note sent" hidden>Thank you. Your message has been sent.</p>
+    </form>
+  </div>
+  <div>
+    <h2 class="section-title" style="margin-top:0">Performance materials</h2>
+    <p><em>Mass of the Americas</em> and works published by Lumen Verum Music: <a href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a></p>
+    <p class="note">Directors: see <a href="/directors/">For directors</a> for perusal scores and publishers.</p>
+    <h2 class="section-title">Press and media</h2>
+    <p>{{ site.pressAddress }}<br>{{ site.pressPhone }}</p>
+    <p class="note"><a href="/press-kit/">Press kit</a> with biography and photographs.</p>
+  </div>
+</div>
+<script>if(location.search.indexOf('sent=1')>-1){var s=document.querySelector('.sent');s.hidden=false;s.scrollIntoView();}</script>

@@ -29,6 +29,7 @@
       <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
       <nav class="site-nav" id="nav">
         <a href="/works/"{% if "/works" in page.url %} aria-current="page"{% endif %}>Works</a>
+        <a href="/listen/"{% if "/listen" in page.url %} aria-current="page"{% endif %}>Listen</a>
         <a href="/recordings/"{% if "/recordings" in page.url %} aria-current="page"{% endif %}>Recordings</a>
         <a href="/performances/"{% if "/performances" in page.url %} aria-current="page"{% endif %}>Performances</a>
         <a href="/biography/"{% if "/biography" in page.url %} aria-current="page"{% endif %}>Biography</a>
@@ -44,9 +45,10 @@
     <div class="wrap">
       <a class="foot-brand" href="/">{% include "mark-wide.njk" %}<span class="foot-name">Frank La Rocca</span><span class="foot-role">Composer of sacred music</span></a>
       <nav aria-label="Footer">
-        <a href="/">Home</a><a href="/works/">Works</a><a href="/recordings/">Recordings</a><a href="/performances/">Performances</a><a href="/biography/">Biography</a><a href="/reviews/">Press</a><a href="/news/">News</a><a href="/contact/">Contact</a>
+        <a href="/">Home</a><a href="/works/">Works</a><a href="/listen/">Listen</a><a href="/recordings/">Recordings</a><a href="/performances/">Performances</a><a href="/biography/">Biography</a><a href="/reviews/">Press</a><a href="/news/">News</a><a href="/directors/">For directors</a><a href="/contact/">Contact</a>
       </nav>
-      <p class="foot-inst">Composer-in-Residence, Benedict XVI Institute for Sacred Music and Divine Worship</p>
+      {% include "icons.njk" %}
+      <p class="foot-inst">Composer-in-Residence, <a href="{{ site.institute }}">Benedict XVI Institute for Sacred Music and Divine Worship</a></p>
       <div class="foot-rule"></div>
       <p class="foot-small">© 2026 Frank La Rocca</p>
       <p class="foot-small colophon"><a href="https://lickitysplitweb.com">Site by Lickity Split Web Design</a></p>
