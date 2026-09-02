@@ -374,7 +374,7 @@ blockquote .attr { font-style: normal; }
 
 blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style: normal; }
 
-.press-strip.on-dark { border-top: 0; margin: 0 0 2.5rem; padding: 0; justify-content: flex-start; gap: .8rem 2.2rem; }
+.press-strip.on-dark { border-top: 0; margin: 0 0 2.5rem; padding: 0; justify-content: flex-start; gap: 1.4rem 1.7rem; }
 .press-strip.on-dark li { color: var(--ash); font-size: 1.15rem; }
 .press-strip.on-dark img { filter: brightness(0) invert(1) opacity(.7); height: 30px; }
 .press-strip.on-dark li.raw img { filter: grayscale(1) opacity(.85); }

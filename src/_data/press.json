@@ -25,6 +25,11 @@
     "home": true
   },
   {
+    "name": "First Things",
+    "logo": "/images/press/logo-first-things.svg",
+    "home": true
+  },
+  {
     "name": "National Catholic Register",
     "logo": "/images/press/logo-ncr.png",
     "home": true
@@ -71,11 +76,6 @@
     "logo": "/images/press/logo-new-liturgical-movement.png",
     "home": false,
     "tall": true
-  },
-  {
-    "name": "First Things",
-    "logo": "/images/press/logo-first-things.svg",
-    "home": true
   },
   {
     "name": "The Catholic Thing",
