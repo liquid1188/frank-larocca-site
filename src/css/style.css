@@ -221,19 +221,19 @@ blockquote .attr { font-style: normal; }
 
 /* ---------- footer ---------- */
 .foot-staff { margin-top: 2rem; }
-.site-foot { padding: 3.5rem 0 2.5rem; color: var(--ash); font-size: .98rem; text-align: center; }
+.site-foot { padding: 2.75rem 0 2rem; color: var(--ash); font-size: .98rem; text-align: center; }
 .site-foot .wrap { display: flex; flex-direction: column; align-items: center; }
-.foot-brand { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--vellum); margin-bottom: 2.2rem; }
+.foot-brand { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--vellum); margin-bottom: 1.6rem; }
 .foot-brand svg { width: 272px; height: 80px; margin-bottom: 0; max-width: 80vw; }
 .foot-name { font-family: var(--display); font-size: 2.2rem; font-weight: 500; line-height: 1; letter-spacing: .005em; margin-top: .2rem; }
 .foot-rule { display: block; width: 272px; max-width: 80vw; height: 1px; margin: .8rem auto .8rem; background: linear-gradient(90deg, transparent, var(--gold-dim) 15%, var(--gold-dim) 85%, transparent); position: relative; }
 .foot-rule::after { content: ""; position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; background: var(--gold); transform: translate(-50%, -50%) rotate(45deg); }
 .foot-role { font-family: var(--body); font-size: .74rem; color: var(--gold); letter-spacing: .28em; text-transform: uppercase; }
 .foot-brand:hover { color: var(--vellum); }
-.site-foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.6rem; margin-bottom: 1.6rem; }
+.site-foot nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .1rem 1.4rem; margin-bottom: 1rem; }
 .site-foot nav a { text-decoration: none; color: var(--ash); font-size: 1rem; padding: .4rem .1rem; display: inline-block; }
 .site-foot nav a:hover { color: var(--gold); }
-.foot-inst { max-width: 46ch; margin: 0 auto 2rem; font-size: .95rem; }
+.foot-inst { max-width: 46ch; margin: 0 auto 1.2rem; font-size: .92rem; }
 .foot-rule { width: 100%; max-width: 60rem; height: 1px; background: var(--gold-dim); margin: 0 auto 1.6rem; }
 .foot-small { margin: 0 0 .35em; font-size: .9rem; max-width: none; }
 .colophon a { text-decoration: none; border-bottom: 1px solid var(--gold-dim); }
@@ -289,7 +289,7 @@ blockquote .attr { font-style: normal; }
 .review-body p { font-size: 1.05rem; color: var(--ash); }
 
 /* socials */
-.socials { list-style: none; margin: 0 0 1.8rem; padding: 0; display: flex; gap: 1.4rem; justify-content: center; }
+.socials { list-style: none; margin: 0 0 1.2rem; padding: 0; display: flex; gap: 1rem; justify-content: center; }
 .socials a { display: inline-flex; width: 26px; height: 26px; padding: 6px; box-sizing: content-box; color: var(--ash); }
 .socials a:hover { color: var(--gold); }
 .socials svg { width: 100%; height: 100%; }
@@ -355,7 +355,7 @@ blockquote .attr { font-style: normal; }
 .work-hero figcaption, .inline-photo figcaption { color: var(--ash); font-size: .85rem; margin-top: .5rem; }
 .inline-photo { margin: 2rem 0; max-width: 60rem; }
 .inline-photo img { border-radius: 2px; }
-.foot-support { margin-bottom: 2rem; }
+.foot-support { margin-bottom: 1.6rem; }
 
 /* affiliation logo row (dark) */
 .logo-row { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem 3.5rem; }
@@ -419,3 +419,9 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .pub-list a { text-decoration: none; }
 .press-strip img[src*="catholic-thing"] { height: 20px; }
 .press-strip img[src*="first-things"] { height: 22px; }
+.foot-hair { width: 100%; max-width: 60rem; height: 1px; background: var(--gold-dim); margin: 0 auto 1.2rem; }
+.signin { color: var(--ash); text-decoration: none; opacity: .7; }
+.signin:hover { opacity: 1; color: var(--gold); }
+.epigraph-close { font-family: var(--display); font-style: italic; font-size: 1.35rem; line-height: 1.3; max-width: 34ch; margin: 3rem 0 0; clear: both; }
+.epigraph-close span { display: block; font-family: var(--body); font-style: normal; font-size: .9rem; color: var(--ash); margin-top: .3rem; }
+@media (max-width: 720px) { .site-foot nav { gap: 0 1.1rem; } .site-foot nav a { font-size: .95rem; padding: .3rem .1rem; } }
