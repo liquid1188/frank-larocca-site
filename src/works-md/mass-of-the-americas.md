@@ -19,7 +19,7 @@ tags: work
 layout: work.njk
 permalink: "/works/mass-of-the-americas/"
 ---
-Commissioned by Archbishop Salvatore Cordileone as a twinned tribute to Our Lady under her titles the Immaculate Conception and Our Lady of Guadalupe, the Mass weaves Gregorian chant, Mexican folk hymns, and an Ave Maria in Nahuatl into a setting for the Latin Mass. Recorded by the Benedict XVI Choir and Orchestra under Richard Sparks, it debuted at number one on the Billboard Traditional Classical chart. A parish edition condenses the orchestral writing for organ while keeping every choral part.
+Commissioned by Archbishop Salvatore Cordileone as a twinned tribute to Our Lady under her titles the Immaculate Conception and Our Lady of Guadalupe, the *Misa de las Américas* extends the tradition of the Missa solemnis: a setting of the Traditional Latin Mass for choir and orchestra that weaves Gregorian chant, folk melodies from eighteenth-century Mexico, and an Ave Maria in Nahuatl, the language in which Our Lady spoke to St. Juan Diego in 1531. William P. Mahrt, editor of the journal *Sacred Music*, closes his essay on the work by calling its movements "destined to be classics." A parish edition condenses the orchestral writing for organ while keeping every choral part.
 
 <figure class="inline-photo"><img src="/images/mass-of-the-americas-choir.jpg" alt="The choir singing the Mass of the Americas" loading="lazy" width="1500" height="790"><figcaption>Benedict XVI Choir. Courtesy of the Benedict XVI Institute.</figcaption></figure>
 
