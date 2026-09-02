@@ -45,12 +45,12 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
   <div class="wrap">
     <blockquote class="marked">
       <span class="qmark" aria-hidden="true">&ldquo;</span>
-      <p>{{ endorsements[0].quote }}</p>
-      <cite>{{ endorsements[0].name }}, {{ endorsements[0].title }}</cite>
+      <p>&ldquo;{{ endorsements[0].quote }}&rdquo;</p>
+      <cite>{% if endorsements[0].url %}<a href="{{ endorsements[0].url }}">{% endif %}{{ endorsements[0].name }}, {{ endorsements[0].title }}{% if endorsements[0].url %}</a>{% endif %}</cite>
     </blockquote>
     <div class="quotes-two">
     {%- for e in endorsements | batch(3) | first %}{% if not loop.first %}
-      <blockquote><p>{{ e.quote }}</p><cite>{{ e.name }}, {{ e.title }}</cite></blockquote>
+      <blockquote><p>&ldquo;{{ e.quote }}&rdquo;</p><cite>{% if e.url %}<a href="{{ e.url }}">{% endif %}{{ e.name }}, {{ e.title }}{% if e.url %}</a>{% endif %}</cite></blockquote>
     {%- endif %}{% endfor %}
     </div>
     <ul class="press-strip" aria-label="Reviewed in">
