@@ -56,9 +56,14 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
       <blockquote><p>&ldquo;{{ e.quote }}&rdquo;</p><cite>{% if e.url %}<a href="{{ e.url }}">{% endif %}{{ e.name }}, {{ e.title }}{% if e.url %}</a>{% endif %}</cite></blockquote>
     {%- endif %}{% endfor %}
     </div>
-    <ul class="press-strip" aria-label="Reviewed in">
-    {%- for o in press %}{% if o.home %}<li class="{% if o.raw %}raw {% endif %}{% if o.small %}small{% endif %}">{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}">{% else %}{{ o.name }}{% endif %}</li>{% endif %}{% endfor %}
+    {%- set homepress = [] %}{% for o in press %}{% if o.home %}{% set homepress = (homepress.push(o), homepress) %}{% endif %}{% endfor %}
+    <div class="press-strip-wrap" aria-label="Reviewed in">
+    {%- for row in homepress | batch(4) %}
+    <ul class="press-strip{% if not loop.first %} continued{% endif %}">
+    {%- for o in row %}<li class="{% if o.raw %}raw {% endif %}{% if o.small %}small{% endif %}">{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
     </ul>
+    {%- endfor %}
+    </div>
   </div>
 </section>
 

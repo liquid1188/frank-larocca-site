@@ -278,7 +278,8 @@ blockquote .attr { font-style: normal; }
 @media (max-width: 720px) { .cards.three { grid-template-columns: 1fr; } .cards { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem 1rem; } .card-title { font-size: 1.2rem; } }
 
 /* press strip */
-.press-strip { list-style: none; margin: 3rem auto 0; padding: 2.5rem 0 .5rem; border-top: 1px solid var(--hair); display: flex; flex-wrap: wrap; justify-content: center; gap: 2.2rem 2.4rem; max-width: 60rem; }
+.press-strip { list-style: none; margin: 3rem auto 0; padding: 2.5rem 0 .5rem; border-top: 1px solid var(--hair); display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem 3rem; max-width: 60rem; }
+.press-strip.continued { margin-top: 0; padding-top: 0; border-top: 0; }
 .press-strip li { font-family: var(--display); font-size: 1.25rem; color: var(--ink-2); letter-spacing: .01em; display: flex; align-items: center; }
 .press-strip img { height: 36px; width: auto; max-width: 220px; filter: brightness(0) opacity(.7); }
 .press-strip li:hover img { filter: brightness(0) opacity(1); }
@@ -471,8 +472,7 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .affil-grid li { flex: 0 0 auto; width: calc(100% / 6 - 1.5rem); text-align: center; }
 .affil-grid .affil-logo { justify-content: center; }
 @media (max-width: 900px) { .affil-grid li { width: calc(100% / 3 - 1.5rem); } }
-.press-strip li { flex: 0 0 auto; width: calc(25% - 2.4rem); justify-content: center; }
-@media (max-width: 720px) { .press-strip li { width: calc(50% - 1.8rem); } }
+.press-strip li { flex: 0 0 auto; justify-content: center; }
 .press-strip.on-dark li { width: auto; }
 .center { margin-left: auto; margin-right: auto; text-align: center; }
 figure.center { display: block; }
