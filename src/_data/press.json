@@ -22,7 +22,6 @@
   {
     "name": "Billboard",
     "logo": "/images/press/logo-billboard.png",
-    "small": true,
     "home": true
   },
   {

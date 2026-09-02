@@ -10,6 +10,7 @@ heroAlt: "Mass of the Americas being celebrated"
 heroCaption: "Mass of the Americas. Courtesy of the Benedict XVI Institute."
 directors: "https://benedictinstitute.org/larocca/"
 audio: "https://www.youtube.com/watch?v=JECDSmQU7AQ"
+video: "https://www.youtube.com/watch?v=fdhVcmgygEU"
 purchase: "https://benedictinstitute.org/larocca/"
 recording: "/recordings/#mass-of-the-americas"
 tags: work
