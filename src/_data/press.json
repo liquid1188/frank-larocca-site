@@ -52,6 +52,11 @@
     "home": false
   },
   {
+    "name": "Aleteia",
+    "logo": "/images/press/logo-aleteia.png",
+    "home": false
+  },
+  {
     "name": "Catholic Arts Today",
     "logo": "/images/press/logo-catholic-arts-today.png",
     "home": false
@@ -75,11 +80,6 @@
   {
     "name": "The Catholic Thing",
     "logo": "/images/press/logo-catholic-thing.png",
-    "home": false
-  },
-  {
-    "name": "Aleteia",
-    "logo": "/images/press/logo-aleteia.png",
     "home": false
   }
 ]

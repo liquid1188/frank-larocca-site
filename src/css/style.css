@@ -431,3 +431,5 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 @media (max-width: 900px) { .site-foot nav { flex-direction: column; gap: .15rem; } .site-foot nav .row { gap: 0 1.3rem; } }
 .pull cite a, .quotes-two cite a, blockquote .attr a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--gold-dim); }
 .pull cite a:hover, .quotes-two cite a:hover, blockquote .attr a:hover { color: var(--rubric); }
+.press-strip.on-dark li:hover img { filter: brightness(0) invert(1) opacity(1); }
+.press-strip.on-dark li.raw:hover img { filter: grayscale(1) brightness(1.15) opacity(1); }
