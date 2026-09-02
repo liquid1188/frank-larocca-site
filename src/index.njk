@@ -7,14 +7,14 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     <div class="hero-copy">
       <h1>Frank<br>La Rocca</h1>
       <p class="role">Composer of sacred music</p>
-      <p class="lede">Composer-in-Residence at the Benedict XVI Institute for Sacred Music and Divine Worship. His <em>Mass of the Americas</em> debuted at number one on the Billboard Traditional Classical chart.</p>
+      <p class="lede">Composer-in-Residence at the Benedict XVI Institute. His <em>Mass of the Americas</em> debuted at number one on the Billboard Traditional Classical chart.</p>
       <div class="actions">
         <button class="btn primary" id="listen" aria-expanded="false" aria-controls="player">Listen to the Mass of the Americas</button>
         <a class="btn" href="/works/">Browse the catalog</a>
       </div>
     </div>
     <div class="hero-portrait">
-      <img src="/images/frank-la-rocca-portrait.jpg" alt="Frank La Rocca" width="1600" height="2142" fetchpriority="high">
+      <img src="/images/frank-la-rocca.jpg" alt="Frank La Rocca" width="1206" height="1172" fetchpriority="high">
     </div>
   </div>
   <div class="staff"></div>
@@ -33,31 +33,17 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
       <p>Perhaps the most significant Catholic composition of our lifetimes.</p>
       <cite>Michael Olbash, on the <em>Mass of the Americas</em></cite>
     </blockquote>
+    <ul class="press-strip" aria-label="Reviewed in">
+      <li>American Record Guide</li><li>Fanfare</li><li>Billboard</li><li>Catholic World Report</li><li>New Liturgical Movement</li>
+    </ul>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap">
     <div class="band-head"><h2>Selected works</h2><a class="more" href="/works/">All {{ collections.work | length }} works</a></div>
-    <div class="works-grid">
-      <ul>
-      {%- for slug in featured %}{% set w = collections.work | bySlug(slug) %}{% if w and loop.index0 < 3 %}
-        <li>
-          <a class="title" href="{{ w.url }}">{{ w.data.title }}</a>
-          <span class="forces">{{ w.data.forces or (w.data.categories | join(", ")) }}</span>
-          <span class="links">{% if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% endif %}{% if w.data.preview %}<a href="{{ w.data.preview }}">Score</a>{% endif %}</span>
-        </li>
-      {%- endif %}{% endfor %}
-      </ul>
-      <ul>
-      {%- for slug in featured %}{% set w = collections.work | bySlug(slug) %}{% if w and loop.index0 >= 3 %}
-        <li>
-          <a class="title" href="{{ w.url }}">{{ w.data.title }}</a>
-          <span class="forces">{{ w.data.forces or (w.data.categories | join(", ")) }}</span>
-          <span class="links">{% if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% endif %}{% if w.data.preview %}<a href="{{ w.data.preview }}">Score</a>{% endif %}</span>
-        </li>
-      {%- endif %}{% endfor %}
-      </ul>
+    <div class="cards three">
+    {%- for slug in featured | batch(3) | first %}{% set w = collections.work | bySlug(slug) %}{% if w %}{% include "card.njk" %}{% endif %}{% endfor %}
     </div>
   </div>
 </section>

@@ -6,14 +6,15 @@ description: "Catalog of works by Frank La Rocca: Mass settings, motets and prop
 ---
 <h1>Works</h1>
 {%- set cats = ["Mass settings & large works", "SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] %}
-<ul class="catnav">
-{%- for cat in cats %}<li><a href="#{{ cat | slugify }}">{{ cat }}</a></li>{%- endfor %}
-</ul>
-{%- for cat in cats %}
-<h2 class="section-title" id="{{ cat | slugify }}">{{ cat }}</h2>
-<ul class="program">
-{%- for w in collections.work %}{%- if cat in w.data.categories %}
-  <li><span class="t"><a href="{{ w.url }}">{{ w.data.title }}</a></span><span class="leader"></span><span class="f">{{ w.data.forces }}</span></li>
-{%- endif %}{%- endfor %}
-</ul>
-{%- endfor %}
+<div class="filters" role="tablist" aria-label="Filter works">
+  <button class="filter is-on" data-cat="">All</button>
+  {%- for cat in cats %}<button class="filter" data-cat="{{ cat }}">{{ cat }}</button>{%- endfor %}
+</div>
+<div class="cards" id="cards">
+{%- for w in collections.work %}{% include "card.njk" %}{% endfor %}
+</div>
+<script>
+  (function(){var fs=document.querySelectorAll('.filter'),cs=document.querySelectorAll('#cards .card');
+  fs.forEach(function(f){f.addEventListener('click',function(){fs.forEach(function(x){x.classList.remove('is-on')});f.classList.add('is-on');var c=f.dataset.cat;
+    cs.forEach(function(k){k.hidden=!!c&&k.dataset.cats.split('|').indexOf(c)<0;});});});})();
+</script>
