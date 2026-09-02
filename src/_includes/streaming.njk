@@ -1,7 +1,7 @@
 {%- if r.links.label %}<a href="{{ r.links.label }}">Label</a>{% endif %}
 {%- if r.links.spotify %}<a href="{{ r.links.spotify }}">Spotify</a>{% endif %}
 {%- if r.links.apple %}<a href="{{ r.links.apple }}">Apple Music</a>{% endif %}
-{%- if r.links.amazon %}<a href="{{ r.links.amazon }}">Amazon</a>{% endif %}
+{%- if r.links.amazon %}<a href="{{ r.links.amazon }}">{% if r.id == "in-this-place" %}CD on Amazon, with booklet{% else %}Amazon{% endif %}</a>{% endif %}
 {%- if r.links.youtube %}<a href="{{ r.links.youtube }}">YouTube Music</a>{% endif %}
 {%- if r.preview %}<a href="https://www.youtube.com/watch?v={{ r.preview }}">Watch the preview</a>{% endif %}
 {%- if r.preview2 %}<a href="https://www.youtube.com/watch?v={{ r.preview2 }}">Messe des Malades preview</a>{% endif %}
