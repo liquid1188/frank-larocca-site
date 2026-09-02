@@ -481,8 +481,8 @@ figure.center img { margin: 0 auto; }
 .page-banner img { width: 100%; max-height: 300px; object-fit: cover; object-position: center 60%; border-radius: 2px; }
 .page-banner figcaption { color: var(--ash); font-size: .85rem; margin-top: .5rem; text-align: right; }
 @media (max-width: 720px) { .work-hero img { max-height: 220px; } .inline-photo img { max-height: 240px; width: 100%; object-fit: cover; } }
-.hero-epigraph { position: relative; z-index: 3; text-align: center; font-family: var(--display); font-style: italic; font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--gold); margin: .2rem auto 0; padding: 0 var(--gutter); max-width: 46ch; }
+.hero-epigraph { position: absolute; z-index: 3; left: 54%; top: 15%; transform: translateX(-50%); text-align: center; font-family: var(--display); font-style: italic; font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--gold); margin: 0; padding: 0; width: 24ch; }
 .hero-epigraph span { font-family: var(--body); font-style: normal; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ash); display: block; margin-top: .3rem; }
-@media (max-width: 880px) { .hero-epigraph { margin-bottom: .6rem; } }
+@media (max-width: 880px) { .hero-epigraph { position: relative; left: auto; top: auto; transform: none; width: auto; max-width: 40ch; margin: .2rem auto .6rem; padding: 0 var(--gutter); } }
 .album[id], [id].section-title, .work-hero[id] { scroll-margin-top: 3rem; }
 .writing .w-logo img[src*="catholic-thing"] { height: 34px; max-width: 160px; }
