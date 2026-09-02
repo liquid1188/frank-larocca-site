@@ -76,6 +76,7 @@ collections:
               - { name: year, label: Year, widget: number }
               - { name: cover, label: Cover image, widget: image, required: false }
               - { name: blurb, label: Description, widget: text }
+              - { name: preview, label: YouTube preview video id, required: false }
               - name: links
                 label: Links
                 widget: object
@@ -96,7 +97,7 @@ collections:
               - { name: id, label: YouTube video id }
               - { name: title, label: Title }
               - { name: source, label: Source or credit }
-              - { name: kind, label: Kind, widget: select, options: ["performance", "requiem", "talk"] }
+              - { name: kind, label: Kind, widget: select, options: ["performance", "requiem", "talk", "preview"] }
               - { name: selected, label: Selected performance (top of Listen page), widget: boolean, required: false }
               - { name: featured, label: Featured on the home page, widget: boolean, required: false }
       - name: endorsements

@@ -15,6 +15,7 @@ description: "Hear Frank La Rocca's music: selected performances, the composer s
 </div>
 
 <h2 class="section-title">More performances</h2>
+<p class="note">Album previews are on the <a href="/recordings/">Albums</a> page.</p>
 <div class="cards">
 {%- for v in videos %}{% if v.kind == "performance" and not v.selected %}
   <a class="card" href="https://www.youtube.com/watch?v={{ v.id }}"><span class="card-art"><img src="https://img.youtube.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"></span><span class="card-title">{{ v.title }}</span><span class="card-meta">{{ v.source }}</span></a>
