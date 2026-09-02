@@ -12,3 +12,5 @@ layout: work.njk
 permalink: "/works/messe-des-malades/"
 ---
 A Mass for the sick, inspired by the composer's late sister Carin. Recorded with the Requiem for the Forgotten on Cappella Records.
+
+A Mass honoring Our Lady of Lourdes, first celebrated on the World Day of the Sick, February 11, 2023, at the Cathedral of Christ the Light in Oakland with Bishop Barber presiding, and returned to each February since with the anointing of the sick.

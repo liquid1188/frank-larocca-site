@@ -10,3 +10,5 @@ layout: work.njk
 permalink: "/works/missa-sancti-juniperi-serra/"
 ---
 Commissioned by the Benedict XVI Institute for the celebration of St. Junípero Serra and the founding of San Francisco.
+
+A Mass in the Extraordinary Form honoring St. Junípero Serra. To be celebrated at Mission Dolores on October 10, 2026 for the 250th anniversary of the mission's founding.

@@ -397,3 +397,15 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 }
 .press-strip img[src*="aleteia"] { height: 22px; }
 .works-grid .links a, .album .links a, .dates a, .news-list h3 a { display: inline-block; padding: .25rem 0; }
+
+/* affiliations grid on Biography */
+.affil-grid { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.6rem 2rem; }
+.affil-grid a { text-decoration: none; display: block; }
+.affil-logo { display: flex; align-items: center; height: 56px; margin-bottom: .5rem; }
+.affil-logo img { max-height: 44px; width: auto; max-width: 180px; filter: brightness(0) invert(1) opacity(.75); }
+.affil-logo.raw img { filter: none; opacity: .9; }
+.affil-logo.square img { max-height: 56px; }
+.affil-grid .affil-name { font-family: var(--display); font-size: 1.35rem; color: var(--vellum); }
+.affil-grid .affil-role { display: block; font-size: .9rem; color: var(--ash); }
+.affil-grid li:hover img { opacity: 1; }
+.logo-row li.raw img { filter: none; opacity: .9; }

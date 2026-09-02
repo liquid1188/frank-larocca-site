@@ -19,7 +19,23 @@
     "short": "Catholic Institute of Sacred Music",
     "role": "Faculty",
     "url": "https://catholicinstituteofsacredmusic.org/",
-    "logo": "",
+    "logo": "/images/affil/cism.png",
+    "raw": true,
+    "square": true
+  },
+  {
+    "name": "Composers, Inc.",
+    "short": "Composers, Inc.",
+    "role": "Founding member, past executive and artistic director",
+    "url": "https://www.composersinc.org/",
+    "logo": "/images/affil/composers-inc.png"
+  },
+  {
+    "name": "St. Patrick's Seminary and University",
+    "short": "St. Patrick's Seminary",
+    "role": "Summer course faculty",
+    "url": "https://www.stpsu.edu/",
+    "logo": "/images/affil/stpatricks.png",
     "raw": true
   },
   {
