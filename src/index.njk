@@ -14,7 +14,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
       </div>
     </div>
     <div class="hero-portrait">
-      <img src="/images/frank-la-rocca.jpg" alt="Frank La Rocca" width="1206" height="1172" fetchpriority="high">
+      <img src="/images/frank-la-rocca-headshot.jpg" alt="Frank La Rocca" width="1978" height="1920" fetchpriority="high">
     </div>
   </div>
   <div class="staff"></div>
@@ -27,12 +27,34 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
   </div>
 </div>
 
+<section class="band watch">
+  <div class="wrap">
+    {%- set feat = videos | selectattr("featured") | first %}
+    <div class="watch-grid">
+      <div class="watch-main">
+        <div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{{ feat.id }}" title="{{ feat.title }}" allowfullscreen></iframe></div>
+        <p class="watch-cap"><strong>{{ feat.title }}</strong> {{ feat.source }}</p>
+      </div>
+      <ul class="watch-list">
+      {%- for v in videos %}{% if not v.featured %}
+        <li><a href="https://www.youtube.com/watch?v={{ v.id }}"><img src="https://img.youtube.com/vi/{{ v.id }}/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><span><strong>{{ v.title }}</strong>{{ v.source }}</span></a></li>
+      {%- endif %}{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section class="band light pull">
   <div class="wrap">
     <blockquote>
-      <p>Perhaps the most significant Catholic composition of our lifetimes.</p>
-      <cite>Michael Olbash, on the <em>Mass of the Americas</em></cite>
+      <p>{{ endorsements[0].quote }}</p>
+      <cite>{{ endorsements[0].name }}, {{ endorsements[0].title }}</cite>
     </blockquote>
+    <div class="quotes-two">
+    {%- for e in endorsements | batch(3) | first %}{% if not loop.first %}
+      <blockquote><p>{{ e.quote }}</p><cite>{{ e.name }}, {{ e.title }}</cite></blockquote>
+    {%- endif %}{% endfor %}
+    </div>
     <ul class="press-strip" aria-label="Reviewed in">
     {%- for o in press %}<li>{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}" loading="lazy">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
     </ul>

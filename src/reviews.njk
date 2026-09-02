@@ -4,6 +4,14 @@ title: Press
 permalink: /reviews/
 ---
 <h1>Press</h1>
+<img class="portrait small" src="/images/frank-la-rocca-bw.jpg" alt="Frank La Rocca" width="554" height="554" loading="eager">
+<h2 class="section-title" style="margin-top:0">Endorsements</h2>
+<div class="endorse-list">
+{%- for e in endorsements %}
+  <blockquote><p>{{ e.quote }}</p><p class="attr">— {{ e.name }}, {{ e.title }}{% if e.about %} · on <em>{{ e.about }}</em>{% endif %}</p></blockquote>
+{%- endfor %}
+</div>
+<h2 class="section-title">Reviews</h2>
 <p class="note">Selected reviews. Full reviews at the source publications. Journalists: see the <a href="/press-kit/">press kit</a>.</p>
 <blockquote><p>the California-based composer...writes music unmistakably inspired by liturgical chant and the masters of the Renaissance and Baroque, but filtered through a musical sensibility informed by the works of 20th-century modernists: beauty ever ancient, ever new</p><p class="attr">— Ronald E. Grames, Fanfare</p></blockquote>
 <blockquote><p>Perhaps the most pernicious single delusion to have afflicted musical thought over the last two centuries...</p><p class="attr">— R.J. Stove, Catholic World Report</p></blockquote>

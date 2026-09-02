@@ -82,6 +82,30 @@ collections:
                   - { name: apple, label: Apple Music, required: false }
                   - { name: amazon, label: Amazon, required: false }
                   - { name: youtube, label: YouTube Music, required: false }
+      - name: videos
+        label: Videos (home page)
+        file: src/_data/videos.json
+        fields:
+          - name: videos
+            label: Videos
+            widget: list
+            fields:
+              - { name: id, label: YouTube video id }
+              - { name: title, label: Title }
+              - { name: source, label: Source or credit }
+              - { name: featured, label: Featured (the large one), widget: boolean, required: false }
+      - name: endorsements
+        label: Endorsements
+        file: src/_data/endorsements.json
+        fields:
+          - name: endorsements
+            label: Quotes (first three show on the home page)
+            widget: list
+            fields:
+              - { name: quote, label: Quote, widget: text }
+              - { name: name, label: Name }
+              - { name: title, label: Title or affiliation }
+              - { name: about, label: About which work, required: false }
       - name: press
         label: Press strip
         file: src/_data/press.json
