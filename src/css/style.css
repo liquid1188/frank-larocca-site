@@ -477,3 +477,6 @@ figure.center img { margin: 0 auto; }
 .card, .album { transition: transform .35s ease; }
 .card:hover, .album:hover { transform: translateY(-3px); }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .card:hover, .album:hover { transform: none; } }
+.page-banner { margin: -1rem 0 2.5rem; }
+.page-banner img { width: 100%; max-height: 300px; object-fit: cover; object-position: center 60%; border-radius: 2px; }
+.page-banner figcaption { color: var(--ash); font-size: .85rem; margin-top: .5rem; text-align: right; }
