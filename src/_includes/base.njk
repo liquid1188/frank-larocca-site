@@ -28,6 +28,7 @@
       <a class="brand" href="/" aria-label="Frank La Rocca, home">{% include "mark.njk" %}<span>Frank La Rocca</span></a>
       <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
       <nav class="site-nav" id="nav">
+        <a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a>
         <a href="/works/"{% if "/works" in page.url %} aria-current="page"{% endif %}>Works</a>
         <a href="/listen/"{% if "/listen" in page.url %} aria-current="page"{% endif %}>Listen</a>
         <a href="/recordings/"{% if "/recordings" in page.url %} aria-current="page"{% endif %}>Albums</a>

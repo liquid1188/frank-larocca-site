@@ -53,12 +53,12 @@ em { font-style: italic; }
 .brand svg { width: 84px; height: 42px; flex: none; }
 .brand span { font-family: var(--display); font-size: 1.55rem; font-weight: 600; letter-spacing: .005em; line-height: 1; padding-top: .1em; white-space: nowrap; }
 .brand:hover { color: var(--vellum); }
-.site-nav { display: flex; gap: 1.6rem; align-items: center; }
+.site-nav { display: flex; gap: 1.4rem; align-items: center; }
 .site-nav a { font-size: 1.02rem; text-decoration: none; color: var(--ash); padding: .2rem 0; border-bottom: 1px solid transparent; }
 .site-nav a:hover { color: var(--vellum); }
 .site-nav a[aria-current="page"] { color: var(--vellum); border-bottom-color: var(--gold); }
 .menu-btn { display: none; background: none; border: 1px solid var(--gold-dim); color: var(--vellum); font: inherit; font-size: 1rem; padding: .45rem .9rem; border-radius: 2px; cursor: pointer; }
-@media (max-width: 880px) {
+@media (max-width: 1000px) {
   .menu-btn { display: inline-block; }
   .brand svg { width: 64px; height: 32px; }
   .brand span { font-size: 1.3rem; }
