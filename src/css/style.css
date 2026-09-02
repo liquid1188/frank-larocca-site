@@ -86,9 +86,9 @@ em { font-style: italic; }
 .hero .lede { color: var(--ash); font-size: 1.12rem; max-width: 46ch; margin-bottom: 1.8rem; }
 .hero-portrait { position: absolute; top: 0; right: calc(-1 * var(--gutter)); bottom: 0; width: 52%; z-index: 1; background: var(--nave); isolation: isolate; overflow: hidden; }
 .hero-portrait img {
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 4%;
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 10%;
   transform: none;
-  filter: grayscale(.8) sepia(.18) contrast(1.06) brightness(.82); mix-blend-mode: lighten;
+  filter: contrast(1.04) brightness(.9); mix-blend-mode: lighten;
 }
 .hero-portrait::before {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
@@ -108,7 +108,7 @@ em { font-style: italic; }
   .hero-portrait picture { display: contents; }
   .hero-copy { max-width: none; padding-top: .5rem; padding-bottom: 3rem; }
   .hero-portrait { position: relative; order: -1; top: auto; right: auto; bottom: auto; width: auto; aspect-ratio: 4 / 3.4; margin: 0 calc(-1 * var(--gutter)) -2.5rem; }
-  .hero-portrait img { object-position: 50% 8%; }
+  .hero-portrait img { object-position: 55% 8%; }
   .hero-portrait::before { background: linear-gradient(to top, var(--nave) 0, rgba(21,18,28,.85) 12%, rgba(21,18,28,0) 55%); }
 }
 
@@ -377,3 +377,5 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .press-strip li.small img { height: 22px; }
 .press-strip li.tall img { height: 48px; }
 .press-strip.on-dark li.raw img { filter: none; opacity: .85; }
+.hero-credit { position: absolute; right: var(--gutter); bottom: .5rem; z-index: 4; margin: 0; font-size: .72rem; color: var(--ash); opacity: .75; }
+@media (max-width: 880px) { .hero-credit { bottom: 2.6rem; } }
