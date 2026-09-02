@@ -43,7 +43,7 @@
   <main>{% if layout == "base.njk" and page.url != "/" and not fullwidth %}<div class="page{% if tags and 'news' in tags %} post{% endif %}"><div class="wrap">{% if tags and 'news' in tags %}<h1>{{ title }}</h1><p class="note"><time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time></p>{% endif %}{{ content | safe }}</div></div>{% else %}{{ content | safe }}{% endif %}</main>
   <footer class="site-foot">
     <div class="wrap">
-      <a class="foot-brand" href="/">{% include "mark-wide.njk" %}<span class="foot-name">Frank La Rocca</span><span class="foot-role">Composer of sacred music</span></a>
+      <a class="foot-brand" href="/">{% include "mark-wide.njk" %}<span class="foot-name">Frank La Rocca</span><span class="foot-rule" aria-hidden="true"></span><span class="foot-role">Composer of sacred music</span></a>
       <nav aria-label="Footer">
         <a href="/">Home</a><a href="/works/">Works</a><a href="/listen/">Listen</a><a href="/recordings/">Albums</a><a href="/performances/">Performances</a><a href="/biography/">Biography</a><a href="/reviews/">Reviews</a><a href="/news/">News</a><a href="/directors/">For directors</a><a href="/contact/">Contact</a>
       </nav>
