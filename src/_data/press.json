@@ -1,7 +1,7 @@
 [
   {
     "name": "The Wall Street Journal",
-    "logo": ""
+    "logo": "/images/press/logo-wsj.png"
   },
   {
     "name": "American Record Guide",
@@ -13,7 +13,8 @@
   },
   {
     "name": "Billboard",
-    "logo": ""
+    "logo": "/images/press/logo-billboard.png",
+    "small": true
   },
   {
     "name": "National Catholic Register",

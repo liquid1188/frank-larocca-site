@@ -46,5 +46,21 @@
       "apple": "",
       "youtube": ""
     }
+  },
+  {
+    "id": "string-trio-secret-thoughts",
+    "title": "String Trio · Secret Thoughts",
+    "label": "Originally on CRI; New World Records NWCRL567",
+    "year": 2011,
+    "cover": "/images/cri-avshalomov-la-rocca-cover.jpg",
+    "blurb": "Two early chamber works from his modernist years, shared with music by Jacob Avshalomov. The String Trio (1981), the piece Andrew Porter praised in The New Yorker, is played by Eric Pritchard, Paul Yarbrough, and Sandy Wilson; Secret Thoughts (1986) for solo cello by Lawrence Granger. Available as download or CD-R with the original liner notes.",
+    "links": {
+      "label": "https://www.newworldrecords.org/products/jacob-avshalomov-frank-la-rocca",
+      "amazon": "",
+      "spotify": "",
+      "apple": "",
+      "youtube": "",
+      "notes": "https://nwr-site-liner-notes.s3.amazonaws.com/nwcrl567.pdf"
+    }
   }
 ]

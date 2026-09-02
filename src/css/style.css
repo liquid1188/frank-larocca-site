@@ -374,3 +374,4 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .press-strip.on-dark li { color: var(--ash); font-size: 1.15rem; }
 .press-strip.on-dark img { filter: brightness(0) invert(1) opacity(.7); height: 30px; }
 .press-strip.on-dark li.raw img { filter: grayscale(1) opacity(.85); }
+.press-strip li.small img { height: 22px; }

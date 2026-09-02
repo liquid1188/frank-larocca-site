@@ -86,6 +86,7 @@ collections:
                   - { name: apple, label: Apple Music, required: false }
                   - { name: amazon, label: Amazon, required: false }
                   - { name: youtube, label: YouTube Music, required: false }
+                  - { name: notes, label: Liner notes link, required: false }
       - name: videos
         label: Videos (home page)
         file: src/_data/videos.json

@@ -5,6 +5,7 @@ categories:
   - "Chamber & orchestral"
 forces: "vln, vla, vc 18'"
 audio: "https://soundcloud.com/frank-larocca/string-trio"
+recording: "/recordings/#string-trio-secret-thoughts"
 tags: work
 layout: work.njk
 permalink: "/works/string-trio/"

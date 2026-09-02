@@ -5,7 +5,7 @@ permalink: /reviews/
 ---
 <h1>Reviews</h1>
 <ul class="press-strip on-dark" aria-label="Reviewed in">
-{%- for o in press %}<li{% if o.raw %} class="raw"{% endif %}>{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
+{%- for o in press %}<li class="{% if o.raw %}raw {% endif %}{% if o.small %}small{% endif %}">{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
 </ul>
 <img class="portrait small" style="clear:both;margin-top:1rem" src="/images/frank-la-rocca-bw.jpg" alt="Frank La Rocca" width="554" height="554" loading="eager">
 <h2 class="section-title" style="margin-top:0">Endorsements</h2>
