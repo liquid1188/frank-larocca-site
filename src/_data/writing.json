@@ -1,11 +1,93 @@
 [
-  { "title": "Frank La Rocca's Search for the Sacred", "outlet": "Benedict XVI Institute, three-part profile", "year": 2018, "url": "https://benedictinstitute.org/2018/06/frank-la-roccas-search-sacred/", "kind": "Profile" },
-  { "title": "Ever Ancient, Ever New", "outlet": "Catholic World Report, interview", "year": 2016, "url": "/news/ever-ancient-ever-new/", "kind": "Interview" },
-  { "title": "Conversion Through Art: The Music of Frank La Rocca", "outlet": "OnePeterFive", "year": 2016, "url": "https://onepeterfive.com/conversion-art-music-frank-la-rocca/", "kind": "Profile" },
-  { "title": "A Review of the Mass of the Americas", "outlet": "OnePeterFive", "year": 2019, "url": "https://onepeterfive.com/mass-of-the-americas/", "kind": "Review" },
-  { "title": "\"Mass of the Americas\" and the Flourishing of Religious Culture", "outlet": "Dappled Things", "year": 2021, "url": "https://www.dappledthings.org/deep-down-things/15197/mass-of-the-americas-flourishing-religious-culture", "kind": "Essay" },
-  { "title": "Evangelizing Through Sacred Beauty", "outlet": "National Catholic Register", "year": 2022, "url": "https://www.ncregister.com/features/evangelizing-through-sacred-beauty", "kind": "Feature" },
-  { "title": "Mass of the Americas Featured in the Wall Street Journal", "outlet": "Catholic Institute of Sacred Music", "year": 2023, "url": "https://catholicinstituteofsacredmusic.org/music-of-faculty-member-frank-la-rocca-featured-in-wall-street-journal/", "kind": "Press" },
-  { "title": "Archbishop Cordileone to Bring the Mass of the Americas to the Guadalupe Shrine", "outlet": "National Catholic Register", "year": 2024, "url": "https://www.ncregister.com/interview/mass-of-the-americas-at-guadalupe-shrine-in-25", "kind": "Feature" },
-  { "title": "Interview with Sir James MacMillan", "outlet": "Catholic Arts Today, by Frank La Rocca", "year": 2018, "url": "/news/catholic-arts-today-interview/", "kind": "By Frank" }
+  {
+    "title": "Frank La Rocca's Search for the Sacred",
+    "outlet": "Benedict XVI Institute, three-part profile",
+    "year": 2018,
+    "url": "https://benedictinstitute.org/2018/06/frank-la-roccas-search-sacred/",
+    "kind": "Profile"
+  },
+  {
+    "title": "Ever Ancient, Ever New",
+    "outlet": "Catholic World Report, interview",
+    "year": 2016,
+    "url": "/news/ever-ancient-ever-new/",
+    "kind": "Interview"
+  },
+  {
+    "title": "Conversion Through Art: The Music of Frank La Rocca",
+    "outlet": "OnePeterFive",
+    "year": 2016,
+    "url": "https://onepeterfive.com/conversion-art-music-frank-la-rocca/",
+    "kind": "Profile"
+  },
+  {
+    "title": "A Review of the Mass of the Americas",
+    "outlet": "OnePeterFive",
+    "year": 2019,
+    "url": "https://onepeterfive.com/mass-of-the-americas/",
+    "kind": "Review"
+  },
+  {
+    "title": "\"Mass of the Americas\" and the Flourishing of Religious Culture",
+    "outlet": "Dappled Things",
+    "year": 2021,
+    "url": "https://www.dappledthings.org/deep-down-things/15197/mass-of-the-americas-flourishing-religious-culture",
+    "kind": "Essay"
+  },
+  {
+    "title": "Evangelizing Through Sacred Beauty",
+    "outlet": "National Catholic Register",
+    "year": 2022,
+    "url": "https://www.ncregister.com/features/evangelizing-through-sacred-beauty",
+    "kind": "Feature"
+  },
+  {
+    "title": "Mass of the Americas Featured in the Wall Street Journal",
+    "outlet": "Catholic Institute of Sacred Music",
+    "year": 2023,
+    "url": "https://catholicinstituteofsacredmusic.org/music-of-faculty-member-frank-la-rocca-featured-in-wall-street-journal/",
+    "kind": "Press"
+  },
+  {
+    "title": "Archbishop Cordileone to Bring the Mass of the Americas to the Guadalupe Shrine",
+    "outlet": "National Catholic Register",
+    "year": 2024,
+    "url": "https://www.ncregister.com/interview/mass-of-the-americas-at-guadalupe-shrine-in-25",
+    "kind": "Feature"
+  },
+  {
+    "title": "Interview with Sir James MacMillan",
+    "outlet": "Catholic Arts Today, by Frank La Rocca",
+    "year": 2018,
+    "url": "/news/catholic-arts-today-interview/",
+    "kind": "By Frank"
+  },
+  {
+    "title": "A Review of Frank La Rocca's Missa Pange Lingua",
+    "outlet": "Catholic Arts Today, Sarah Maria Craig Penner",
+    "year": 2024,
+    "url": "https://benedictinstitute.org/2024/09/a-review-of-frank-la-roccas-missa-pange-lingua/",
+    "kind": "Review"
+  },
+  {
+    "title": "Stanzas for the Chinese Martyrs",
+    "outlet": "Benedict XVI Institute",
+    "year": 2024,
+    "url": "https://benedictinstitute.org/2024/10/stanzas-for-the-chinese-martyrs/",
+    "kind": "Feature"
+  },
+  {
+    "title": "World Premiere of New Sacred Music: The Hymns of Corpus Christi",
+    "outlet": "Benedict XVI Institute",
+    "year": 2024,
+    "url": "https://benedictinstitute.org/2024/08/world-premiere-of-new-sacred-music-the-hymns-of-corpus-christi/",
+    "kind": "Feature"
+  },
+  {
+    "title": "Modern Sacred Music at Its Best: the Mass of the Americas",
+    "outlet": "OnePeterFive, Mark Nowakowski",
+    "year": 2022,
+    "url": "https://onepeterfive.com/modern-sacred-music-at-its-best-the-mass-of-the-americas/",
+    "kind": "Review"
+  }
 ]
