@@ -17,3 +17,5 @@ A Mass for the sick, inspired by the composer's late sister Carin. Recorded with
 A Mass honoring Our Lady of Lourdes, first celebrated on the World Day of the Sick, February 11, 2023, at the Cathedral of Christ the Light in Oakland with Bishop Barber presiding, and returned to each February since with the anointing of the sick.
 
 Movements: Kyrie; Gloria; Alleluia, on a verse melody by John Renke; *Ego sum Pastor bonus*, for the Anointing of the Sick; Sanctus and Benedictus; Agnus Dei.
+
+Commissioned by Archbishop Cordileone as the Church emerged from the pandemic, with Moira Richards Conzelman as patroness, and first celebrated with the Order of Malta on the World Day of the Sick, February 11, 2023, Bishop Michael Barber presiding and the Archbishop preaching, broadcast live on EWTN. In the composer's words, it honors those who suffer indignity in illness and still keep faith in God's providence.
