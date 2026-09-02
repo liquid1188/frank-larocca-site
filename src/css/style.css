@@ -52,7 +52,7 @@ em { font-style: italic; }
 .site-head { position: relative; z-index: 5; }
 .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-top: 1.35rem; padding-bottom: 1.35rem; }
 .brand { display: inline-flex; align-items: center; gap: .8rem; text-decoration: none; color: var(--vellum); }
-.brand svg { width: 88px; height: 35px; flex: none; }
+.brand svg { width: 84px; height: 42px; flex: none; }
 .brand span { font-family: var(--display); font-size: 1.55rem; font-weight: 600; letter-spacing: .005em; line-height: 1; padding-top: .1em; white-space: nowrap; }
 .brand:hover { color: var(--vellum); }
 .site-nav { display: flex; gap: 1.6rem; align-items: center; }
@@ -62,7 +62,7 @@ em { font-style: italic; }
 .menu-btn { display: none; background: none; border: 1px solid var(--gold-dim); color: var(--vellum); font: inherit; font-size: 1rem; padding: .45rem .9rem; border-radius: 2px; cursor: pointer; }
 @media (max-width: 880px) {
   .menu-btn { display: inline-block; }
-  .brand svg { width: 66px; height: 26px; }
+  .brand svg { width: 64px; height: 32px; }
   .brand span { font-size: 1.3rem; }
   .site-nav {
     display: none; position: absolute; left: 0; right: 0; top: 100%;
@@ -225,7 +225,7 @@ blockquote .attr { font-style: normal; }
 .site-foot { padding: 3.5rem 0 2.5rem; color: var(--ash); font-size: .98rem; text-align: center; }
 .site-foot .wrap { display: flex; flex-direction: column; align-items: center; }
 .foot-brand { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--vellum); margin-bottom: 2.2rem; }
-.foot-brand svg { width: 200px; height: 80px; margin-bottom: 1.2rem; }
+.foot-brand svg { width: 272px; height: 80px; margin-bottom: 1.2rem; max-width: 80vw; }
 .foot-name { font-family: var(--display); font-size: 2.2rem; font-weight: 500; line-height: 1; letter-spacing: .005em; }
 .foot-role { font-family: var(--display); font-size: 1.1rem; color: var(--gold); margin-top: .45rem; letter-spacing: .04em; }
 .foot-brand:hover { color: var(--vellum); }
