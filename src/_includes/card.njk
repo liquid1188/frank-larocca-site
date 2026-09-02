@@ -1,5 +1,5 @@
 <a class="card" href="{{ w.url }}" data-cats="{{ w.data.categories | join('|') }}">
-  {%- set vid = w.data.video if w.data.video else (w.data.audio if (w.data.audio and "youtu" in w.data.audio) else "") %}
+  {%- set vid = w.data.thumb if w.data.thumb else (w.data.video if w.data.video else (w.data.audio if (w.data.audio and "youtu" in w.data.audio and "music.youtube" not in w.data.audio) else "")) %}
   {%- if vid %}
   <span class="card-art"><img src="https://img.youtube.com/vi/{{ vid | ytid }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"></span>
   {%- else %}

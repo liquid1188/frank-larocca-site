@@ -20,6 +20,8 @@ collections:
       - { name: preview, label: Score preview link, required: false }
       - { name: audio, label: Audio link (YouTube or SoundCloud), required: false }
       - { name: video, label: Video link (YouTube), required: false }
+      - { name: playlist, label: YouTube playlist id (embeds the whole work), required: false }
+      - { name: thumb, label: Thumbnail video (YouTube link), required: false }
       - { name: purchase, label: Purchase link, required: false }
       - { name: recording, label: Recording page link, required: false }
       - { name: directors, label: Performance materials link, required: false }

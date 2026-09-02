@@ -10,7 +10,7 @@ export default function (eleventyConfig) {
     (typeof iso === "string" ? new Date(iso + "T12:00:00Z") : new Date(iso)).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" })
   );
   eleventyConfig.addFilter("bySlug", (coll, slug) => coll.find((w) => w.data.slug === slug || w.fileSlug === slug));
-  eleventyConfig.addFilter("ytid", (u) => (u || "").replace("https://www.youtube.com/watch?v=", "").replace("https://youtu.be/", "").split("&")[0]);
+  eleventyConfig.addFilter("ytid", (u) => (u || "").replace("https://www.youtube.com/watch?v=", "").replace("https://youtu.be/", "").split("&")[0].split("?")[0]);
   eleventyConfig.addGlobalData("today", () => new Date().toISOString().slice(0, 10));
   eleventyConfig.addGlobalData("buildId", () => Date.now().toString(36));
   return { dir: { input: "src", includes: "_includes", output: "_site" } };

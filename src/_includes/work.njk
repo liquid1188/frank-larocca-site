@@ -10,8 +10,8 @@ eleventyComputed:
 {%- if forces or year %}<p class="attr">{{ forces }}{% if forces and year %}, {% endif %}{{ year }}</p>{%- endif %}
 <div class="work-links">
 {%- if preview %}<a href="{{ preview }}">Preview the score</a>{%- endif %}
-{%- if audio %}<a href="{{ audio }}">Listen</a>{%- endif %}
-{%- if video %}<a href="{{ video }}">Watch</a>{%- endif %}
+{%- if audio %}<a href="{{ audio }}">{% if "music.youtube" in audio %}Listen to the album{% else %}Listen{% endif %}</a>{%- endif %}
+{%- if video %}<a href="{{ video }}">{% if playlist %}Watch the whole Mass{% else %}Watch{% endif %}</a>{%- endif %}
 {%- if purchase %}<a href="{{ purchase }}">Purchase</a>{%- endif %}
 {%- if recording %}<a href="{{ recording }}">Recording</a>{%- endif %}
 {%- if directors %}<a href="{{ directors }}">Parish edition</a>{%- endif %}
@@ -19,8 +19,10 @@ eleventyComputed:
 {%- if content | trim %}
 <div style="margin-top:2rem">{{ content | safe }}</div>
 {%- endif %}
-{%- set vid = video if video else (audio if (audio and "youtu" in audio) else "") %}
-{%- if vid %}
+{%- set vid = video if video else (audio if (audio and "youtu" in audio and "music.youtube" not in audio) else "") %}
+{%- if playlist %}
+<div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list={{ playlist }}" title="{{ title }}, complete" allowfullscreen></iframe></div>
+{%- elif vid %}
 <div class="embed"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{{ vid | ytid }}" title="{{ title }}, recording" allowfullscreen></iframe></div>
 {%- endif %}
 {%- set cat = categories | first %}
