@@ -272,9 +272,9 @@ blockquote .attr { font-style: normal; }
 @media (max-width: 720px) { .cards.three { grid-template-columns: 1fr; } .cards { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem 1rem; } .card-title { font-size: 1.2rem; } }
 
 /* press strip */
-.press-strip { list-style: none; margin: 3rem auto 0; padding: 1.5rem 0 0; border-top: 1px solid var(--hair); display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 2.4rem; max-width: 60rem; }
+.press-strip { list-style: none; margin: 3rem auto 0; padding: 2.5rem 0 .5rem; border-top: 1px solid var(--hair); display: flex; flex-wrap: wrap; justify-content: center; gap: 2.2rem 2.4rem; max-width: 60rem; }
 .press-strip li { font-family: var(--display); font-size: 1.25rem; color: var(--ink-2); letter-spacing: .01em; display: flex; align-items: center; }
-.press-strip img { height: 32px; width: auto; max-width: 200px; filter: brightness(0) opacity(.7); }
+.press-strip img { height: 36px; width: auto; max-width: 220px; filter: brightness(0) opacity(.7); }
 .press-strip li:hover img { filter: brightness(0) opacity(1); }
 
 /* bio archive photo */
