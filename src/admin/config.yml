@@ -72,7 +72,7 @@ collections:
         label: Featured works (home page)
         file: src/_data/featured.json
         fields:
-          - { name: featured, label: Work slugs, widget: list, field: { name: slug, label: Slug } }
+          - { name: featured, label: Works on the home page, widget: list, hint: "Six works; the first three show as pictures.", field: { name: slug, label: Work, widget: relation, collection: works, search_fields: [title], value_field: "{{slug}}", display_fields: [title] } }
       - name: recordings
         label: Recordings
         file: src/_data/recordings.json
@@ -81,12 +81,13 @@ collections:
             label: Albums
             widget: list
             fields:
-              - { name: id, label: Anchor id }
+              - { name: id, label: Short id, hint: "Lowercase, no spaces. Used for links to this album, for example mass-of-the-americas" }
               - { name: title, label: Title }
-              - { name: label, label: Label and catalogue number }
-              - { name: year, label: Year, widget: number }
+              - { name: label, label: Label and catalogue number, default: "Cappella Records" }
+              - { name: year, label: Year, widget: number, default: 2026 }
               - { name: cover, label: Cover image, widget: image, required: false }
-              - { name: blurb, label: Description, widget: text }
+              - { name: blurb, label: Description, widget: text, hint: "Performers, what is on it, anything notable" }
+              - { name: tracks, label: Track list, widget: text, required: false, hint: "Separate with a middle dot or a comma" }
               - { name: preview, label: YouTube preview video id, required: false }
               - name: links
                 label: Links
@@ -106,9 +107,9 @@ collections:
             label: Videos
             widget: list
             fields:
-              - { name: id, label: YouTube video id }
+              - { name: id, label: YouTube video id, hint: "The part after v= in the address, for example fdhVcmgygEU" }
               - { name: title, label: Title }
-              - { name: source, label: Source or credit }
+              - { name: source, label: Source or credit, default: "Benedict XVI Institute" }
               - { name: kind, label: Kind, widget: select, options: ["performance", "requiem", "talk", "preview"], default: "performance" }
               - { name: selected, label: Selected performance (top of Listen page), widget: boolean, required: false }
               - { name: featured, label: Featured on the home page, widget: boolean, required: false }
@@ -120,10 +121,11 @@ collections:
             label: Quotes (first three show on the home page)
             widget: list
             fields:
-              - { name: quote, label: Quote, widget: text }
+              - { name: quote, label: Quote, widget: text, hint: "The words only; quotation marks are added for you" }
               - { name: name, label: Name }
-              - { name: title, label: Title or affiliation }
-              - { name: about, label: About which work, required: false }
+              - { name: title, label: Title or publication }
+              - { name: about, label: About which work, required: false, default: "Mass of the Americas" }
+              - { name: url, label: Link to the source, required: false }
       - name: press
         label: Press strip
         file: src/_data/press.json
@@ -132,10 +134,10 @@ collections:
             label: Publications
             widget: list
             fields:
-              - { name: name, label: Name }
-              - { name: logo, label: Logo image, widget: image, required: false }
-              - { name: raw, label: Show logo in its own colours (no silhouette), widget: boolean, required: false }
-              - { name: home, label: Show on the home page strip, widget: boolean, required: false }
+              - { name: name, label: Publication }
+              - { name: logo, label: Logo image, widget: image, required: false, hint: "PNG or SVG with a transparent background" }
+              - { name: raw, label: Logo is a solid box (show it gray instead of white), widget: boolean, required: false, default: false }
+              - { name: home, label: Show on the home page strip, widget: boolean, required: false, default: false }
       - name: affiliations
         label: Affiliations
         file: src/_data/affiliations.json
@@ -145,8 +147,8 @@ collections:
             widget: list
             fields:
               - { name: name, label: Full name }
-              - { name: short, label: Short name }
-              - { name: role, label: Role }
+              - { name: short, label: Short name, hint: "As it should read if no logo is uploaded" }
+              - { name: role, label: Role, default: "Publisher", hint: "For example: Publisher, Faculty, Composer-in-Residence" }
               - { name: url, label: Link, required: false }
               - { name: logo, label: Logo image, widget: image, required: false }
               - { name: raw, label: Show logo in its own colours (no silhouette), widget: boolean, required: false }
@@ -161,10 +163,10 @@ collections:
             widget: list
             fields:
               - { name: title, label: Title }
-              - { name: outlet, label: Outlet }
-              - { name: year, label: Year, widget: number }
+              - { name: outlet, label: Outlet, hint: "Publication, then the writer if you like: National Catholic Register, Joan Frawley Desmond" }
+              - { name: year, label: Year, widget: number, default: 2026 }
               - { name: url, label: Link }
-              - { name: kind, label: Kind }
+              - { name: kind, label: Kind, widget: select, options: ["Interview", "Profile", "Review", "Feature", "Podcast", "By Frank"], default: "Feature" }
       - name: site
         label: Site settings
         file: src/_data/site.json
