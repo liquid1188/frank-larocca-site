@@ -530,5 +530,8 @@ figure.center img { margin: 0 auto; }
 }
 
 /* balanced line breaks on short centered or captioned text */
-.feature .credit, .foot-inst, .hero-epigraph, .pull cite, .watch-cap, .work-hero figcaption, .inline-photo figcaption, .page-banner figcaption, .band-lede, .epigraph-close, .foot-small, h1, h2, h3 { text-wrap: balance; }
+.hero-epigraph, .pull cite, .watch-cap, .work-hero figcaption, .inline-photo figcaption, .page-banner figcaption, .band-lede, .epigraph-close, .foot-small, h1, h2, h3 { text-wrap: balance; }
 .feature .credit { max-width: 34ch; }
+.feature .credit span, .foot-inst span, .foot-inst a { display: block; }
+.feature .credit { text-wrap: initial; max-width: none; }
+.foot-inst { text-wrap: initial; max-width: none; }
