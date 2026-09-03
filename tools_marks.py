@@ -9,7 +9,7 @@ def punctum(x,y,w=W,h=Hh):
     b=0.28; r=0.45  # bow and corner softening
     return (f'M{x+r:.2f},{y+b:.2f} Q{x+w/2:.2f},{y-b:.2f} {x+w-r:.2f},{y+b:.2f} '
             f'Q{x+w:.2f},{y+b:.2f} {x+w:.2f},{y+b+r:.2f} L{x+w:.2f},{y+h-b-r:.2f} Q{x+w:.2f},{y+h-b:.2f} {x+w-r:.2f},{y+h-b:.2f} '
-            f'Q{x+w/2:.2f},{y+h+b:.2f} {x+r:.2f},{y+h-b:.2f} Q{x:.2f},{y+h-b:.2f} {x:.2f},{y+h-b-r:.2f} L{x:.2f},{y+b+r:.2f} Q{x:.2f},{y+b:.2f} {x+r:.2f},{y+b:.2f} Z')
+            f'Q{x+w/2:.2f},{y+h-2.2*b:.2f} {x+r:.2f},{y+h-b:.2f} Q{x:.2f},{y+h-b:.2f} {x:.2f},{y+h-b-r:.2f} L{x:.2f},{y+b+r:.2f} Q{x:.2f},{y+b:.2f} {x+r:.2f},{y+b:.2f} Z')
 def sq(x,p,hollow=False,py=PY,w=W,h=Hh):
     y=py[p]-h/2
     if hollow: return f'<path d="{punctum(x+0.6,y+0.6,w-1.2,h-1.2)}" fill="none" stroke="FILL" stroke-width="1.3"/>'
@@ -64,19 +64,19 @@ def build():
         vb=re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"',svg); w,h=float(vb.group(1)),float(vb.group(2))
         body=re.sub(r'^<svg[^>]*>','',svg); body=re.sub(r'</svg>$','',body); return body,w,h
     def stacked():
-        b,w,h=inner(svg2); scale=5.2; sw=w*scale; sh=h*scale; Wc,Hc=1600,1000; x0=(Wc-sw)/2; y0=110
+        b,w,h=inner(svg2); scale=7.2; sw=w*scale; sh=h*scale; Wc,Hc=1600,1000; x0=(Wc-sw)/2; y0=70
         return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{Wc}" height="{Hc}" viewBox="0 0 {Wc} {Hc}"><rect width="{Wc}" height="{Hc}" fill="{NAVY}"/>
 <g transform="translate({x0:.1f} {y0}) scale({scale})">{b}</g>
-<text x="{Wc/2}" y="{y0+sh+165}" text-anchor="middle" font-family="Cormorant Garamond" font-weight="500" font-size="150" fill="{VELLUM}">Frank La Rocca</text>
+<text x="{Wc/2}" y="{y0+sh+170}" text-anchor="middle" font-family="Cormorant Garamond" font-weight="500" font-size="168" fill="{VELLUM}">Frank La Rocca</text>
 <line x1="{x0:.0f}" y1="{y0+sh+225}" x2="{x0+sw:.0f}" y2="{y0+sh+225}" stroke="{GOLD}" stroke-opacity=".45" stroke-width="2"/>
 <rect x="{Wc/2-10}" y="{y0+sh+215}" width="20" height="20" fill="{GOLD}" transform="rotate(45 {Wc/2} {y0+sh+225})"/>
 <text x="{Wc/2}" y="{y0+sh+300}" text-anchor="middle" font-family="Alegreya" font-size="38" letter-spacing="12" fill="{GOLD}">COMPOSER OF SACRED MUSIC</text></svg>'''
     def horizontal():
-        b,w,h=inner(svg); scale=3.2; sw=w*scale; sh=h*scale; Wc,Hc=1800,700; total=sw+140+740; x0=(Wc-total)/2; y0=(Hc-sh)/2
+        b,w,h=inner(svg); scale=2.4; sw=w*scale; sh=h*scale; Wc,Hc=1800,700; total=sw+140+560; x0=(Wc-total)/2; y0=(Hc-sh)/2
         return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{Wc}" height="{Hc}" viewBox="0 0 {Wc} {Hc}"><rect width="{Wc}" height="{Hc}" fill="{NAVY}"/>
 <g transform="translate({x0:.1f} {y0:.1f}) scale({scale})">{b}</g>
-<line x1="{x0+sw+70:.0f}" y1="{Hc/2-100}" x2="{x0+sw+70:.0f}" y2="{Hc/2+100}" stroke="{GOLD}" stroke-width="2.5"/>
-<text x="{x0+sw+140:.0f}" y="{Hc/2+34}" font-family="Cormorant Garamond" font-weight="500" font-size="100" fill="{VELLUM}">Frank La Rocca</text></svg>'''
+<line x1="{x0+sw+70:.0f}" y1="{Hc/2-75}" x2="{x0+sw+70:.0f}" y2="{Hc/2+75}" stroke="{GOLD}" stroke-width="2.5"/>
+<text x="{x0+sw+140:.0f}" y="{Hc/2+26}" font-family="Cormorant Garamond" font-weight="500" font-size="76" fill="{VELLUM}">Frank La Rocca</text></svg>'''
     def mark_alone():
         b,w,h=inner(svg); scale=10; sw=w*scale; sh=h*scale; Wc,Hc=1600,900
         return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{Wc}" height="{Hc}" viewBox="0 0 {Wc} {Hc}"><rect width="{Wc}" height="{Hc}" fill="{NAVY}"/><g transform="translate({(Wc-sw)/2:.1f} {(Hc-sh)/2:.1f}) scale({scale})">{b}</g></svg>'''
