@@ -5,36 +5,10 @@ backend:
 media_folder: src/images
 public_folder: /images
 collections:
-  - name: works
-    label: Works
-    folder: src/works-md
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: title, label: Title }
-      - { name: slug, label: URL slug }
-      - { name: categories, label: Categories, widget: select, multiple: true,
-          options: ["Mass settings & large works", "SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] }
-      - { name: forces, label: Forces & duration, required: false }
-      - { name: year, label: Year, required: false }
-      - { name: preview, label: Score preview link, required: false }
-      - { name: audio, label: Audio link (YouTube or SoundCloud), required: false }
-      - { name: video, label: Video link (YouTube), required: false }
-      - { name: playlist, label: YouTube playlist id (embeds the whole work), required: false }
-      - { name: thumb, label: Thumbnail video (YouTube link), required: false }
-      - { name: purchase, label: Purchase link, required: false }
-      - { name: recording, label: Recording page link, required: false }
-      - { name: directors, label: Performance materials link, required: false }
-      - { name: hero, label: Header photo, widget: image, required: false }
-      - { name: heroAlt, label: Header photo description, required: false }
-      - { name: heroCaption, label: Header photo caption, required: false }
-      - { name: layout, widget: hidden, default: work.njk }
-      - { name: tags, widget: hidden, default: work }
-      - { name: permalink, widget: hidden }
-      - { name: body, label: Program note, widget: markdown, required: false }
   - name: events
     label: Performances
     label_singular: Performance
+    description: "Press Add to announce a date. Past dates move to the past list on their own."
     folder: src/events
     create: true
     slug: "{{fields.date}}-{{slug}}-{{fields.city}}"
@@ -45,8 +19,8 @@ collections:
         field: date
         pattern: \d{4}
     fields:
-      - { name: title, label: What is being performed, hint: "For example: Mass of the Americas, or Miserere, Solemn Pontifical Mass" }
-      - { name: date, label: Date, widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
+      - { name: title, label: What is being performed, default: "Mass of the Americas", hint: "Change this if it is another work. For example: Miserere, Solemn Pontifical Mass" }
+      - { name: date, label: Date, widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD", default: "{{now}}" }
       - { name: time, label: Time (optional), required: false, hint: "For example: 11 am" }
       - { name: venue, label: Venue, hint: "For example: Cathedral of St. Mary of the Assumption" }
       - { name: city, label: City and state, hint: "For example: San Francisco, CA" }
@@ -55,16 +29,44 @@ collections:
       - { name: tags, widget: hidden, default: event }
   - name: news
     label: News
+    label_singular: Post
+    description: "A short post or an announcement. The newest shows first on the home page."
     folder: src/news
     create: true
+    slug: "{{slug}}"
     fields:
       - { name: title, label: Title }
-      - { name: date, label: Date, widget: datetime }
+      - { name: date, label: Date, widget: datetime, default: "{{now}}", time_format: false }
       - { name: layout, widget: hidden, default: base.njk }
       - { name: tags, widget: hidden, default: news }
       - { name: body, label: Post, widget: markdown }
+  - name: works
+    label: Works
+    label_singular: Work
+    description: "One entry per piece. Only the title and category are required; add links and a note whenever you have them."
+    folder: src/works-md
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} · {{forces}}"
+    sortable_fields: [title, year]
+    fields:
+      - { name: title, label: Title }
+      - { name: categories, label: Category, widget: select, multiple: true, default: ["SATB a cappella"],
+          options: ["Mass settings & large works", "SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] }
+      - { name: forces, label: Forces and duration, required: false, hint: "For example: SATB a cappella 4'" }
+      - { name: year, label: Year, required: false }
+      - { name: preview, label: Score preview link, required: false, hint: "Issuu or PDF" }
+      - { name: audio, label: Recording link, required: false, hint: "YouTube, SoundCloud, or YouTube Music" }
+      - { name: video, label: Video link, required: false, hint: "YouTube" }
+      - { name: purchase, label: Where to buy the score, required: false }
+      - { name: recording, label: Album page on this site, required: false, hint: "For example: /recordings/#mass-of-the-americas" }
+      - { name: directors, label: Performance materials link, required: false }
+      - { name: hero, label: Header photo, widget: image, required: false }
+      - { name: heroCaption, label: Header photo caption, required: false }
+      - { name: body, label: Program note, widget: markdown, required: false }
   - name: settings
-    label: Site data
+    label: Everything else
+    description: "Albums, videos, endorsements, press and affiliation logos, featured works, and site settings."
     files:
       - name: featured
         label: Featured works (home page)
@@ -107,7 +109,7 @@ collections:
               - { name: id, label: YouTube video id }
               - { name: title, label: Title }
               - { name: source, label: Source or credit }
-              - { name: kind, label: Kind, widget: select, options: ["performance", "requiem", "talk", "preview"] }
+              - { name: kind, label: Kind, widget: select, options: ["performance", "requiem", "talk", "preview"], default: "performance" }
               - { name: selected, label: Selected performance (top of Listen page), widget: boolean, required: false }
               - { name: featured, label: Featured on the home page, widget: boolean, required: false }
       - name: endorsements
