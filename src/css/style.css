@@ -518,8 +518,10 @@ figure.center img { margin: 0 auto; }
 @media (max-width: 720px) {
   .press-strip.on-dark { gap: 1.4rem 1rem; }
   .press-strip.on-dark li { width: calc(50% - 1rem); justify-content: center; }
-  .press-strip.on-dark img { height: auto; max-height: 28px; max-width: 100%; }
-  .press-strip.on-dark img[src*="new-yorker"], .press-strip.on-dark img[src*="dappled"], .press-strip.on-dark img[src*="expedition"], .press-strip.on-dark img[src*="logo-arg"] { max-height: 22px; }
+  .press-strip.on-dark img { height: auto; max-height: 28px; max-width: 140px; }
+  .press-strip.on-dark img[src*="new-yorker"], .press-strip.on-dark img[src*="dappled"], .press-strip.on-dark img[src*="expedition"], .press-strip.on-dark img[src*="logo-arg"], .press-strip.on-dark img[src*="aleteia"], .press-strip.on-dark img[src*="first-things"], .press-strip.on-dark img[src*="catholic-thing"], .press-strip.on-dark img[src*="wsj"] { max-height: 20px; }
+  .press-strip.on-dark img[src*="liturgical"] { max-height: 44px; max-width: 150px; }
+  .press-strip.on-dark img[src*="fanfare"], .press-strip.on-dark img[src*="ewtn"], .press-strip.on-dark img[src*="onepeterfive"] { max-height: 34px; }
   .affil-grid { gap: 1.4rem 1rem; }
   .affil-grid li { width: calc(33.333% - 1rem); }
   .affil-logo { height: 48px; }
