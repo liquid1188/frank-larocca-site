@@ -582,3 +582,4 @@ figure.center img { margin: 0 auto; }
 .inset .epigraph-close { color: var(--ink); }
 .inset .epigraph-close span, .inset .archive figcaption { color: var(--ink-2); }
 .inset .foot-hair { background: var(--hair); }
+.inset figcaption { color: var(--ink-2); }
