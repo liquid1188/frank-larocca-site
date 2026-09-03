@@ -17,5 +17,10 @@ export default function (eleventyConfig) {
     iso: e.date.toISOString().slice(0, 10), work: e.data.title, time: e.data.time || "", venue: e.data.venue, city: e.data.city, who: e.data.who || "", url: e.data.url || ""
   })).sort((a, b) => a.iso.localeCompare(b.iso)));
   eleventyConfig.addFilter("longDate", (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }));
+  // Home page news: posts and outside coverage merged, newest first
+  eleventyConfig.addCollection("latestNews", (api) => {
+    const posts = api.getFilteredByTag("news").map((p) => ({ year: p.date.getFullYear(), sort: p.date.getTime(), title: p.data.title, url: p.url, outlet: "" }));
+    return posts;
+  });
   return { dir: { input: "src", includes: "_includes", output: "_site" } };
 }

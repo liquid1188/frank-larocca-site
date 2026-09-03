@@ -140,9 +140,12 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     </div>
     <div>
       <div class="band-head"><h2>News</h2><a class="more" href="/news/">All news</a></div>
+      {%- set items = [] %}
+      {%- for w in writing %}{% set items = (items.push({ year: w.year, sort: w.year * 10000 + 5000, title: w.title, url: w.url, outlet: w.outlet }), items) %}{% endfor %}
+      {%- for p in collections.latestNews %}{% set items = (items.push({ year: p.year, sort: p.year * 10000, title: p.title, url: p.url, outlet: "" }), items) %}{% endfor %}
       <ul class="dates">
-      {%- for post in collections.news | reverse | batch(3) | first %}
-        <li><span class="when">{{ post.data.date | shortDate }}</span><div><div class="what"><a href="{{ post.url }}" style="text-decoration:none">{{ post.data.title }}</a></div></div></li>
+      {%- for n in items | sort(true, false, "sort") | batch(3) | first %}
+        <li><span class="when">{{ n.year }}</span><div><div class="what"><a href="{{ n.url }}" style="text-decoration:none">{{ n.title }}</a></div>{% if n.outlet %}<p class="where">{{ n.outlet }}</p>{% endif %}</div></li>
       {%- endfor %}
       </ul>
     </div>
