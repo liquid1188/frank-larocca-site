@@ -85,7 +85,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
   </div>
 </section>
 
-<section class="band">
+<section class="band light">
   <div class="wrap">
     <div class="band-head"><h2>Selected works</h2><a class="more" href="/works/">All {{ collections.work | length }} works</a></div>
     <div class="cards three">
@@ -94,7 +94,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
   </div>
 </section>
 
-<section class="band light">
+<section class="band">
   <div class="wrap">
     <div class="band-head"><h2>Albums</h2><a class="more" href="/recordings/">All albums</a></div>
     <p class="band-lede">Both Cappella Records albums debuted at number one on Billboard's Traditional Classical chart.</p>
@@ -113,7 +113,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
   </div>
 </section>
 
-<section class="band affil">
+<section class="band light affil">
   <div class="wrap">
     <div class="band-head"><h2>Affiliations</h2></div>
     {%- set logos = [] %}{% for a in affiliations %}{% if a.logo %}{% set logos = (logos.push(a), logos) %}{% endif %}{% endfor %}

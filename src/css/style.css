@@ -535,3 +535,18 @@ figure.center img { margin: 0 auto; }
 .feature .credit span, .foot-inst span, .foot-inst a { display: block; }
 .feature .credit { text-wrap: initial; max-width: none; }
 .foot-inst { text-wrap: initial; max-width: none; }
+
+/* cards, albums, logos on the light band */
+.band.light .card-title { color: var(--ink); }
+.band.light .card:hover .card-title { color: var(--rubric); }
+.band.light .card-meta { color: var(--ink-2); }
+.band.light .card-art { background: #e6dfd0; }
+.band.light .card-art.type { background-color: #e6dfd0; background-image: repeating-linear-gradient(to bottom, rgba(138,109,47,.35) 0 1px, transparent 1px 9px); }
+.band.light .card-art.type span { color: #8a6d2f; }
+.band.light .band-head h2 { color: var(--ink); }
+.band.light .logo-row img { filter: brightness(0) opacity(.72); }
+.band.light .logo-row li:hover img { filter: brightness(0) opacity(1); }
+.band.light .logo-row li.raw img, .band.light .logo-row li.mono img { filter: grayscale(1) opacity(.8); }
+.band:not(.light) .album .label { color: var(--ash); }
+.band:not(.light) .album img { box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+.band:not(.light) .band-lede { color: var(--ash); }
