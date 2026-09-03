@@ -13,5 +13,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("ytid", (u) => (u || "").replace("https://www.youtube.com/watch?v=", "").replace("https://youtu.be/", "").split("&")[0].split("?")[0]);
   eleventyConfig.addGlobalData("today", () => new Date().toISOString().slice(0, 10));
   eleventyConfig.addGlobalData("buildId", () => Date.now().toString(36));
+  eleventyConfig.addCollection("eventsSorted", (api) => api.getFilteredByTag("event").map((e) => ({
+    iso: e.date.toISOString().slice(0, 10), work: e.data.title, time: e.data.time || "", venue: e.data.venue, city: e.data.city, who: e.data.who || "", url: e.data.url || ""
+  })).sort((a, b) => a.iso.localeCompare(b.iso)));
+  eleventyConfig.addFilter("longDate", (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }));
   return { dir: { input: "src", includes: "_includes", output: "_site" } };
 }

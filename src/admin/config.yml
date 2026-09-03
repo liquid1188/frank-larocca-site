@@ -32,6 +32,27 @@ collections:
       - { name: tags, widget: hidden, default: work }
       - { name: permalink, widget: hidden }
       - { name: body, label: Program note, widget: markdown, required: false }
+  - name: events
+    label: Performances
+    label_singular: Performance
+    folder: src/events
+    create: true
+    slug: "{{fields.date}}-{{slug}}-{{fields.city}}"
+    summary: "{{date}} · {{title}} · {{city}}"
+    sortable_fields: [date, title]
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+    fields:
+      - { name: title, label: What is being performed, hint: "For example: Mass of the Americas, or Miserere, Solemn Pontifical Mass" }
+      - { name: date, label: Date, widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
+      - { name: time, label: Time (optional), required: false, hint: "For example: 11 am" }
+      - { name: venue, label: Venue, hint: "For example: Cathedral of St. Mary of the Assumption" }
+      - { name: city, label: City and state, hint: "For example: San Francisco, CA" }
+      - { name: who, label: Celebrant, conductor, or ensemble (optional), required: false }
+      - { name: url, label: Link for details (optional), required: false }
+      - { name: tags, widget: hidden, default: event }
   - name: news
     label: News
     folder: src/news
@@ -45,21 +66,6 @@ collections:
   - name: settings
     label: Site data
     files:
-      - name: events
-        label: Performances
-        file: src/_data/events.json
-        fields:
-          - name: events
-            label: Events
-            widget: list
-            fields:
-              - { name: iso, label: Date (YYYY-MM-DD, used for sorting) }
-              - { name: work, label: Work }
-              - { name: date, label: Date & time as shown }
-              - { name: venue, label: Venue }
-              - { name: city, label: City }
-              - { name: who, label: Celebrant or conductor, required: false }
-              - { name: url, label: Details link, required: false }
       - name: featured
         label: Featured works (home page)
         file: src/_data/featured.json

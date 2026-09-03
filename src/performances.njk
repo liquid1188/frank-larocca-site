@@ -5,7 +5,7 @@ permalink: /performances/
 description: "Upcoming and recent performances of music by Frank La Rocca, including celebrations of the Mass of the Americas."
 ---
 {%- set upcoming = [] %}{% set past = [] %}
-{%- for e in events %}{% if e.iso >= today %}{% set upcoming = (upcoming.push(e), upcoming) %}{% else %}{% set past = (past.push(e), past) %}{% endif %}{% endfor %}
+{%- for e in collections.eventsSorted %}{% if e.iso >= today %}{% set upcoming = (upcoming.push(e), upcoming) %}{% else %}{% set past = (past.push(e), past) %}{% endif %}{% endfor %}
 <script type="application/ld+json">[{% for e in upcoming %}{"@context":"https://schema.org","@type":"MusicEvent","name":{{ (e.work + " by Frank La Rocca") | dump | safe }},"startDate":"{{ e.iso }}","location":{"@type":"Place","name":{{ e.venue | dump | safe }},"address":{{ e.city | dump | safe }}},"performer":{"@type":"Person","name":"Frank La Rocca"}{% if e.url %},"url":{{ e.url | dump | safe }}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]</script>
 <h1>Performances</h1>
 <p class="note">Celebrations of the <em>Mass of the Americas</em> are coordinated by the Benedict XVI Institute's <a href="{{ site.projectGuadalupe }}">Project Guadalupe 2031</a>.</p>
@@ -13,7 +13,7 @@ description: "Upcoming and recent performances of music by Frank La Rocca, inclu
 {%- if upcoming | length %}
 <ul class="dates">
 {%- for e in upcoming | sort(false, false, "iso") %}
-  <li><span class="when">{{ e.date }}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}{% if e.url %} · <a href="{{ e.url }}">Details</a>{% endif %}</p></div></li>
+  <li><span class="when">{{ e.iso | longDate }}{% if e.time %}, {{ e.time }}{% endif %}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}{% if e.url %} · <a href="{{ e.url }}">Details</a>{% endif %}</p></div></li>
 {%- endfor %}
 </ul>
 {%- else %}
@@ -23,6 +23,6 @@ description: "Upcoming and recent performances of music by Frank La Rocca, inclu
 <p class="note">The <em>Mass of the Americas</em> has been sung in cathedrals and churches across the Americas and in Rome and London since its 2018 premiere. Video of the Mass has been seen more than 600,000 times on YouTube.</p>
 <ul class="dates past">
 {%- for e in past | sort(true, false, "iso") %}
-  <li><span class="when">{{ e.date }}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}{% if e.who %} · {{ e.who }}{% endif %}</p></div></li>
+  <li><span class="when">{{ e.iso | longDate }}{% if e.time %}, {{ e.time }}{% endif %}</span><div><div class="what">{{ e.work }}</div><p class="where">{{ e.venue }}, {{ e.city }}{% if e.who %} · {{ e.who }}{% endif %}</p></div></li>
 {%- endfor %}
 </ul>
