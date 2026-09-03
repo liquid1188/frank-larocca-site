@@ -546,7 +546,39 @@ figure.center img { margin: 0 auto; }
 .band.light .band-head h2 { color: var(--ink); }
 .band.light .logo-row img { filter: brightness(0) opacity(.72); }
 .band.light .logo-row li:hover img { filter: brightness(0) opacity(1); }
-.band.light .logo-row li.raw img, .band.light .logo-row li.mono img { filter: grayscale(1) opacity(.8); }
+.band.light .logo-row li.raw img { filter: brightness(0) opacity(.72); }
+.band.light .logo-row li.mono img { filter: grayscale(1) opacity(.8); }
 .band:not(.light) .album .label { color: var(--ash); }
 .band:not(.light) .album img { box-shadow: 0 10px 30px rgba(0,0,0,.5); }
 .band:not(.light) .band-lede { color: var(--ash); }
+
+/* light insets inside interior pages: full-bleed vellum bands */
+.inset { background: var(--stone); color: var(--ink); margin: 3rem calc(50% - 50vw); padding: 2.5rem calc(50vw - 50%) 3rem; }
+.inset .section-title { color: #8a6d2f; }
+.inset .section-title:first-child { margin-top: 0; }
+.inset .dates li { border-top-color: var(--hair); }
+.inset .dates .when { color: var(--rubric); }
+.inset .dates .where, .inset .note, .inset .kicker { color: var(--ink-2); }
+.inset .dates.past .when { color: var(--ink-2); }
+.inset a:hover { color: var(--rubric); }
+.inset .affil-logo img { filter: brightness(0) opacity(.72); }
+.inset .affil-logo.raw img { filter: brightness(0) opacity(.72); }
+.inset .affil-logo.mono img { filter: grayscale(1) opacity(.8); }
+.inset .affil-grid .affil-name { color: var(--ink); }
+.inset .affil-grid .affil-role { color: var(--ink-2); }
+.inset blockquote p:first-child, .inset .endorse-list blockquote p:first-child { color: var(--ink); }
+.inset blockquote { border-left-color: rgba(138,109,47,.5); }
+.inset .attr { color: var(--ink-2); }
+.inset .card-title { color: var(--ink); }
+.inset .card:hover .card-title { color: var(--rubric); }
+.inset .card-meta { color: var(--ink-2); }
+.inset .card-art { background: #e6dfd0; }
+.inset .card-art.type { background-color: #e6dfd0; background-image: repeating-linear-gradient(to bottom, rgba(138,109,47,.35) 0 1px, transparent 1px 9px); }
+.inset .card-art.type span { color: #8a6d2f; }
+.inset .watch-cap strong, .inset .watch-list strong { color: var(--ink); }
+.inset .watch-cap, .inset .watch-list span { color: var(--ink-2); }
+.inset .watch-list li { border-top-color: var(--hair); }
+.inset .pub-list li { border-top-color: var(--hair); }
+.inset .epigraph-close { color: var(--ink); }
+.inset .epigraph-close span, .inset .archive figcaption { color: var(--ink-2); }
+.inset .foot-hair { background: var(--hair); }

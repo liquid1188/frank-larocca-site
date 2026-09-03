@@ -9,11 +9,13 @@ permalink: /reviews/
 {%- for o in press %}<li class="{% if o.raw %}raw {% endif %}{% if o.small %}small {% endif %}{% if o.tall %}tall{% endif %}">{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
 </ul>
 <img class="portrait small" style="clear:both;margin-top:1rem" src="/images/frank-la-rocca-mcgladdery.jpg" alt="Frank La Rocca. Photograph by Kevin McGladdery" width="1327" height="1327" loading="eager">
+<div class="inset">
 <h2 class="section-title" style="margin-top:0">Endorsements</h2>
 <div class="endorse-list">
 {%- for e in endorsements %}
   <blockquote><p>&ldquo;{{ e.quote }}&rdquo;</p><p class="attr">— {% if e.url %}<a href="{{ e.url }}">{% endif %}{{ e.name }}, {{ e.title }}{% if e.url %}</a>{% endif %}{% if e.about %} · on <em>{{ e.about }}</em>{% endif %}</p></blockquote>
 {%- endfor %}
+</div>
 </div>
 <h2 class="section-title">Reviews</h2>
 <p class="note">Selected reviews. Full reviews at the source publications. Journalists: see the <a href="/press-kit/">press kit</a>.</p>

@@ -30,12 +30,14 @@ description: "Perusal scores, performance materials, publishers, and the parish 
   <p class="note sent" hidden>Thank you. Your request has been sent.</p>
 </form>
 <div class="work-links"><a href="/works/mass-of-the-americas/">About the work</a><a href="https://benedictinstitute.org/mass-of-the-americas-composed-by-frank-la-rocca/">The Mass at the Institute</a></div>
+<div class="inset">
 <h2 class="section-title">Publishers</h2>
 <ul class="pub-list">
 {%- for a in affiliations %}{% if a.role == "Publisher" %}
   <li>{% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}</li>
 {%- endif %}{% endfor %}
 </ul>
+</div>
 <h2 class="section-title">Commissions and unpublished works</h2>
 <p>For commissions, works not yet in print, or questions about forces and editions, write through the <a href="/contact/">contact page</a>.</p>
 <script>
