@@ -15,7 +15,7 @@ permalink: /news/
 {%- for w in writing | sort(true, false, "year") %}
   {%- set logo = "" %}{%- set raw = false %}
   {%- for o in press %}{% if o.logo and (o.name in w.outlet) %}{% set logo = o.logo %}{% set raw = o.raw %}{% endif %}{% endfor %}
-  {%- if not logo %}{% for a in affiliations %}{% if a.logo and (a.short in w.outlet) %}{% set logo = a.logo %}{% set raw = a.raw %}{% endif %}{% endfor %}{% endif %}
-  <li><span class="w-year">{{ w.year }}</span><div class="w-body"><a href="{{ w.url }}">{{ w.title }}</a><span class="w-outlet">{{ w.outlet }}</span></div><span class="w-logo{% if raw %} raw{% endif %}">{% if logo %}<img src="{{ logo }}" alt="" loading="lazy">{% endif %}</span></li>
+  {%- set mono = false %}{%- if not logo %}{% for a in affiliations %}{% if a.logo and (a.short in w.outlet) %}{% set logo = a.logo %}{% set raw = a.raw %}{% set mono = a.mono %}{% endif %}{% endfor %}{% endif %}
+  <li><span class="w-year">{{ w.year }}</span><div class="w-body"><a href="{{ w.url }}">{{ w.title }}</a><span class="w-outlet">{{ w.outlet }}</span></div><span class="w-logo{% if raw %} raw{% endif %}{% if mono %} mono{% endif %}">{% if logo %}<img src="{{ logo }}" alt="" loading="lazy">{% endif %}</span></li>
 {%- endfor %}
 </ul>

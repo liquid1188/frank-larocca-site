@@ -461,7 +461,8 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .writing .w-body a:hover { color: var(--gold); }
 .writing .w-outlet { display: block; color: var(--ash); font-size: .92rem; margin-top: .15rem; }
 .writing .w-logo { display: flex; justify-content: flex-end; }
-.writing .w-logo img { height: auto; max-height: 26px; width: auto; max-width: 120px; filter: brightness(0) invert(1) opacity(.7); }
+.writing .w-logo img { height: 24px; width: auto; max-width: 130px; object-fit: contain; filter: brightness(0) invert(1) opacity(.7); }
+.writing .w-logo.mono { display: none; }
 .writing .w-logo.raw img { filter: grayscale(1) brightness(1.1) opacity(.85); }
 @media (max-width: 640px) { .writing li { grid-template-columns: 3.4rem minmax(0,1fr); } .writing .w-logo { grid-column: 2; justify-content: flex-start; } }
 
