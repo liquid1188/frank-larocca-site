@@ -496,7 +496,7 @@ figure.center img { margin: 0 auto; }
 .page-banner img { width: 100%; max-height: 340px; object-fit: cover; object-position: center 40%; border-radius: 2px; }
 .page-banner figcaption { color: var(--ash); font-size: .85rem; margin-top: .5rem; text-align: right; }
 @media (max-width: 720px) { .work-hero img { max-height: 220px; } .inline-photo img { max-height: 240px; width: 100%; object-fit: cover; } }
-.hero-epigraph { position: absolute; z-index: 3; left: 51%; top: 15%; transform: translateX(-50%); text-align: center; font-family: var(--display); font-style: italic; font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--gold); margin: 0; padding: 0; width: 24ch; }
+.hero-epigraph { position: absolute; z-index: 3; left: 51%; top: 15%; transform: translateX(-50%); text-align: center; font-family: var(--display); font-style: italic; font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--gold); margin: 0; padding: 0; width: 28ch; text-wrap: initial; }
 .hero-epigraph span { font-family: var(--body); font-style: normal; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ash); display: block; margin-top: .3rem; }
 @media (max-width: 880px) { .hero-epigraph { position: relative; left: auto; top: auto; transform: none; width: auto; max-width: 40ch; margin: .2rem auto .6rem; padding: 0 var(--gutter); } }
 .album[id], [id].section-title, .work-hero[id] { scroll-margin-top: 3rem; }
@@ -602,3 +602,4 @@ figure.center img { margin: 0 auto; }
 .archive-pair { display: flex; gap: 2.5rem; justify-content: center; align-items: flex-end; flex-wrap: wrap; margin-top: 3rem; }
 .archive-pair .archive { margin-top: 0; max-width: 420px; }
 .archive-pair .archive img { max-width: 100%; }
+.page-line { font-family: var(--display); font-style: italic; font-size: clamp(1.15rem, 1.7vw, 1.4rem); color: var(--vellum); margin: -.6rem 0 1.4rem; }
