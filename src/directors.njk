@@ -7,15 +7,9 @@ description: "Perusal scores, performance materials, publishers, and the parish 
 <h1>For directors</h1>
 <figure class="side-photo"><img src="/images/trier-cathedral.jpg" alt="Light through stained glass on a pillar of Trier Cathedral" width="1365" height="2048" loading="eager"><figcaption>Trier Cathedral. Photograph by Frank La Rocca.</figcaption></figure>
 <p>Most of the catalog is available for perusal online and for purchase from the publishers below. Score previews on each <a href="/works/">work page</a> open the full score on Issuu.</p>
-<ol class="steps" aria-label="How to program a work">
-  <li><a href="/works/"><span class="n">1</span><strong>Browse the catalog</strong><span>Filter the works by forces, season, and language. Each page opens the full score on Issuu.</span></a></li>
-  <li><a href="/listen/"><span class="n">2</span><strong>Hear it sung</strong><span>Recordings of most of the catalog, with the complete Mass of the Americas on video.</span></a></li>
-  <li><a href="#perusal"><span class="n">3</span><strong>Request a perusal score</strong><span>Any edition of the Mass, free on request. Other works preview online.</span></a></li>
-  <li><a href="#publishers"><span class="n">4</span><strong>Order the music</strong><span>Licensed copies from the publishers, or write about commissions and unpublished works.</span></a></li>
-</ol>
 <h2 class="section-title">Mass of the Americas</h2>
 <p>Four editions: Extraordinary Form (Latin, 1962 Missal), Ordinary Form (Spanish, Latin, English, and Nahuatl), a hybrid Ordinary Form with Greek Kyrie and Latin Agnus Dei, and the parish edition for chorus and organ. Scores are licensed per printed copy and delivered electronically with a license to print; order enough for choir, conductor, and organist, sixteen at minimum. Perusal copies of any edition are free on request.</p>
-<form class="form perusal" id="perusal" action="https://formsubmit.co/{{ site.materialsEmail }}" method="POST" data-thanks="Thank you. Your perusal request has been sent; the score will follow by email.">
+<form class="form perusal" action="https://formsubmit.co/{{ site.materialsEmail }}" method="POST" data-thanks="Thank you. Your perusal request has been sent; the score will follow by email.">
   <input type="hidden" name="_subject" value="Perusal request, Mass of the Americas">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_next" value="{{ site.url }}/directors/?sent=1">
@@ -37,7 +31,7 @@ description: "Perusal scores, performance materials, publishers, and the parish 
   <p class="note sent" hidden>Thank you. Your request has been sent.</p>
 </form>
 <div class="work-links"><a href="/works/mass-of-the-americas/">About the work</a><a href="https://benedictinstitute.org/mass-of-the-americas-composed-by-frank-la-rocca/">The Mass at the Institute</a></div>
-<div class="inset" id="publishers">
+<div class="inset">
 <h2 class="section-title">Publishers</h2>
 <ul class="pub-list">
 {%- for a in affiliations %}{% if a.role == "Publisher" %}
