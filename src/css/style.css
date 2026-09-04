@@ -591,3 +591,8 @@ figure.center img { margin: 0 auto; }
 .band.light .dates .where, .band.light .dates .what a { color: var(--ink-2); }
 .band.light .dates .what, .band.light .dates .what a { color: var(--ink); }
 .band.light .dates a:hover { color: var(--rubric); }
+.side-photo { float: right; width: min(34%, 340px); margin: 0 0 1.5rem 2.5rem; }
+.side-photo img { width: 100%; height: auto; border-radius: 2px; }
+.side-photo figcaption { color: var(--ash); font-size: .85rem; margin-top: .5rem; }
+.inset { clear: both; }
+@media (max-width: 720px) { .side-photo { float: none; width: 100%; max-width: 360px; margin: 0 0 1.5rem; } }
