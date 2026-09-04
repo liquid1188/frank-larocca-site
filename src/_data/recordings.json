@@ -42,17 +42,18 @@
   {
     "id": "in-this-place",
     "title": "In This Place",
-    "label": "Enharmonic Records",
-    "year": 2013,
+    "label": "Enharmonic Records, ENCD12-025",
+    "year": 2012,
     "cover": "/images/in-this-place-cover.jpg",
-    "blurb": "Frank La Rocca's debut solo CD, with Christine Brandes, soprano, Jonathan Dimmock, organ, the Artists Vocal Ensemble, and Strata, and a program booklet written by the composer. A 2013 Critic's Choice at American Record Guide; reached the top ten in classical CD sales on Amazon.",
+    "blurb": "Frank La Rocca's debut solo CD. Christine Brandes, soprano; Jonathan Dimmock, organ; the Artists Vocal Ensemble; and Trio Strata (Audrey Andrist, piano, Nathan Williams, clarinet, James Stern, violin); with period strings in the Veni Sancte Spiritus. Produced by David DeBoor Canfield, engineered by Robert Shumaker, cover photographs by the composer of Partrishow Church, Wales. A 2013 Critic's Choice at American Record Guide; reached the top ten in classical CD sales on Amazon.",
     "links": {
       "label": "",
       "amazon": "https://www.amazon.com/This-Place-Artists-Vocal-Ensemble/dp/B00AOCMRX2/",
       "spotify": "",
       "apple": "",
       "youtube": ""
-    }
+    },
+    "tracks": "Veni Sancte Spiritus · In This Place · Meditation · O Sacrum Convivium · Credo · O Magnum Mysterium · Expectavi Dominum · Miserere"
   },
   {
     "id": "string-trio-secret-thoughts",
