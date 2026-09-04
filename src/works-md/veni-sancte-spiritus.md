@@ -17,4 +17,4 @@ My setting is dominated by two particular elements, both inspired by numerical s
 
 Veni was undergoing a few final revisions in summer of 2001, and was completed on September 11, 2001, the day of the attack on the World Trade Center in New York City. In memory of the victims, it contains the postscript "Requiescant in pace," "May they rest in peace."
 
-<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2012).</p>
+<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2013).</p>

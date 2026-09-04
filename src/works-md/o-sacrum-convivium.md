@@ -15,4 +15,4 @@ St. Thomas Aquinas composed the hymn O Sacrum Convivium for the Liturgy of the F
 
 The two homophonic passages ("in quo Christus sumitur" and "mens impletur gratia") employ the baroque "Cross" motif, a four-note motif that echoes the up-down-up shape described by the four points of the Cross as the eye moves from left to right. The listener may realize, after the fact, that the concluding "Alleluia" is an echo of the initial motif ("O Sacrum"), and that the "Cross" motif is itself an inversion of the "O Sacrum" motif. The remarkable thing to me about this is that I did not become aware of these relationships until after the piece had been completed.
 
-<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2012).</p>
+<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2013).</p>

@@ -19,4 +19,4 @@ The music is structured to underscore these two contrasting aspects of the Psalm
 
 Miserere is dedicated to my children, Christian and Genevieve.
 
-<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2012).</p>
+<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2013).</p>

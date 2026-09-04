@@ -19,4 +19,4 @@ Expectavi Dominum is a setting of verses from Psalm 39 (Psalm 40 in Protestant t
 
 The work was composed to honor my colleague, Dr. David Stein, upon the occasion of his retirement as Director of Choral Activities at California State University, East Bay in June 2002. He conducted the premiere in Oakland, California, leading the University Singers in a stirring performance. Expectavi Dominum is published by Boosey and Hawkes.
 
-<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2012).</p>
+<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2013).</p>

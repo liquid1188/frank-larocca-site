@@ -16,4 +16,4 @@ The stark, evocative beauty of the text O Magnum Mysterium has captured the imag
 
 My own setting was written during Advent of 2003 and was guided by a desire to underscore the mysterious, bittersweet meeting of Spirit and flesh and the fateful, obedient response to God's will in the persons of Jesus and his mother. O Magnum Mysterium is published by Walton Music.
 
-<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2012).</p>
+<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2013).</p>

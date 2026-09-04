@@ -14,4 +14,4 @@ Credo is a setting of the Nicene Creed, a profession of faith confessed by adher
 My setting balances the requirements of a concert work with one that might be suitable for liturgical use. This latter feature is reflected in the two solo incipits quoting original chant melodies, and in the use of certain techniques of Renaissance counterpoint associated with polyphonic Masses. At heart, though, this is a concert work, focused on highlighting the possibilities of dramatic contrast the text offers, while also striving to evoke some of the timelessness of this very ancient text.
 
 
-<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2012).</p>
+<p class="note">From the composer's notes to <em>In This Place</em> (Enharmonic Records, 2013).</p>
