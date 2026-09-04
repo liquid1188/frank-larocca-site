@@ -609,3 +609,5 @@ figure.center img { margin: 0 auto; }
 .photo-panel img { max-width: 56rem; width: 100%; margin: 0 auto; display: block; }
 .photo-panel figcaption { max-width: 56rem; margin: .75rem auto 0; text-align: left; }
 .page-line { font-family: var(--display); font-style: italic; font-size: clamp(1.15rem, 1.7vw, 1.4rem); color: var(--vellum); margin: -.6rem 0 1.4rem; }
+.page-line-cite { display: block; font-family: var(--body); font-style: normal; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ash); margin-top: .4rem; }
+.page-line-cite em { text-transform: none; letter-spacing: 0; font-style: italic; font-size: 1rem; }
