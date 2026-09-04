@@ -77,5 +77,13 @@
     "role": "Professor Emeritus",
     "url": "https://www.csueastbay.edu/",
     "logo": "/images/affil/csueb.svg"
+  },
+  {
+    "name": "MusicSpoke",
+    "short": "MusicSpoke",
+    "role": "Publisher",
+    "url": "https://musicspoke.com/composer/franklarocca",
+    "logo": "/images/affil/musicspoke.png",
+    "wide": true
   }
 ]

@@ -4,7 +4,7 @@ slug: "echo"
 categories:
   - "SSAA"
 forces: "SSAA"
-purchase: "http://musicspoke.com/composer/franklarocca/"
+purchase: "https://musicspoke.com/downloads/echo/"
 tags: work
 layout: work.njk
 permalink: "/works/echo/"

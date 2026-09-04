@@ -4,7 +4,7 @@ slug: "o-sacrum-convivium"
 categories:
   - "SATB a cappella"
   - "Propers & motets"
-purchase: "http://musicspoke.com/composer/franklarocca/"
+purchase: "https://musicspoke.com/downloads/o-sacrum-convivium/"
 audio: "https://www.youtube.com/watch?v=pavIv85zk7A"
 recording: "/recordings/#in-this-place"
 tags: work

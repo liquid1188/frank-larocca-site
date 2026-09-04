@@ -4,7 +4,7 @@ slug: "divertimento"
 categories:
   - "Chamber & orchestral"
 forces: "two pianos 5'"
-purchase: "http://musicspoke.com/downloads/divertimento/"
+purchase: "https://musicspoke.com/downloads/divertimento/"
 audio: "https://soundcloud.com/frank-larocca/divertimento"
 year: 1990
 tags: work
