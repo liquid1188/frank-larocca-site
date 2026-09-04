@@ -83,7 +83,8 @@ em { font-style: italic; }
   margin: 0 0 .3em -.04em; color: var(--vellum); max-width: none;
 }
 .hero .role { font-family: var(--display); font-size: clamp(1.35rem, 2.3vw, 1.8rem); color: var(--gold); margin: 0 0 .5em; }
-.hero .hero-line { font-family: var(--display); font-style: italic; font-size: clamp(1.15rem, 1.7vw, 1.4rem); line-height: 1.35; color: var(--vellum); max-width: 30ch; margin: 0 0 1rem; text-wrap: balance; }
+.hero .hero-line { font-family: var(--display); font-style: italic; font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.35; color: var(--vellum); max-width: none; margin: 0 0 1rem; white-space: nowrap; }
+@media (max-width: 560px) { .hero .hero-line { white-space: normal; } }
 .hero .lede { color: var(--ash); font-size: 1.12rem; max-width: 46ch; margin-bottom: 1.8rem; }
 .hero-portrait { position: absolute; top: 0; right: calc(-1 * var(--gutter)); bottom: 0; width: 52%; z-index: 1; background: var(--nave); isolation: isolate; overflow: hidden; }
 .hero-portrait img {
