@@ -596,3 +596,4 @@ figure.center img { margin: 0 auto; }
 .side-photo figcaption { color: var(--ash); font-size: .85rem; margin-top: .5rem; }
 .inset { clear: both; }
 @media (max-width: 720px) { .side-photo { float: none; width: 100%; max-width: 360px; margin: 0 0 1.5rem; } }
+.page .wrap > .inset:last-child { margin-bottom: -4rem; padding-bottom: 3.5rem; }
