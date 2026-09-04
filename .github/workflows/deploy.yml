@@ -1,6 +1,8 @@
 name: Deploy to GitHub Pages
 on:
-  workflow_dispatch:   # manual only until client approval — switch to push:branches:[main] at launch
+  workflow_dispatch:   # manual until launch; switch to push:branches:[main] at launch
+  schedule:
+    - cron: "15 9 * * 1"   # every Monday, so performances move from Upcoming to Past on their own
 permissions:
   contents: read
   pages: write

@@ -6,7 +6,7 @@ description: "Recordings of Frank La Rocca's music on Cappella Records and Enhar
 ---
 <h1>Albums</h1>
 <div class="albums stack">
-{%- for r in recordings %}
+{%- for r in recordings | sort(true, false, "year") %}
 <div class="album" id="{{ r.id }}">
   {% if r.cover %}<img src="{{ r.cover }}" alt="Album cover, {{ r.title }}" width="1200" height="1200" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">{% else %}<div class="cover-blank"></div>{% endif %}
   <div>

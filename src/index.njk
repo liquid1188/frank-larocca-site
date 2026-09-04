@@ -99,7 +99,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     <div class="band-head"><h2>Albums</h2><a class="more" href="/recordings/">All albums</a></div>
     <p class="band-lede">Both Cappella Records albums debuted at number one on Billboard's Traditional Classical chart.</p>
     <div class="albums">
-    {%- for r in recordings | batch(2) | first %}
+    {%- for r in recordings | sort(true, false, "year") | batch(2) | first %}
       <div class="album">
         {% if r.cover %}<img src="{{ r.cover }}" alt="Album cover, {{ r.title }}" width="1200" height="1200" loading="lazy">{% else %}<div class="cover-blank"></div>{% endif %}
         <div>

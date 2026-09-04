@@ -53,13 +53,14 @@
       <p class="foot-inst"><span>Composer-in-Residence,</span> <a href="{{ site.institute }}">Benedict XVI Institute for Sacred Music and Divine Worship</a></p>
       <a class="btn foot-support" href="{{ site.instituteDonate }}">Support the Institute</a>
       <div class="foot-hair"></div>
-      <p class="foot-small">© 2026 Frank La Rocca · <a class="signin" href="/admin/">Sign in</a></p>
+      <p class="foot-small">© <span id="year">{{ today | truncate(4, true, "") }}</span> Frank La Rocca · <a class="signin" href="/admin/">Sign in</a></p>
       <p class="foot-small colophon"><a href="https://lickitysplitweb.com">Site by Lickity Split Web Design</a></p>
     </div>
   </footer>
   <script>
     (function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('nav');if(!b)return;
     b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Close':'Menu';});})();
+    (function(){var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();})();
     (function(){if(!('IntersectionObserver' in window))return;var els=document.querySelectorAll('.band, .card, .album, .feature, .section-title');els.forEach(function(e){e.classList.add('reveal')});var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.06});els.forEach(function(e){io.observe(e)});})();
   </script>
 </body>
