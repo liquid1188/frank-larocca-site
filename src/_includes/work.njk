@@ -11,7 +11,7 @@ eleventyComputed:
 <div class="work-links">
 {%- if preview %}<a href="{{ preview }}">Preview the score</a>{%- endif %}
 {%- if audio %}<a href="{{ audio }}">{% if "music.youtube" in audio %}Listen to the album{% else %}Listen{% endif %}</a>{%- endif %}
-{%- if video %}<a href="{{ video }}">{% if playlist %}Watch the whole Mass{% else %}Watch{% endif %}</a>{%- endif %}
+{%- if video %}<a href="{{ video }}">{% if playlist %}Watch the whole Mass{% elif slug == "missa-pange-lingua" %}Watch the premiere Mass{% else %}Watch{% endif %}</a>{%- endif %}
 {%- if purchase %}<a href="{{ purchase }}">{% if "cappella" in purchase %}Buy the album{% else %}Purchase{% endif %}</a>{%- endif %}
 {%- if recording %}<a href="{{ recording }}">Recording</a>{%- endif %}
 {%- if directors %}<a href="{{ directors }}">Scores and parish edition</a>{%- endif %}
