@@ -22,7 +22,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Frank La Rocca","jobTitle":"Composer","url":"{{ site.url }}/","image":"{{ site.url }}/images/frank-la-rocca-mcgladdery.jpg","affiliation":{"@type":"Organization","name":"Benedict XVI Institute for Sacred Music and Divine Worship"}}</script>
   <link rel="stylesheet" href="/css/style.css?v={{ buildId }}">
 </head>
-<body>
+<body{% if page.url == "/" %} class="home"{% endif %}>
   <header class="site-head">
     <div class="wrap">
       <a class="brand" href="/" aria-label="Frank La Rocca, home">{% include "mark.njk" %}<span>Frank La Rocca</span></a>

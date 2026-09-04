@@ -125,7 +125,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
   </div>
 </section>
 
-<section class="band light">
+<section class="band">
   <div class="wrap two-up">
     {%- set upcoming = [] %}{% set past = [] %}
     {%- for e in collections.eventsSorted %}{% if e.iso >= today %}{% set upcoming = (upcoming.push(e), upcoming) %}{% else %}{% set past = (past.push(e), past) %}{% endif %}{% endfor %}
