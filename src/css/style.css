@@ -600,7 +600,12 @@ figure.center img { margin: 0 auto; }
 .inset { clear: both; }
 @media (max-width: 720px) { .side-photo { float: none; width: 100%; max-width: 360px; margin: 0 0 1.5rem; } }
 .page .wrap > .inset:last-child { margin-bottom: -4rem; padding-bottom: 3.5rem; }
-.archive-pair { display: flex; gap: 2.5rem; justify-content: center; align-items: flex-end; flex-wrap: wrap; margin-top: 3rem; }
-.archive-pair .archive { margin-top: 0; max-width: 420px; }
-.archive-pair .archive img { max-width: 100%; }
+.archive-pair { display: flex; gap: 2.5rem; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-top: 3rem; }
+.archive-pair .archive { margin-top: 0; max-width: none; flex: 0 1 auto; }
+.archive-pair .archive img { height: 380px; width: auto; max-width: 100%; display: block; }
+.archive-pair .archive figcaption { max-width: 36ch; }
+@media (max-width: 720px) { .archive-pair .archive img { height: auto; width: 100%; } .archive-pair .archive { max-width: 360px; } }
+.photo-panel { max-width: none; margin: 3rem calc(-1 * var(--gutter)); padding: 2.5rem var(--gutter); background: var(--nave-2); text-align: center; }
+.photo-panel img { max-width: 56rem; width: 100%; margin: 0 auto; display: block; }
+.photo-panel figcaption { max-width: 56rem; margin: .75rem auto 0; text-align: left; }
 .page-line { font-family: var(--display); font-style: italic; font-size: clamp(1.15rem, 1.7vw, 1.4rem); color: var(--vellum); margin: -.6rem 0 1.4rem; }
