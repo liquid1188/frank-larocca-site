@@ -597,3 +597,6 @@ figure.center img { margin: 0 auto; }
 .inset { clear: both; }
 @media (max-width: 720px) { .side-photo { float: none; width: 100%; max-width: 360px; margin: 0 0 1.5rem; } }
 .page .wrap > .inset:last-child { margin-bottom: -4rem; padding-bottom: 3.5rem; }
+.archive-pair { display: flex; gap: 2.5rem; justify-content: center; align-items: flex-end; flex-wrap: wrap; margin-top: 3rem; }
+.archive-pair .archive { margin-top: 0; max-width: 420px; }
+.archive-pair .archive img { max-width: 100%; }
