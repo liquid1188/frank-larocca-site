@@ -33,6 +33,14 @@
     "raw": true
   },
   {
+    "name": "American Academy of Catholic Scholars and Artists",
+    "short": "AACSA",
+    "role": "Fellow",
+    "url": "https://aacsa.avemaria.edu/",
+    "logo": "/images/affil/aacsa.png?v=2",
+    "wide": true
+  },
+  {
     "name": "Boosey & Hawkes",
     "short": "Boosey & Hawkes",
     "role": "Publisher",
