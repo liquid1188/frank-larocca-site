@@ -586,3 +586,8 @@ figure.center img { margin: 0 auto; }
 .inset .epigraph-close span, .inset .archive figcaption { color: var(--ink-2); }
 .inset .foot-hair { background: var(--hair); }
 .inset figcaption { color: var(--ink-2); }
+.band.light .dates li { border-top-color: var(--hair); }
+.band.light .dates .when { color: var(--rubric); }
+.band.light .dates .where, .band.light .dates .what a { color: var(--ink-2); }
+.band.light .dates .what, .band.light .dates .what a { color: var(--ink); }
+.band.light .dates a:hover { color: var(--rubric); }
