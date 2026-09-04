@@ -7,8 +7,8 @@ description: "Upcoming and recent performances of music by Frank La Rocca, inclu
 {%- set upcoming = [] %}{% set past = [] %}
 {%- for e in collections.eventsSorted %}{% if e.iso >= today %}{% set upcoming = (upcoming.push(e), upcoming) %}{% else %}{% set past = (past.push(e), past) %}{% endif %}{% endfor %}
 <script type="application/ld+json">[{% for e in upcoming %}{"@context":"https://schema.org","@type":"MusicEvent","name":{{ (e.work + " by Frank La Rocca") | dump | safe }},"startDate":"{{ e.iso }}","location":{"@type":"Place","name":{{ e.venue | dump | safe }},"address":{{ e.city | dump | safe }}},"performer":{"@type":"Person","name":"Frank La Rocca"}{% if e.url %},"url":{{ e.url | dump | safe }}{% endif %}}{% if not loop.last %},{% endif %}{% endfor %}]</script>
+<figure class="page-banner"><img src="/images/mass-of-the-americas-choir.jpg" alt="The Benedict XVI Choir singing the Mass of the Americas" width="1500" height="790" loading="eager"><figcaption>The Benedict XVI Choir in the Mass of the Americas. Courtesy of the Benedict XVI Institute.</figcaption></figure>
 <h1>Performances</h1>
-<figure class="side-photo"><img src="/images/trier-cathedral.jpg" alt="Light through stained glass on a pillar of Trier Cathedral" width="1365" height="2048" loading="eager"><figcaption>Trier Cathedral. Photograph by Frank La Rocca.</figcaption></figure>
 <p class="note">Celebrations of the <em>Mass of the Americas</em> are coordinated by the Benedict XVI Institute's <a href="{{ site.projectGuadalupe }}">Project Guadalupe 2031</a>.</p>
 <h2 class="section-title">Upcoming</h2>
 {%- if upcoming | length %}

@@ -491,7 +491,7 @@ figure.center img { margin: 0 auto; }
 .card:hover, .album:hover { transform: translateY(-3px); }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .card:hover, .album:hover { transform: none; } }
 .page-banner { margin: -1rem 0 2.5rem; }
-.page-banner img { width: 100%; max-height: 300px; object-fit: cover; object-position: center 60%; border-radius: 2px; }
+.page-banner img { width: 100%; max-height: 340px; object-fit: cover; object-position: center 40%; border-radius: 2px; }
 .page-banner figcaption { color: var(--ash); font-size: .85rem; margin-top: .5rem; text-align: right; }
 @media (max-width: 720px) { .work-hero img { max-height: 220px; } .inline-photo img { max-height: 240px; width: 100%; object-fit: cover; } }
 .hero-epigraph { position: absolute; z-index: 3; left: 51%; top: 19%; transform: translateX(-50%); text-align: center; font-family: var(--display); font-style: italic; font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--gold); margin: 0; padding: 0; width: 24ch; }
