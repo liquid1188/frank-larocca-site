@@ -1,5 +1,5 @@
 ---
-title: "I Will Lift Up MIne Eyes (Psalm 121)"
+title: "I Will Lift Up Mine Eyes (Psalm 121)"
 slug: "i-will-lift-up-mine-eyes-psalm-121"
 categories:
   - "Choral\u2013instrumental"
