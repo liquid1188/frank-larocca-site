@@ -606,8 +606,8 @@ figure.center img { margin: 0 auto; }
 .page .wrap > .inset:last-child { margin-bottom: -4rem; padding-bottom: 3.5rem; }
 .archive-pair { display: flex; gap: 2.5rem; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-top: 3rem; }
 .archive-pair .archive { margin-top: 0; max-width: none; flex: 0 1 auto; }
-.archive-pair .archive img { height: 380px; width: auto; max-width: 100%; display: block; }
-.archive-pair .archive figcaption { max-width: 36ch; }
+.archive-pair .archive img { height: 440px; width: auto; max-width: 100%; display: block; }
+.archive-pair .archive figcaption { max-width: none; width: 0; min-width: 100%; white-space: normal; }
 @media (max-width: 720px) { .archive-pair .archive img { height: auto; width: 100%; } .archive-pair .archive { max-width: 360px; } }
 .photo-panel { max-width: 56rem; margin: 3rem auto; padding: 1.25rem 1.25rem 1.1rem; background: var(--nave-2); text-align: center; }
 .photo-panel img { width: 100%; margin: 0 auto; display: block; filter: brightness(1.06); }
