@@ -458,15 +458,19 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 
 /* writing list with logos */
 .writing { list-style: none; margin: 0; padding: 0; max-width: 60rem; }
-.writing li { display: grid; grid-template-columns: 4rem minmax(0,1fr) 120px; gap: 1rem 1.5rem; align-items: center; padding: .9rem 0; border-top: 1px solid var(--gold-dim); }
+.writing li { display: grid; grid-template-columns: 4rem minmax(0,1fr) 190px; gap: 1rem 1.5rem; align-items: center; padding: .9rem 0; border-top: 1px solid var(--gold-dim); }
 .writing .w-year { color: var(--gold); font-size: .95rem; }
 .writing .w-body a { font-family: var(--display); font-size: 1.3rem; line-height: 1.15; text-decoration: none; display: block; }
 .writing .w-body a:hover { color: var(--gold); }
 .writing .w-outlet { display: block; color: var(--ash); font-size: .92rem; margin-top: .15rem; }
 .writing .w-logo { display: flex; justify-content: flex-end; }
-.writing .w-logo img { height: 24px; width: auto; max-width: 130px; object-fit: contain; filter: brightness(0) invert(1) opacity(.7); }
-.writing .w-logo.mono { display: none; }
-.writing .w-logo.raw img { filter: grayscale(1) brightness(1.1) opacity(.85); }
+.writing .w-logo { width: 190px; }
+.writing .w-logo img { max-height: 34px; height: auto; width: auto; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1) opacity(.78); }
+.writing .w-logo img[src*="cism"] { max-height: 72px; filter: none; }
+.writing .w-logo img[src*="aleteia"] { max-height: 26px; }
+.writing .w-logo.mono img { filter: brightness(0) invert(1) opacity(.75); }
+.writing .w-mark { font-family: var(--display); font-size: 1rem; letter-spacing: .02em; color: var(--ash); text-align: right; line-height: 1.2; max-width: 180px; }
+.writing .w-logo.raw img { filter: grayscale(1) brightness(1.7) opacity(.9); }
 @media (max-width: 640px) { .writing li { grid-template-columns: 3.4rem minmax(0,1fr); } .writing .w-logo { grid-column: 2; justify-content: flex-start; } }
 
 /* balanced rows: eleven affiliations as six and five, eight press as four and four */
@@ -532,7 +536,7 @@ figure.center img { margin: 0 auto; }
   .affil-logo img { max-width: 100%; max-height: 40px; }
   .affil-logo.square img { max-height: 48px; }
   .affil-grid .affil-role { font-size: .78rem; line-height: 1.3; }
-  .writing .w-logo img { max-height: 22px; max-width: 110px; }
+  .writing .w-logo img { max-height: 28px; max-width: 140px; }
 }
 
 /* balanced line breaks on short centered or captioned text */

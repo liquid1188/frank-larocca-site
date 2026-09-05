@@ -20,9 +20,9 @@
     "role": "Faculty",
     "url": "https://catholicinstituteofsacredmusic.org/",
     "logo": "/images/affil/cism.png",
-    "raw": false,
+    "raw": true,
     "square": true,
-    "mono": true
+    "mono": false
   },
   {
     "name": "St. Patrick's Seminary and University",
