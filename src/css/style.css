@@ -280,10 +280,10 @@ blockquote .attr { font-style: normal; }
 @media (max-width: 720px) { .cards.three { grid-template-columns: 1fr; } .cards { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem 1rem; } .card-title { font-size: 1.2rem; } }
 
 /* press strip */
-.press-strip { list-style: none; margin: 3rem auto 0; padding: 2.5rem 0 .5rem; border-top: 1px solid var(--hair); display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem 3rem; max-width: 60rem; }
+.press-strip { list-style: none; margin: 3rem auto 0; padding: 2.5rem 0 .5rem; border-top: 1px solid var(--hair); display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem 2.6rem; max-width: 66rem; }
 .press-strip.continued { margin-top: 0; padding-top: 0; border-top: 0; }
 .press-strip li { font-family: var(--display); font-size: 1.25rem; color: var(--ink-2); letter-spacing: .01em; display: flex; align-items: center; }
-.press-strip img { height: 36px; width: auto; max-width: 220px; filter: brightness(0) opacity(.7); }
+.press-strip img { height: 36px; width: auto; max-width: 250px; filter: brightness(0) opacity(.7); }
 .press-strip li:hover img { filter: brightness(0) opacity(1); }
 
 /* bio archive photo */
@@ -371,11 +371,11 @@ blockquote .attr { font-style: normal; }
 .logo-row { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem 2.5rem; }
 .logo-row img { height: 44px; width: auto; max-width: 200px; filter: brightness(0) invert(1) opacity(.72); transition: opacity .2s; }
 .logo-row li:hover img { filter: brightness(0) invert(1) opacity(1); }
-.logo-row li:first-child img { height: 60px; }
+.logo-row li:first-child img { height: 70px; max-width: 240px; }
 .note.center { text-align: center; margin: 2rem auto 0; }
 .site-foot { margin-top: 2rem; border-top: 1px solid var(--gold-dim); }
 body.home .site-foot { margin-top: 0; }
-@media (max-width: 720px) { .logo-row { gap: 1.5rem 2rem; } .logo-row img { height: 34px; max-width: 150px; } .logo-row li:first-child img { height: 46px; } }
+@media (max-width: 720px) { .logo-row { gap: 1.5rem 2rem; } .logo-row img { height: 34px; max-width: 150px; } .logo-row li:first-child img { height: 56px; } }
 
 .press-strip li.raw img { filter: grayscale(1) opacity(.8); }
 .logo-row li.raw img { filter: grayscale(1) opacity(.85); }
@@ -387,10 +387,10 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 
 .press-strip.on-dark { border-top: 0; margin: 0 0 2.5rem; padding: 0; justify-content: flex-start; gap: 1.4rem 1.7rem; }
 .press-strip.on-dark li { color: var(--ash); font-size: 1.15rem; }
-.press-strip.on-dark img { filter: brightness(0) invert(1) opacity(.7); height: 30px; }
+.press-strip.on-dark img { filter: brightness(0) invert(1) opacity(.7); height: 34px; }
 .press-strip.on-dark li.raw img { filter: grayscale(1) opacity(.85); }
 .press-strip li.small img { height: 22px; }
-.press-strip li.tall img { height: 48px; }
+.press-strip li.tall img { height: 66px; }
 .press-strip.on-dark li.raw img { filter: grayscale(1) brightness(1.1) opacity(.85); }
 .hero-credit { position: absolute; right: var(--gutter); bottom: 3.2rem; z-index: 3; margin: 0; font-size: .78rem; color: var(--ash); opacity: .8; }
 @media (max-width: 880px) { .hero-credit { right: var(--gutter); bottom: .3rem; font-size: .72rem; } }
@@ -413,7 +413,7 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
   .dates .when { font-size: .9rem; }
   .portrait.small { display: none; }
 }
-.press-strip img[src*="aleteia"] { height: 22px; }
+.press-strip img[src*="aleteia"] { height: 28px; }
 .works-grid .links a, .album .links a, .dates a, .news-list h3 a { display: inline-block; padding: .25rem 0; }
 
 /* affiliations grid on Biography */
@@ -423,6 +423,7 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .affil-logo img { max-height: 44px; width: auto; max-width: 180px; filter: brightness(0) invert(1) opacity(.75); }
 .affil-logo.raw img { filter: none; opacity: .9; }
 .affil-logo.square img { max-height: 56px; }
+.affil-logo img[src*="bxvi"] { max-height: 60px; max-width: 240px; }
 .affil-grid .affil-name { font-family: var(--display); font-size: 1.35rem; color: var(--vellum); }
 .affil-grid .affil-role { display: block; font-size: .9rem; color: var(--ash); }
 .affil-grid li:hover img { opacity: 1; }
@@ -432,8 +433,9 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .pub-list { list-style: none; margin: 0 0 1rem; padding: 0; max-width: 40rem; }
 .pub-list li { padding: .7rem 0; border-top: 1px solid var(--gold-dim); font-family: var(--display); font-size: 1.35rem; }
 .pub-list a { text-decoration: none; }
-.press-strip img[src*="catholic-thing"] { height: 20px; }
-.press-strip img[src*="first-things"] { height: 22px; }
+.press-strip img[src*="catholic-thing"] { height: 27px; }
+.press-strip img[src*="new-yorker"], .press-strip img[src*="dappled"], .press-strip img[src*="expedition"], .press-strip img[src*="logo-arg"], .press-strip img[src*="catholic-arts-today"], .press-strip img[src*="wsj"] { height: 34px; }
+.press-strip img[src*="first-things"] { height: 30px; }
 .foot-hair { width: 100%; max-width: 60rem; height: 1px; background: var(--gold-dim); margin: 0 auto 1.2rem; }
 .signin { color: var(--ash); text-decoration: none; opacity: .7; }
 .signin:hover { opacity: 1; color: var(--gold); }
