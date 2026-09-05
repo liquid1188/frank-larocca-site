@@ -466,7 +466,7 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .writing .w-logo { display: flex; justify-content: flex-end; }
 .writing .w-logo { width: 190px; }
 .writing .w-logo img { max-height: 34px; height: auto; width: auto; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1) opacity(.78); }
-.writing .w-logo img[src*="cism"] { max-height: 72px; filter: none; }
+.writing .w-logo img[src*="cism"] { max-height: 64px; filter: none; opacity: .95; }
 .writing .w-logo img[src*="aleteia"] { max-height: 26px; }
 .writing .w-logo.mono img { filter: brightness(0) invert(1) opacity(.75); }
 .writing .w-mark { font-family: var(--display); font-size: 1rem; letter-spacing: .02em; color: var(--ash); text-align: right; line-height: 1.2; max-width: 180px; }
@@ -618,3 +618,4 @@ figure.center img { margin: 0 auto; }
 
 .endorse-portrait { float: right; width: 240px; margin: 0 0 1.5rem 2.5rem; shape-outside: margin-box; }
 @media (max-width: 700px) { .endorse-portrait { float: none; width: 100%; max-width: 320px; margin: 0 0 1.5rem; } }
+.affil-strip img[src*="cism"], .affil-logo img[src*="cism"] { filter: none; opacity: .95; max-height: 64px; height: 64px; }
