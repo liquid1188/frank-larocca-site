@@ -510,7 +510,7 @@ figure.center img { margin: 0 auto; }
 .album[id], [id].section-title, .work-hero[id] { scroll-margin-top: 3rem; }
 .soon { min-height: 60vh; display: grid; align-content: center; text-align: center; padding: 4rem 0; }
 .soon .wrap { max-width: 44rem; }
-.soon-mark { width: 240px; height: auto; margin: 0 auto 2rem; }
+.soon-mark { width: 240px; height: auto; margin: 0 auto 2rem; filter: brightness(0) invert(.92) opacity(.85); }
 .soon h1 { font-size: clamp(2rem, 4vw, 3rem); }
 .soon p { margin-left: auto; margin-right: auto; }
 .reviews-page blockquote > p:first-child:not(.attr) { font-family: var(--display); font-style: italic; font-size: 1.4rem; line-height: 1.25; margin-bottom: .3em; color: var(--vellum); }
