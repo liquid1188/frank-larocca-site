@@ -40,8 +40,8 @@ eleventyExcludeFromCollections: true
     {%- for w in rows | lvSort %}
       {%- set name = w.data.motet or w.data.title %}
       <li>
-        <div class="lv-title"><a href="{{ w.url }}">{{ name }}</a>{% if w.data.motet %} <span class="lv-occasion">{{ w.data.title }}</span>{% endif %}</div>
-        {%- if w.data.forces %}<div class="lv-forces">{{ w.data.forces }}</div>{% endif %}
+        <div class="lv-title"><a href="{{ w.url }}">{{ name }}</a></div>
+        {%- if w.data.motet or w.data.forces %}<div class="lv-forces">{% if w.data.motet %}{{ w.data.title }}{% if w.data.forces %}, {% endif %}{% endif %}{{ w.data.forces }}</div>{% endif %}
         <div class="lv-links">
           {%- if w.data.perusal %}<a href="{{ w.data.perusal }}">Perusal score</a>{% elif w.data.preview %}<a href="{{ w.data.preview }}">Preview score</a>{% endif %}
           {%- if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% elif w.data.video %}<a href="{{ w.data.video }}">Watch</a>{% endif %}

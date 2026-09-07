@@ -637,7 +637,6 @@ figure.center img { margin: 0 auto; }
 .lv-title { font-family: var(--display); font-size: 1.45rem; line-height: 1.15; }
 .lv-title a { text-decoration: none; color: var(--ink); }
 .lv-title a:hover { color: var(--rubric); }
-.lv-occasion { display: block; font-family: var(--body, inherit); font-size: .9rem; color: var(--ink-2); margin-top: .15rem; font-style: italic; }
 .lv-forces { font-size: .95rem; color: var(--ink-2); margin-top: .25rem; }
 .lv-links { display: flex; flex-wrap: wrap; gap: .2rem 1.1rem; margin-top: .55rem; font-size: .92rem; }
 .lv-links a { text-decoration: none; color: var(--ink-2); border-bottom: 1px solid rgba(34,29,43,.25); padding-bottom: 1px; }
