@@ -43,7 +43,7 @@ collections:
   - name: works
     label: Works
     label_singular: Work
-    description: "One entry per piece. Only the title and category are required; add links and a note whenever you have them."
+    description: "One entry per piece. Only the title and category are required; add links and a note whenever you have them. To make a perusal copy or a licensed performance copy of a score, use the Lumen Verum license tool (/lumen-verum/license/), then upload the perusal copy here as the Perusal score."
     folder: src/works-md
     create: true
     slug: "{{slug}}"
