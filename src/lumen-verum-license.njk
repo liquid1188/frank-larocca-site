@@ -54,7 +54,10 @@ description: "Stamp a Lumen Verum Music score with a per-copy license."
   function today(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
   function licence(){
     var d=today().replace(/-/g,'').slice(2); // YYMMDD
-    return 'LVM-'+d+'-'+code(($('work').value+'|'+$('ens').value+'|'+$('city').value+'|'+$('copies').value).toLowerCase());
+    var base='LVM-'+d+'-'+code(($('work').value+'|'+$('ens').value+'|'+$('city').value+'|'+$('copies').value).toLowerCase());
+    var used=ledger().map(function(r){return r.lic}),lic=base,n=2;
+    while(used.indexOf(lic)>=0){lic=base+'-'+n;n++;}
+    return lic;
   }
   function footer(){
     var ens=$('ens').value.trim(),city=$('city').value.trim(),n=parseInt($('copies').value,10)||0;
