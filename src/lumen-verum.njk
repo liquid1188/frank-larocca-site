@@ -11,8 +11,13 @@ eleventyExcludeFromCollections: true
     <img class="soon-mark" src="/images/affil/lumen-verum-music.svg" alt="Lumen Verum Music" width="150" height="84">
     <h1>Lumen Verum Music</h1>
     <p class="lv-lede">The publishing imprint of Frank La Rocca.</p>
+    {%- if not site.lvCatalog %}
+    <p style="margin-top:1.4rem">A catalog of scores is coming. Until then, performance materials for works published by Lumen Verum Music are available by request.</p>
+    <p><a class="btn primary" href="mailto:{{ site.materialsEmail }}?subject=Score%20request">{{ site.materialsEmail }}</a></p>
+    {%- endif %}
   </div>
 </section>
+{%- if site.lvCatalog %}
 {%- set groups = [
   ["Motets and anthems", ["SATB a cappella", "Propers & motets"], "nopropers"],
   ["Choral propers", ["Propers & motets"]],
@@ -64,3 +69,4 @@ eleventyExcludeFromCollections: true
   </div>
   </div>
 </section>
+{%- endif %}

@@ -178,6 +178,7 @@ collections:
           - { name: setupMode, label: Setup mode (hide from search engines), widget: boolean }
           - { name: contactEmail, label: Contact form delivers to }
           - { name: materialsEmail, label: Performance materials email }
+          - { name: lvCatalog, label: Show the Lumen Verum catalog, widget: boolean, hint: "Off shows a short coming-soon page with your email instead of the list of works." }
           - { name: pressAddress, label: Press address }
           - { name: pressPhone, label: Press phone }
           - name: social
