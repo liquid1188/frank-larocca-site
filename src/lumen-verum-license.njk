@@ -101,9 +101,9 @@ description: "Stamp a Lumen Verum Music score with a per-copy license."
       var font=await doc.embedFont(PDF.StandardFonts.TimesRomanItalic);
       var line=footer(),lic=licence(),ens=$('ens').value.trim();
       doc.getPages().forEach(function(pg){
-        var w=pg.getWidth(),h=pg.getHeight(),size=7.5,tw=font.widthOfTextAtSize(line,size);
-        while(tw>w-40&&size>5){size-=.5;tw=font.widthOfTextAtSize(line,size);}
-        pg.drawText(line,{x:(w-tw)/2,y:14,size:size,font:font,color:PDF.rgb(.35,.3,.28)});
+        var w=pg.getWidth(),h=pg.getHeight(),size=9.5,tw=font.widthOfTextAtSize(line,size);
+        while(tw>w-48&&size>6){size-=.5;tw=font.widthOfTextAtSize(line,size);}
+        pg.drawText(line,{x:(w-tw)/2,y:16,size:size,font:font,color:PDF.rgb(.3,.26,.24)});
         if($('wm').checked){
           var ws=Math.min(w,h)/9,wt=font.widthOfTextAtSize(ens,ws);
           pg.drawText(ens,{x:w/2-(wt/2)*Math.cos(Math.PI/4), y:h/2-(wt/2)*Math.sin(Math.PI/4), size:ws,font:font,color:PDF.rgb(.6,.55,.5),opacity:.10,rotate:PDF.degrees(45)});
@@ -127,8 +127,9 @@ description: "Stamp a Lumen Verum Music score with a per-copy license."
       var font=await doc.embedFont(PDF.StandardFonts.TimesRomanItalic);
       var foot='Perusal copy. Not for performance or reproduction.  Lumen Verum Music  lumenverummusic@gmail.com',big='PERUSAL COPY';
       doc.getPages().forEach(function(pg){
-        var w=pg.getWidth(),h=pg.getHeight(),size=7.5,tw=font.widthOfTextAtSize(foot,size);
-        pg.drawText(foot,{x:(w-tw)/2,y:14,size:size,font:font,color:PDF.rgb(.35,.3,.28)});
+        var w=pg.getWidth(),h=pg.getHeight(),size=9.5,tw=font.widthOfTextAtSize(foot,size);
+        while(tw>w-48&&size>6){size-=.5;tw=font.widthOfTextAtSize(foot,size);}
+        pg.drawText(foot,{x:(w-tw)/2,y:16,size:size,font:font,color:PDF.rgb(.3,.26,.24)});
         var ws=Math.min(w,h)/7,wt=font.widthOfTextAtSize(big,ws);
         pg.drawText(big,{x:w/2-(wt/2)*Math.cos(Math.PI/4),y:h/2-(wt/2)*Math.sin(Math.PI/4),size:ws,font:font,color:PDF.rgb(.5,.45,.4),opacity:.14,rotate:PDF.degrees(45)});
       });
