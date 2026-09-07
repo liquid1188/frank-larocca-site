@@ -624,18 +624,28 @@ figure.center img { margin: 0 auto; }
 .affil-strip img[src*="cism"], .affil-logo img[src*="cism"] { filter: none; opacity: .95; max-height: 64px; height: 64px; }
 
 /* Lumen Verum catalog */
-.lv-head { min-height: 0; padding-bottom: 1rem; }
-.lv-catalog { padding: 1rem 0 4rem; }
-.lv-catalog .wrap { max-width: 52rem; }
-.lv-catalog .section-title { margin-top: 2.6rem; }
-.lv-list { list-style: none; margin: 0; padding: 0; }
-.lv-list li { display: grid; grid-template-columns: 1fr auto; gap: .2rem 1.5rem; padding: .9rem 0; border-bottom: 1px solid rgba(255,255,255,.08); align-items: baseline; }
-.lv-title { font-family: var(--display); font-size: 1.35rem; }
-.lv-title a { text-decoration: none; color: var(--vellum); }
-.lv-title a:hover { color: var(--gold); }
-.lv-occasion { display: block; font-family: var(--body, inherit); font-size: .9rem; color: var(--ash); margin-top: .1rem; }
-.lv-forces { grid-column: 1; font-size: .95rem; color: var(--ash); }
-.lv-links { grid-column: 2; grid-row: 1 / span 2; display: flex; gap: .6rem; white-space: nowrap; }
-.lv-links a { font-size: .9rem; text-decoration: none; padding: .3rem .7rem; border: 1px solid var(--gold-dim); border-radius: 2px; color: var(--vellum); }
-.lv-links a:hover { border-color: var(--gold); color: var(--gold); }
-@media (max-width: 600px) { .lv-list li { grid-template-columns: 1fr; } .lv-links { grid-column: 1; grid-row: auto; margin-top: .5rem; } }
+.lv-head { min-height: 0; padding: 3.5rem 0 3rem; }
+.lv-head .soon-mark { margin-bottom: 1.6rem; }
+.lv-head h1 { margin-bottom: .2em; }
+.lv-lede { font-family: var(--display); font-size: 1.35rem; color: var(--gold); margin: 0; }
+.lv-catalog { padding-top: clamp(2.5rem, 5vw, 4rem); }
+.lv-catalog .wrap { max-width: 62rem; }
+.lv-group + .lv-group { margin-top: 3rem; }
+.lv-group-title { font-family: var(--body, inherit); font-size: .82rem; letter-spacing: .18em; text-transform: uppercase; color: #8a6d2f; margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 1px solid rgba(138,109,47,.35); font-weight: 500; }
+.lv-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 3rem; }
+.lv-list li { padding: 1rem 0; border-bottom: 1px solid rgba(34,29,43,.1); }
+.lv-title { font-family: var(--display); font-size: 1.45rem; line-height: 1.15; }
+.lv-title a { text-decoration: none; color: var(--ink); }
+.lv-title a:hover { color: var(--rubric); }
+.lv-occasion { display: block; font-family: var(--body, inherit); font-size: .9rem; color: var(--ink-2); margin-top: .15rem; font-style: italic; }
+.lv-forces { font-size: .95rem; color: var(--ink-2); margin-top: .25rem; }
+.lv-links { display: flex; flex-wrap: wrap; gap: .2rem 1.1rem; margin-top: .55rem; font-size: .92rem; }
+.lv-links a { text-decoration: none; color: var(--ink-2); border-bottom: 1px solid rgba(34,29,43,.25); padding-bottom: 1px; }
+.lv-links a:hover { color: var(--rubric); border-bottom-color: var(--rubric); }
+.lv-links .lv-req { color: #8a6d2f; border-bottom-color: rgba(138,109,47,.5); }
+.lv-order { text-align: center; }
+.lv-order-inner { max-width: 40rem; margin: 0 auto; }
+.lv-order .section-title { margin-top: 0; }
+.lv-order .btn { margin-top: .6rem; }
+.lv-order .note { margin-top: 1.6rem; color: var(--ash); font-size: .95rem; }
+@media (max-width: 720px) { .lv-list { grid-template-columns: 1fr; } }

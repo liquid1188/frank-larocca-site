@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
   <div class="wrap">
     <img class="soon-mark" src="/images/affil/lumen-verum-music.svg" alt="Lumen Verum Music" width="150" height="84">
     <h1>Lumen Verum Music</h1>
-    <p>The publishing imprint of Frank La Rocca. Scores are licensed per copy and delivered as PDFs watermarked to the purchasing ensemble. Preview any work below, then write to <a href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a> with the title and the number of copies you need.</p>
+    <p class="lv-lede">The publishing imprint of Frank La Rocca.</p>
   </div>
 </section>
 {%- set groups = [
@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
   ["Chamber and orchestral", ["Chamber & orchestral"]]
 ] %}
 {%- set placed = [] %}
-<section class="lv-catalog">
+<section class="band light lv-catalog">
   <div class="wrap">
   {%- for g in groups %}
     {%- set rows = [] %}
@@ -34,7 +34,8 @@ eleventyExcludeFromCollections: true
       {%- endif %}
     {%- endfor %}
     {%- if rows | length %}
-    <h2 class="section-title">{{ g[0] }}</h2>
+    <div class="lv-group">
+    <h2 class="lv-group-title">{{ g[0] }}</h2>
     <ul class="lv-list">
     {%- for w in rows | lvSort %}
       {%- set name = w.data.motet or w.data.title %}
@@ -42,16 +43,25 @@ eleventyExcludeFromCollections: true
         <div class="lv-title"><a href="{{ w.url }}">{{ name }}</a>{% if w.data.motet %} <span class="lv-occasion">{{ w.data.title }}</span>{% endif %}</div>
         {%- if w.data.forces %}<div class="lv-forces">{{ w.data.forces }}</div>{% endif %}
         <div class="lv-links">
-          {%- if w.data.preview %}<a href="{{ w.data.preview }}">Preview</a>{% endif %}
+          {%- if w.data.preview %}<a href="{{ w.data.preview }}">Preview score</a>{% endif %}
           {%- if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% elif w.data.video %}<a href="{{ w.data.video }}">Watch</a>{% endif %}
-          <a href="mailto:{{ site.materialsEmail }}?subject={{ name | urlencode }}">Request</a>
+          <a class="lv-req" href="mailto:{{ site.materialsEmail }}?subject={{ name | urlencode }}">Request</a>
         </div>
       </li>
     {%- endfor %}
     </ul>
+    </div>
     {%- endif %}
   {%- endfor %}
-  <h2 class="section-title">How ordering works</h2>
-  <p>Write to <a href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a> with the work, your ensemble, and the number of copies. You will receive a PDF licensed to your ensemble for that number of copies, with the license printed on each page. Duplicating beyond the licensed count requires an additional license. Directors preparing the Masses commissioned by the Benedict XVI Institute should see <a href="/directors/">For directors</a>.</p>
+  </div>
+</section>
+<section class="band lv-order">
+  <div class="wrap">
+  <div class="lv-order-inner">
+    <h2 class="section-title">Ordering</h2>
+    <p>Write with the work, your ensemble, and the number of copies you need. You will receive a PDF licensed to your ensemble for that number, with the license printed on each page. Copies beyond the licensed count require an additional license.</p>
+    <a class="btn primary" href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a>
+    <p class="note">Directors preparing the Masses commissioned by the Benedict XVI Institute should see <a href="/directors/">For directors</a>.</p>
+  </div>
   </div>
 </section>
