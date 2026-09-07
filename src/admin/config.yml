@@ -8,7 +8,7 @@ collections:
   - name: events
     label: Performances
     label_singular: Performance
-    description: "Press Add to announce a date. Past dates move to the past list on their own."
+    description: "Press Add to announce a date. Past dates move to the past list on their own. Made a mistake? Open Site history (/admin/history/) to restore any earlier version, or text Andrew."
     folder: src/events
     create: true
     slug: "{{fields.date}}-{{slug}}-{{fields.city}}"
