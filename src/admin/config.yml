@@ -55,6 +55,7 @@ collections:
           options: ["Mass settings & large works", "SATB a cappella", "SSAA", "Choral–instrumental", "Propers & motets", "Chamber & orchestral"] }
       - { name: forces, label: Forces and duration, required: false, hint: "For example: SATB a cappella 4'" }
       - { name: year, label: Year, required: false }
+      - { name: perusal, label: Perusal score (PDF), widget: file, required: false, media_folder: /src/scores, public_folder: /scores, hint: "Upload a watermarked perusal PDF. Shown instead of the Issuu link when present." }
       - { name: preview, label: Score preview link, required: false, hint: "Issuu or PDF" }
       - { name: audio, label: Recording link, required: false, hint: "YouTube, SoundCloud, or YouTube Music" }
       - { name: video, label: Video link, required: false, hint: "YouTube" }

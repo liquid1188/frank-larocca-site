@@ -43,7 +43,7 @@ eleventyExcludeFromCollections: true
         <div class="lv-title"><a href="{{ w.url }}">{{ name }}</a>{% if w.data.motet %} <span class="lv-occasion">{{ w.data.title }}</span>{% endif %}</div>
         {%- if w.data.forces %}<div class="lv-forces">{{ w.data.forces }}</div>{% endif %}
         <div class="lv-links">
-          {%- if w.data.preview %}<a href="{{ w.data.preview }}">Preview score</a>{% endif %}
+          {%- if w.data.perusal %}<a href="{{ w.data.perusal }}">Perusal score</a>{% elif w.data.preview %}<a href="{{ w.data.preview }}">Preview score</a>{% endif %}
           {%- if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% elif w.data.video %}<a href="{{ w.data.video }}">Watch</a>{% endif %}
           <a class="lv-req" href="mailto:{{ site.materialsEmail }}?subject={{ name | urlencode }}&body=Work%3A%20{{ name | urlencode }}%0AEnsemble%3A%20%0ACity%3A%20%0ACopies%3A%20">Request</a>
         </div>

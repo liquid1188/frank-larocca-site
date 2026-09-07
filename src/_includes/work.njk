@@ -9,7 +9,7 @@ eleventyComputed:
 <h1>{{ title }}</h1>
 {%- if forces or year %}<p class="attr">{{ forces }}{% if forces and year %}, {% endif %}{{ year }}</p>{%- endif %}
 <div class="work-links">
-{%- if preview %}<a href="{{ preview }}">Preview the score</a>{%- endif %}
+{%- if perusal %}<a href="{{ perusal }}">Perusal score (PDF)</a>{%- elif preview %}<a href="{{ preview }}">Preview the score</a>{%- endif %}
 {%- if audio %}<a href="{{ audio }}">{% if "music.youtube" in audio %}Listen to the album{% else %}Listen{% endif %}</a>{%- endif %}
 {%- if video %}<a href="{{ video }}">{% if playlist %}Watch the whole Mass{% elif slug == "missa-pange-lingua" %}Watch the premiere Mass{% else %}Watch{% endif %}</a>{%- endif %}
 {%- if purchase %}<a href="{{ purchase }}">{% if "cappella" in purchase %}Buy the album{% else %}Purchase{% endif %}</a>{%- endif %}

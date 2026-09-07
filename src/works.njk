@@ -10,6 +10,7 @@ description: "Catalog of works by Frank La Rocca: Mass settings, motets and prop
 <div class="filters" role="tablist" aria-label="Filter works">
   <button class="filter is-on" data-cat="">All</button>
   {%- for cat in cats %}<button class="filter" data-cat="{{ cat }}">{{ cat }}</button>{%- endfor %}
+  <button class="filter" data-cat="Lumen Verum Music">Lumen Verum Music</button>
 </div>
 <div class="cards" id="cards">
 {%- for w in collections.work %}{% include "card.njk" %}{% endfor %}

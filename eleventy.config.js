@@ -1,7 +1,7 @@
 import { HtmlBasePlugin } from "@11ty/eleventy";
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
-  eleventyConfig.addPassthroughCopy({ "src/css": "css", "src/admin": "admin", "src/assets": "assets", "src/images": "images" });
+  eleventyConfig.addPassthroughCopy({ "src/css": "css", "src/admin": "admin", "src/assets": "assets", "src/images": "images", "src/scores": "scores" });
   eleventyConfig.addFilter("readableDate", (d) =>
     new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
   );
