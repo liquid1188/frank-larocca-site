@@ -1,0 +1,125 @@
+---
+layout: base.njk
+title: Lumen Verum Music · License a score
+permalink: /lumen-verum/license/
+noindex: true
+eleventyExcludeFromCollections: true
+description: "Stamp a Lumen Verum Music score with a per-copy license."
+---
+<p class="kicker"><a href="/lumen-verum/" style="text-decoration:none">Lumen Verum Music</a></p>
+<h1>License a score</h1>
+<p class="note">Everything here runs in this browser. The score never leaves this computer.</p>
+
+<div class="lic">
+  <div class="lic-drop" id="drop" tabindex="0">
+    <input type="file" id="file" accept="application/pdf" hidden>
+    <span id="dropText">Drop the master PDF here, or click to choose</span>
+  </div>
+
+  <div class="lic-grid">
+    <label>Work<input id="work" placeholder="Filled from the PDF name; edit if needed"></label>
+    <label>Ensemble<input id="ens" placeholder="St. Mary's Cathedral Choir" autocomplete="off"></label>
+    <label>City<input id="city" placeholder="Baltimore" autocomplete="off"></label>
+    <label>Copies<input id="copies" type="number" min="1" value="30"></label>
+    <label>Licensee email (for your record)<input id="email" type="email" placeholder="director@parish.org"></label>
+    <label class="lic-check"><input id="wm" type="checkbox"> Add a faint diagonal watermark of the ensemble name</label>
+  </div>
+
+  <p class="lic-preview" id="preview"></p>
+  <div class="lic-actions">
+    <button class="btn primary" id="stamp" disabled>Stamp and download</button>
+    <button class="btn" id="csv">Download ledger (CSV)</button>
+    <span class="note" id="status"></span>
+  </div>
+
+  <h2 class="section-title">Ledger</h2>
+  <p class="note">Kept in this browser only. Each stamp adds a row. The ledger is also your ASCAP performance-data source.</p>
+  <div class="lic-table-wrap"><table class="lic-table" id="ledger"><thead><tr><th>Date</th><th>License</th><th>Work</th><th>Ensemble</th><th>Copies</th></tr></thead><tbody></tbody></table></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var drop=$('drop'),file=$('file'),bytes=null,fname='';
+  var fields=['work','ens','city','copies','email'];
+  var KEY='lvm-ledger';
+
+  function code(str){ // 4 chars, base-32 alphabet without ambiguous glyphs, from a simple hash
+    var h=2166136261; for(var i=0;i<str.length;i++){h^=str.charCodeAt(i);h=(h*16777619)>>>0;}
+    var A='ABCDEFGHJKMNPQRSTVWXYZ23456789',o='';
+    for(var k=0;k<4;k++){o+=A[h%A.length];h=Math.floor(h/A.length);} return o;
+  }
+  function today(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function licence(){
+    var d=today().replace(/-/g,'').slice(2); // YYMMDD
+    return 'LVM-'+d+'-'+code(($('work').value+'|'+$('ens').value+'|'+$('city').value+'|'+$('copies').value).toLowerCase());
+  }
+  function footer(){
+    var ens=$('ens').value.trim(),city=$('city').value.trim(),n=parseInt($('copies').value,10)||0;
+    var who=ens+(city?', '+city:'');
+    return 'Licensed to '+who+' for '+n+(n===1?' copy':' copies')+'.  '+licence()+'  Lumen Verum Music';
+  }
+  function refresh(){
+    var ok=bytes&&$('ens').value.trim()&&$('work').value.trim()&&parseInt($('copies').value,10)>0;
+    $('stamp').disabled=!ok;
+    $('preview').textContent= ($('ens').value.trim()&&bytes) ? footer() : '';
+  }
+  fields.forEach(function(f){$(f).addEventListener('input',refresh)});
+
+  function load(f){
+    if(!f||f.type!=='application/pdf'){$('status').textContent='That is not a PDF.';return;}
+    fname=f.name; var r=new FileReader();
+    r.onload=function(){bytes=new Uint8Array(r.result);$('dropText').textContent=fname;
+      if(!$('work').value){$('work').value=fname.replace(/\.pdf$/i,'').replace(/[_-]+/g,' ').replace(/\b(score|master|full|wm)\b/ig,'').trim();}
+      $('status').textContent='';refresh();};
+    r.readAsArrayBuffer(f);
+  }
+  drop.addEventListener('click',function(){file.click()});
+  drop.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();file.click();}});
+  file.addEventListener('change',function(){load(file.files[0])});
+  ['dragenter','dragover'].forEach(function(ev){drop.addEventListener(ev,function(e){e.preventDefault();drop.classList.add('over')})});
+  ['dragleave','drop'].forEach(function(ev){drop.addEventListener(ev,function(e){e.preventDefault();drop.classList.remove('over')})});
+  drop.addEventListener('drop',function(e){load(e.dataTransfer.files[0])});
+
+  function ledger(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+  function render(){
+    var tb=$('ledger').querySelector('tbody');tb.innerHTML='';
+    ledger().slice().reverse().forEach(function(r){var tr=document.createElement('tr');
+      [r.date,r.lic,r.work,r.ens+(r.city?', '+r.city:''),r.copies].forEach(function(v){var td=document.createElement('td');td.textContent=v;tr.appendChild(td)});tb.appendChild(tr);});
+  }
+  render();
+
+  $('stamp').addEventListener('click',async function(){
+    $('status').textContent='Stamping…';$('stamp').disabled=true;
+    try{
+      var PDF=PDFLib,doc=await PDF.PDFDocument.load(bytes,{ignoreEncryption:true});
+      var font=await doc.embedFont(PDF.StandardFonts.TimesRomanItalic);
+      var line=footer(),lic=licence(),ens=$('ens').value.trim();
+      doc.getPages().forEach(function(pg){
+        var w=pg.getWidth(),h=pg.getHeight(),size=7.5,tw=font.widthOfTextAtSize(line,size);
+        while(tw>w-40&&size>5){size-=.5;tw=font.widthOfTextAtSize(line,size);}
+        pg.drawText(line,{x:(w-tw)/2,y:14,size:size,font:font,color:PDF.rgb(.35,.3,.28)});
+        if($('wm').checked){
+          var ws=Math.min(w,h)/9,wt=font.widthOfTextAtSize(ens,ws);
+          pg.drawText(ens,{x:w/2-(wt/2)*Math.cos(Math.PI/4), y:h/2-(wt/2)*Math.sin(Math.PI/4), size:ws,font:font,color:PDF.rgb(.6,.55,.5),opacity:.10,rotate:PDF.degrees(45)});
+        }
+      });
+      doc.setProducer('Lumen Verum Music');doc.setSubject('Licensed copy '+lic);
+      var out=await doc.save();
+      var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([out],{type:'application/pdf'}));
+      a.download=$('work').value.trim().replace(/[^\w\- ]+/g,'').replace(/\s+/g,'_')+'_'+lic+'.pdf';a.click();
+      var L=ledger();L.push({date:today(),lic:lic,work:$('work').value.trim(),ens:ens,city:$('city').value.trim(),copies:parseInt($('copies').value,10),email:$('email').value.trim()});
+      localStorage.setItem(KEY,JSON.stringify(L));render();
+      $('status').textContent='Done. '+lic;
+    }catch(e){console.error(e);$('status').textContent='Could not stamp this PDF. '+(e.message||'');}
+    $('stamp').disabled=false;
+  });
+
+  $('csv').addEventListener('click',function(){
+    var L=ledger(),rows=[['date','license','work','ensemble','city','copies','email']].concat(L.map(function(r){return[r.date,r.lic,r.work,r.ens,r.city,r.copies,r.email||'']}));
+    var csv=rows.map(function(r){return r.map(function(v){return '"'+String(v==null?'':v).replace(/"/g,'""')+'"'}).join(',')}).join('\n');
+    var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='lumen-verum-ledger.csv';a.click();
+  });
+})();
+</script>

@@ -649,3 +649,22 @@ figure.center img { margin: 0 auto; }
 .lv-order .btn { margin-top: .6rem; }
 .lv-order .note { margin-top: 1.6rem; color: var(--ash); font-size: .95rem; }
 @media (max-width: 720px) { .lv-list { grid-template-columns: 1fr; } }
+
+/* Lumen Verum license stamper */
+.lic { max-width: 46rem; }
+.lic-drop { border: 1px dashed var(--gold-dim); border-radius: 2px; padding: 2.2rem 1rem; text-align: center; color: var(--ash); cursor: pointer; margin: 1.5rem 0; transition: border-color .2s, color .2s; }
+.lic-drop:hover, .lic-drop.over, .lic-drop:focus-visible { border-color: var(--gold); color: var(--vellum); }
+.lic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; }
+.lic-grid label { display: block; font-size: .9rem; color: var(--ash); }
+.lic-grid label:first-child { grid-column: 1 / -1; }
+.lic-grid input:not([type=checkbox]) { display: block; width: 100%; margin-top: .3rem; font: inherit; font-size: 1.05rem; color: var(--vellum); background: var(--nave-2); border: 1px solid var(--gold-dim); border-radius: 2px; padding: .55rem .7rem; box-sizing: border-box; }
+.lic-grid input:focus { outline: none; border-color: var(--gold); }
+.lic-check { grid-column: 1 / -1; display: flex !important; align-items: center; gap: .6rem; margin-top: .4rem; }
+.lic-preview { font-family: var(--display); font-style: italic; color: var(--gold); margin: 1.4rem 0 .6rem; min-height: 1.4em; }
+.lic-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1rem; }
+.lic-actions .btn[disabled] { opacity: .45; cursor: default; }
+.lic-table-wrap { overflow-x: auto; }
+.lic-table { width: 100%; border-collapse: collapse; font-size: .92rem; margin-top: .5rem; }
+.lic-table th, .lic-table td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid rgba(255,255,255,.08); white-space: nowrap; }
+.lic-table th { color: var(--ash); font-weight: 500; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+@media (max-width: 600px) { .lic-grid { grid-template-columns: 1fr; } }
