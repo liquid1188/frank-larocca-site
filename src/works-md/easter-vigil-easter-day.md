@@ -3,7 +3,7 @@ title: "Easter Vigil, Easter Day"
 slug: "easter-vigil-easter-day"
 categories:
   - "Propers & motets"
-preview: "http://issuu.com/compozor/docs/christ_our_passover_score"
+preview: "https://issuu.com/compozor/docs/christ_our_passover_score"
 audio: "https://www.youtube.com/watch?v=WEaLnJD1yTE"
 publisher: "Lumen Verum Music"
 lvOrder: 5

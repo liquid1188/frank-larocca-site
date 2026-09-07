@@ -4,7 +4,7 @@ slug: "eli-eli"
 categories:
   - "Choral\u2013instrumental"
 forces: "SATB and Organ 6'"
-preview: "http://issuu.com/compozor/docs/eli__eli_choral_organ4.26.05_rev"
+preview: "https://issuu.com/compozor/docs/eli__eli_choral_organ4.26.05_rev"
 audio: "https://soundcloud.com/frank-larocca/eli-eli"
 publisher: "Lumen Verum Music"
 tags: work

@@ -4,7 +4,7 @@ slug: "expectavi-dominum"
 categories:
   - "SATB a cappella"
   - "Propers & motets"
-preview: "http://issuu.com/compozor/docs/expectavi_dominum"
+preview: "https://issuu.com/compozor/docs/expectavi_dominum"
 audio: "https://soundcloud.com/frank-larocca/expectavi-dominum"
 purchase: "http://www.sheetmusicplus.com/search?Ntt=Frank+La+Rocca"
 recording: "/recordings/#in-this-place"

@@ -4,7 +4,7 @@ slug: "alleluia"
 categories:
   - "Choral\u2013instrumental"
 forces: "SATB, Organ, optional brass 2'30\""
-preview: "http://issuu.com/compozor/docs/alleluia_cover"
+preview: "https://issuu.com/compozor/docs/alleluia_cover"
 audio: "https://soundcloud.com/frank-larocca/alleluia"
 publisher: "Lumen Verum Music"
 tags: work

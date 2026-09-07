@@ -4,7 +4,7 @@ slug: "diffusa-est-gratia"
 categories:
   - "SATB a cappella"
   - "Propers & motets"
-preview: "http://issuu.com/compozor/docs/diffusa_est_gratia_score_9.14wm"
+preview: "https://issuu.com/compozor/docs/diffusa_est_gratia_score_9.14wm"
 audio: "https://www.youtube.com/watch?v=eJo-9MFwD6I"
 purchase: "https://musicspoke.com/downloads/diffusa-est-gratia/"
 tags: work

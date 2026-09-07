@@ -3,7 +3,7 @@ title: "O Vos Omnes"
 slug: "o-vos-omnes"
 categories:
   - "SATB a cappella"
-preview: "http://issuu.com/compozor/docs/o_vos_omnes"
+preview: "https://issuu.com/compozor/docs/o_vos_omnes"
 audio: "https://www.youtube.com/watch?v=XuypT16_E-c"
 publisher: "Lumen Verum Music"
 tags: work

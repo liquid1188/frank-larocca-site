@@ -4,7 +4,7 @@ slug: "cantate-domino"
 categories:
   - "Choral\u2013instrumental"
 forces: "SATB and Orchestra 6'"
-preview: "http://issuu.com/compozor/docs/cantate_erm_final"
+preview: "https://issuu.com/compozor/docs/cantate_erm_final"
 audio: "https://soundcloud.com/frank-larocca/cantate-domino"
 publisher: "Lumen Verum Music"
 tags: work
