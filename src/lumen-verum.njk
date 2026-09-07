@@ -45,7 +45,7 @@ eleventyExcludeFromCollections: true
         <div class="lv-links">
           {%- if w.data.preview %}<a href="{{ w.data.preview }}">Preview score</a>{% endif %}
           {%- if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% elif w.data.video %}<a href="{{ w.data.video }}">Watch</a>{% endif %}
-          <a class="lv-req" href="mailto:{{ site.materialsEmail }}?subject={{ name | urlencode }}">Request</a>
+          <a class="lv-req" href="mailto:{{ site.materialsEmail }}?subject={{ name | urlencode }}&body=Work%3A%20{{ name | urlencode }}%0AEnsemble%3A%20%0ACity%3A%20%0ACopies%3A%20">Request</a>
         </div>
       </li>
     {%- endfor %}
@@ -59,9 +59,8 @@ eleventyExcludeFromCollections: true
   <div class="wrap">
   <div class="lv-order-inner">
     <h2 class="section-title">Ordering</h2>
-    <p>Write with the work, your ensemble, and the number of copies you need. You will receive a PDF licensed to your ensemble for that number, with the license printed on each page. Copies beyond the licensed count require an additional license.</p>
-    <a class="btn primary" href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a>
-    <p class="note">Directors preparing the Masses commissioned by the Benedict XVI Institute should see <a href="/directors/">For directors</a>.</p>
+    <p>Write with the work, your ensemble, and the number of copies you need.</p>
+    <a class="btn primary" href="mailto:{{ site.materialsEmail }}?subject=Score%20request&body=Work%3A%20%0AEnsemble%3A%20%0ACity%3A%20%0ACopies%3A%20">{{ site.materialsEmail }}</a>
   </div>
   </div>
 </section>
