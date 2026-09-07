@@ -45,7 +45,7 @@ eleventyExcludeFromCollections: true
         <div class="lv-links">
           {%- if w.data.perusal %}<a href="{{ w.data.perusal }}">Perusal score</a>{% elif w.data.preview %}<a href="{{ w.data.preview }}">Preview score</a>{% endif %}
           {%- if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% elif w.data.video %}<a href="{{ w.data.video }}">Watch</a>{% endif %}
-          <a class="lv-req" href="mailto:{{ site.materialsEmail }}?subject={{ name | urlencode }}&body=Work%3A%20{{ name | urlencode }}%0AEnsemble%3A%20%0ACity%3A%20%0ACopies%3A%20">Request</a>
+          <a class="lv-req" href="mailto:{{ site.materialsEmail }}?subject=Score%20request%20for%20{{ name | urlencode }}&body=Dear%20Dr.%20La%20Rocca%2C%0A%0AI%20would%20like%20to%20request%20performance%20copies%20of%20{{ name | urlencode }}.%0A%0AEnsemble%3A%20%0ACity%3A%20%0ANumber%20of%20copies%3A%20%0A%0AThank%20you%2C%0A">Request</a>
         </div>
       </li>
     {%- endfor %}
@@ -60,7 +60,7 @@ eleventyExcludeFromCollections: true
   <div class="lv-order-inner">
     <h2 class="section-title">Ordering</h2>
     <p>Write with the work, your ensemble, and the number of copies you need.</p>
-    <a class="btn primary" href="mailto:{{ site.materialsEmail }}?subject=Score%20request&body=Work%3A%20%0AEnsemble%3A%20%0ACity%3A%20%0ACopies%3A%20">{{ site.materialsEmail }}</a>
+    <a class="btn primary" href="mailto:{{ site.materialsEmail }}?subject=Score%20request&body=Dear%20Dr.%20La%20Rocca%2C%0A%0AI%20would%20like%20to%20request%20performance%20copies%20of%20the%20following%20work%3A%20.%0A%0AEnsemble%3A%20%0ACity%3A%20%0ANumber%20of%20copies%3A%20%0A%0AThank%20you%2C%0A">{{ site.materialsEmail }}</a>
   </div>
   </div>
 </section>
