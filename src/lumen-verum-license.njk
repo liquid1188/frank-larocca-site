@@ -8,7 +8,7 @@ description: "Stamp a Lumen Verum Music score with a per-copy license."
 ---
 <p class="kicker"><a href="/lumen-verum/" style="text-decoration:none">Lumen Verum Music</a></p>
 <h1>License a score</h1>
-<p class="note">Everything here runs in this browser. The score never leaves this computer.</p>
+<p class="note">Everything here runs in this browser. The score never leaves this computer. Fill in the ensemble to stamp a licensed copy, or drop a master and click Perusal copy to make the public preview for the editor.</p>
 
 <div class="lic">
   <div class="lic-drop" id="drop" tabindex="0">
@@ -28,6 +28,7 @@ description: "Stamp a Lumen Verum Music score with a per-copy license."
   <p class="lic-preview" id="preview"></p>
   <div class="lic-actions">
     <button class="btn primary" id="stamp" disabled>Stamp and download</button>
+    <button class="btn" id="perusal" disabled>Perusal copy</button>
     <button class="btn" id="csv">Download ledger (CSV)</button>
     <span class="note" id="status"></span>
   </div>
@@ -62,7 +63,7 @@ description: "Stamp a Lumen Verum Music score with a per-copy license."
   }
   function refresh(){
     var ok=bytes&&$('ens').value.trim()&&$('work').value.trim()&&parseInt($('copies').value,10)>0;
-    $('stamp').disabled=!ok;
+    $('stamp').disabled=!ok; $('perusal').disabled=!bytes;
     $('preview').textContent= ($('ens').value.trim()&&bytes) ? footer() : '';
   }
   fields.forEach(function(f){$(f).addEventListener('input',refresh)});
@@ -114,6 +115,26 @@ description: "Stamp a Lumen Verum Music score with a per-copy license."
       $('status').textContent='Done. '+lic;
     }catch(e){console.error(e);$('status').textContent='Could not stamp this PDF. '+(e.message||'');}
     $('stamp').disabled=false;
+  });
+
+  $('perusal').addEventListener('click',async function(){
+    $('status').textContent='Marking…';
+    try{
+      var PDF=PDFLib,doc=await PDF.PDFDocument.load(bytes,{ignoreEncryption:true});
+      var font=await doc.embedFont(PDF.StandardFonts.TimesRomanItalic);
+      var foot='Perusal copy. Not for performance or reproduction.  Lumen Verum Music  lumenverummusic@gmail.com',big='PERUSAL COPY';
+      doc.getPages().forEach(function(pg){
+        var w=pg.getWidth(),h=pg.getHeight(),size=7.5,tw=font.widthOfTextAtSize(foot,size);
+        pg.drawText(foot,{x:(w-tw)/2,y:14,size:size,font:font,color:PDF.rgb(.35,.3,.28)});
+        var ws=Math.min(w,h)/7,wt=font.widthOfTextAtSize(big,ws);
+        pg.drawText(big,{x:w/2-(wt/2)*Math.cos(Math.PI/4),y:h/2-(wt/2)*Math.sin(Math.PI/4),size:ws,font:font,color:PDF.rgb(.5,.45,.4),opacity:.14,rotate:PDF.degrees(45)});
+      });
+      doc.setProducer('Lumen Verum Music');doc.setSubject('Perusal copy');
+      var out=await doc.save();
+      var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([out],{type:'application/pdf'}));
+      a.download=($('work').value.trim()||fname.replace(/\.pdf$/i,'')).replace(/[^\w\- ]+/g,'').replace(/\s+/g,'_')+'_perusal.pdf';a.click();
+      $('status').textContent='Done. Upload this file in the editor as the Perusal score.';
+    }catch(e){console.error(e);$('status').textContent='Could not mark this PDF. '+(e.message||'');}
   });
 
   $('csv').addEventListener('click',function(){
