@@ -6,6 +6,7 @@ categories:
   - "Propers & motets"
 preview: "http://issuu.com/compozor/docs/ubi_caritas"
 audio: "https://soundcloud.com/frank-larocca/ubi-caritas"
+publisher: "Lumen Verum Music"
 tags: work
 layout: work.njk
 permalink: "/works/ubi-caritas/"

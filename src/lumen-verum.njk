@@ -3,14 +3,55 @@ layout: base.njk
 title: Lumen Verum Music
 permalink: /lumen-verum/
 fullwidth: true
-description: "Lumen Verum Music, the publishing imprint of composer Frank La Rocca."
+description: "Lumen Verum Music, the publishing imprint of composer Frank La Rocca. Catalog of scores with perusal and request information."
 eleventyExcludeFromCollections: true
 ---
-<section class="soon">
+<section class="soon lv-head">
   <div class="wrap">
     <img class="soon-mark" src="/images/affil/lumen-verum-music.svg" alt="Lumen Verum Music" width="150" height="84">
     <h1>Lumen Verum Music</h1>
-    <p>The publishing imprint of Frank La Rocca. A catalog of scores with perusal and purchase information is coming.</p>
-    <p class="note">Until then, performance materials for works published by Lumen Verum Music are available by request: <a href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a>. See also <a href="/directors/">For directors</a>.</p>
+    <p>The publishing imprint of Frank La Rocca. Scores are licensed per copy and delivered as PDFs watermarked to the purchasing ensemble. Preview any work below, then write to <a href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a> with the title and the number of copies you need.</p>
+  </div>
+</section>
+{%- set groups = [
+  ["Motets and anthems", ["SATB a cappella", "Propers & motets"], "nopropers"],
+  ["Choral propers", ["Propers & motets"]],
+  ["Choral with instruments", ["Choral–instrumental"]],
+  ["Treble voices", ["SSAA"]],
+  ["Chamber and orchestral", ["Chamber & orchestral"]]
+] %}
+{%- set placed = [] %}
+<section class="lv-catalog">
+  <div class="wrap">
+  {%- for g in groups %}
+    {%- set rows = [] %}
+    {%- for w in collections.work %}
+      {%- if w.data.publisher == "Lumen Verum Music" and w.data.slug not in placed %}
+        {%- set hit = false %}
+        {%- for c in g[1] %}{% if c in w.data.categories %}{% set hit = true %}{% endif %}{% endfor %}
+        {%- if g[2] == "nopropers" and w.data.motet %}{% set hit = false %}{% endif %}
+        {%- if hit %}{% set rows = (rows.push(w), rows) %}{% set placed = (placed.push(w.data.slug), placed) %}{% endif %}
+      {%- endif %}
+    {%- endfor %}
+    {%- if rows | length %}
+    <h2 class="section-title">{{ g[0] }}</h2>
+    <ul class="lv-list">
+    {%- for w in rows | lvSort %}
+      {%- set name = w.data.motet or w.data.title %}
+      <li>
+        <div class="lv-title"><a href="{{ w.url }}">{{ name }}</a>{% if w.data.motet %} <span class="lv-occasion">{{ w.data.title }}</span>{% endif %}</div>
+        {%- if w.data.forces %}<div class="lv-forces">{{ w.data.forces }}</div>{% endif %}
+        <div class="lv-links">
+          {%- if w.data.preview %}<a href="{{ w.data.preview }}">Preview</a>{% endif %}
+          {%- if w.data.audio %}<a href="{{ w.data.audio }}">Listen</a>{% elif w.data.video %}<a href="{{ w.data.video }}">Watch</a>{% endif %}
+          <a href="mailto:{{ site.materialsEmail }}?subject={{ name | urlencode }}">Request</a>
+        </div>
+      </li>
+    {%- endfor %}
+    </ul>
+    {%- endif %}
+  {%- endfor %}
+  <h2 class="section-title">How ordering works</h2>
+  <p>Write to <a href="mailto:{{ site.materialsEmail }}">{{ site.materialsEmail }}</a> with the work, your ensemble, and the number of copies. You will receive a PDF licensed to your ensemble for that number of copies, with the license printed on each page. Duplicating beyond the licensed count requires an additional license. Directors preparing the Masses commissioned by the Benedict XVI Institute should see <a href="/directors/">For directors</a>.</p>
   </div>
 </section>

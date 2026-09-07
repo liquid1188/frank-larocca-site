@@ -7,6 +7,7 @@ forces: "soprano, clar, stg. quartet 10'"
 preview: "http://issuu.com/compozor/docs/veni_issuuwm"
 audio: "https://soundcloud.com/frank-larocca/veni-sancte-spiritus"
 recording: "/recordings/#in-this-place"
+publisher: "Lumen Verum Music"
 tags: work
 layout: work.njk
 permalink: "/works/veni-sancte-spiritus/"

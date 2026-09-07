@@ -59,6 +59,8 @@ collections:
       - { name: audio, label: Recording link, required: false, hint: "YouTube, SoundCloud, or YouTube Music" }
       - { name: video, label: Video link, required: false, hint: "YouTube" }
       - { name: purchase, label: Where to buy the score, required: false }
+      - { name: publisher, label: Publisher, required: false, widget: select, options: ["Lumen Verum Music", "Boosey & Hawkes", "GIA", "Walton Music", "Santa Barbara Music Publishing", "MusicSpoke"], hint: "Lumen Verum works are listed on the imprint page automatically." }
+      - { name: motet, label: Motet title (for propers), required: false, hint: "For example: Behold, a Virgin Shall Conceive" }
       - { name: recording, label: Album page on this site, required: false, hint: "For example: /recordings/#mass-of-the-americas" }
       - { name: directors, label: Performance materials link, required: false }
       - { name: hero, label: Header photo, widget: image, required: false }

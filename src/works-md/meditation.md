@@ -6,6 +6,7 @@ categories:
 forces: "piano solo 3' chorus, orchestra, organ, soloists 92'"
 audio: "https://soundcloud.com/frank-larocca/meditation"
 recording: "/recordings/#in-this-place"
+publisher: "Lumen Verum Music"
 tags: work
 layout: work.njk
 permalink: "/works/meditation/"

@@ -5,6 +5,7 @@ categories:
   - "Propers & motets"
 preview: "http://issuu.com/compozor/docs/laudate_dominum"
 audio: "https://soundcloud.com/frank-larocca/laudate-dominum"
+publisher: "Lumen Verum Music"
 tags: work
 layout: work.njk
 permalink: "/works/laudate-dominum/"

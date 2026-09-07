@@ -6,6 +6,7 @@ categories:
 forces: "SATB and Orchestra 6'"
 preview: "http://issuu.com/compozor/docs/cantate_erm_final"
 audio: "https://soundcloud.com/frank-larocca/cantate-domino"
+publisher: "Lumen Verum Music"
 tags: work
 layout: work.njk
 permalink: "/works/cantate-domino/"

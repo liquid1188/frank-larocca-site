@@ -6,6 +6,7 @@ categories:
 preview: "http://issuu.com/compozor/docs/exaudi_wm"
 audio: "https://soundcloud.com/frank-larocca/exaudi"
 year: 1998
+publisher: "Lumen Verum Music"
 tags: work
 layout: work.njk
 permalink: "/works/exaudi/"

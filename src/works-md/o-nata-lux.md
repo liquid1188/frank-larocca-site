@@ -6,6 +6,7 @@ categories:
 forces: "SATB and Strings (orchestral or chamber) 7'30\""
 preview: "http://issuu.com/compozor/docs/o_nata_lux_wm"
 audio: "https://soundcloud.com/frank-larocca/o-nata-lux"
+publisher: "Lumen Verum Music"
 tags: work
 layout: work.njk
 permalink: "/works/o-nata-lux/"

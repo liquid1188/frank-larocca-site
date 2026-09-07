@@ -6,6 +6,7 @@ categories:
 forces: "vln, vla, vc 18'"
 audio: "https://soundcloud.com/frank-larocca/string-trio"
 recording: "/recordings/#string-trio-secret-thoughts"
+publisher: "Lumen Verum Music"
 tags: work
 layout: work.njk
 permalink: "/works/string-trio/"

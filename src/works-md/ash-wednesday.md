@@ -5,6 +5,9 @@ categories:
   - "Propers & motets"
 preview: "http://issuu.com/compozor/docs/he_who_ponders_score"
 audio: "https://soundcloud.com/frank-larocca/he-who-ponders-the-law-of-the-lord"
+publisher: "Lumen Verum Music"
+lvOrder: 3
+motet: "He Who Ponders the Law of the Lord"
 tags: work
 layout: work.njk
 permalink: "/works/ash-wednesday/"

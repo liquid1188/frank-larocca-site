@@ -15,7 +15,9 @@ eleventyComputed:
 {%- if purchase %}<a href="{{ purchase }}">{% if "cappella" in purchase %}Buy the album{% else %}Purchase{% endif %}</a>{%- endif %}
 {%- if recording %}<a href="{{ recording }}">Recording</a>{%- endif %}
 {%- if directors %}<a href="{{ directors }}">Scores and parish edition</a>{%- endif %}
+{%- if publisher == "Lumen Verum Music" and not purchase %}<a href="mailto:{{ site.materialsEmail }}?subject={{ (motet or title) | urlencode }}">Request the score</a>{%- endif %}
 </div>
+{%- if publisher %}<p class="attr" style="margin-top:.4rem">Published by {% if publisher == "Lumen Verum Music" %}<a href="/lumen-verum/">Lumen Verum Music</a>{% else %}{{ publisher }}{% endif %}</p>{%- endif %}
 {%- if content | trim %}
 <div style="margin-top:2rem">{{ content | safe }}</div>
 {%- endif %}

@@ -5,6 +5,7 @@ categories:
   - "SATB a cappella"
 preview: "http://issuu.com/compozor/docs/o_vos_omnes"
 audio: "https://www.youtube.com/watch?v=XuypT16_E-c"
+publisher: "Lumen Verum Music"
 tags: work
 layout: work.njk
 permalink: "/works/o-vos-omnes/"

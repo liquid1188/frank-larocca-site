@@ -622,3 +622,20 @@ figure.center img { margin: 0 auto; }
 .endorse-portrait { float: right; width: 240px; margin: 0 0 1.5rem 2.5rem; shape-outside: margin-box; }
 @media (max-width: 700px) { .endorse-portrait { float: none; width: 100%; max-width: 320px; margin: 0 0 1.5rem; } }
 .affil-strip img[src*="cism"], .affil-logo img[src*="cism"] { filter: none; opacity: .95; max-height: 64px; height: 64px; }
+
+/* Lumen Verum catalog */
+.lv-head { min-height: 0; padding-bottom: 1rem; }
+.lv-catalog { padding: 1rem 0 4rem; }
+.lv-catalog .wrap { max-width: 52rem; }
+.lv-catalog .section-title { margin-top: 2.6rem; }
+.lv-list { list-style: none; margin: 0; padding: 0; }
+.lv-list li { display: grid; grid-template-columns: 1fr auto; gap: .2rem 1.5rem; padding: .9rem 0; border-bottom: 1px solid rgba(255,255,255,.08); align-items: baseline; }
+.lv-title { font-family: var(--display); font-size: 1.35rem; }
+.lv-title a { text-decoration: none; color: var(--vellum); }
+.lv-title a:hover { color: var(--gold); }
+.lv-occasion { display: block; font-family: var(--body, inherit); font-size: .9rem; color: var(--ash); margin-top: .1rem; }
+.lv-forces { grid-column: 1; font-size: .95rem; color: var(--ash); }
+.lv-links { grid-column: 2; grid-row: 1 / span 2; display: flex; gap: .6rem; white-space: nowrap; }
+.lv-links a { font-size: .9rem; text-decoration: none; padding: .3rem .7rem; border: 1px solid var(--gold-dim); border-radius: 2px; color: var(--vellum); }
+.lv-links a:hover { border-color: var(--gold); color: var(--gold); }
+@media (max-width: 600px) { .lv-list li { grid-template-columns: 1fr; } .lv-links { grid-column: 1; grid-row: auto; margin-top: .5rem; } }

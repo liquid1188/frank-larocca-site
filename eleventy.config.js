@@ -11,6 +11,8 @@ export default function (eleventyConfig) {
   );
   eleventyConfig.addFilter("bySlug", (coll, slug) => coll.find((w) => w.data.slug === slug || w.fileSlug === slug));
   eleventyConfig.addFilter("ytid", (u) => (u || "").replace("https://www.youtube.com/watch?v=", "").replace("https://youtu.be/", "").split("&")[0].split("?")[0]);
+  eleventyConfig.addFilter("lvSort", (arr) => [...arr].sort((a, b) => (a.data.lvOrder || 99) - (b.data.lvOrder || 99) || a.data.title.localeCompare(b.data.title)));
+  eleventyConfig.addFilter("urlencode", (v) => encodeURIComponent(v || ""));
   eleventyConfig.addGlobalData("today", () => new Date().toISOString().slice(0, 10));
   eleventyConfig.addGlobalData("buildId", () => Date.now().toString(36));
   eleventyConfig.addCollection("eventsSorted", (api) => api.getFilteredByTag("event").map((e) => ({
