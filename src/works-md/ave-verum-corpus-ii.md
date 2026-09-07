@@ -7,6 +7,7 @@ categories:
 forces: "SATB a cappella"
 video: "https://www.youtube.com/watch?v=Wfd9TwMdCgA"
 purchase: "https://musicspoke.com/downloads/ave-verum-corpus-ii/"
+publisher: "MusicSpoke"
 tags: work
 layout: work.njk
 permalink: "/works/ave-verum-corpus-ii/"
