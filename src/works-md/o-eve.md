@@ -1,5 +1,6 @@
 ---
 title: "O Eve"
+forces: "SSAA, a cappella"
 slug: "o-eve"
 categories:
   - "SSAA"

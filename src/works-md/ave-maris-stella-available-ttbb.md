@@ -1,5 +1,6 @@
 ---
 title: "Ave Maris Stella (available TTBB)"
+forces: "SSAA, a cappella"
 slug: "ave-maris-stella-available-ttbb"
 categories:
   - "SSAA"

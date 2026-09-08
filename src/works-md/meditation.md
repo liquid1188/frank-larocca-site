@@ -3,7 +3,7 @@ title: "Meditation"
 slug: "meditation"
 categories:
   - "Chamber & orchestral"
-forces: "piano solo 3' chorus, orchestra, organ, soloists 92'"
+forces: "piano solo 3'"
 audio: "https://soundcloud.com/frank-larocca/meditation"
 recording: "/recordings/#in-this-place"
 publisher: "Lumen Verum Music"

@@ -1,5 +1,6 @@
 ---
 title: "Magnificat"
+forces: "SSAA, a cappella"
 slug: "magnificat"
 categories:
   - "SSAA"

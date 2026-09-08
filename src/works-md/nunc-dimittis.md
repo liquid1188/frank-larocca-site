@@ -1,5 +1,6 @@
 ---
 title: "Nunc Dimittis"
+forces: "SSAA, a cappella"
 slug: "nunc-dimittis"
 categories:
   - "SSAA"
