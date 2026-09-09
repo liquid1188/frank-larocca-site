@@ -280,7 +280,7 @@ blockquote .attr { font-style: normal; }
 @media (max-width: 720px) { .cards.three { grid-template-columns: 1fr; } .cards { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem 1rem; } .card-title { font-size: 1.2rem; } }
 
 /* press strip */
-.press-strip { list-style: none; margin: 3rem auto 0; padding: 2.5rem 0 .5rem; border-top: 1px solid var(--hair); display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem 2.6rem; max-width: 66rem; }
+.press-strip { list-style: none; margin: 3rem auto 0; padding: 2.5rem 0 .5rem; border-top: 1px solid var(--hair); display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem 2.2rem; max-width: 66rem; }
 .press-strip.continued { margin-top: 0; padding-top: 0; border-top: 0; }
 .press-strip li { font-family: var(--display); font-size: 1.25rem; color: var(--ink-2); letter-spacing: .01em; display: flex; align-items: center; }
 .press-strip img { height: 36px; width: auto; max-width: 250px; filter: brightness(0) opacity(var(--fade, .7)); transition: filter .2s, opacity .2s; }
@@ -391,7 +391,7 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .press-strip.on-dark img { filter: brightness(0) invert(1) opacity(var(--fade, .7)); height: 34px; }
 .press-strip.on-dark li.raw img { filter: grayscale(1) opacity(var(--fade, .85)); }
 .press-strip li.small img { height: 22px; }
-.press-strip li.tall img { height: 50px; }
+.press-strip li.tall img { height: 44px; }
 .press-strip.on-dark li.raw img { filter: grayscale(1) brightness(1.1) opacity(var(--fade, .85)); }
 .hero-credit { position: absolute; right: var(--gutter); bottom: 3.2rem; z-index: 3; margin: 0; font-size: .78rem; color: var(--ash); opacity: .8; }
 @media (max-width: 880px) { .hero-credit { right: var(--gutter); bottom: .3rem; font-size: .72rem; } }
@@ -436,7 +436,8 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .pub-list li { padding: .7rem 0; border-top: 1px solid var(--gold-dim); font-family: var(--display); font-size: 1.35rem; }
 .pub-list a { text-decoration: none; }
 .press-strip img[src*="catholic-thing"] { height: 27px; }
-.press-strip img[src*="new-yorker"], .press-strip img[src*="dappled"], .press-strip img[src*="expedition"], .press-strip img[src*="logo-arg"], .press-strip img[src*="catholic-arts-today"], .press-strip img[src*="wsj"] { height: 34px; }
+.press-strip img[src*="new-yorker"], .press-strip img[src*="dappled"], .press-strip img[src*="logo-arg"], .press-strip img[src*="wsj"] { height: 34px; }
+.press-strip img[src*="expedition"], .press-strip img[src*="catholic-arts-today"] { height: 28px; }
 .press-strip img[src*="first-things"] { height: 30px; }
 .foot-hair { width: 100%; max-width: 60rem; height: 1px; background: var(--gold-dim); margin: 0 auto 1.2rem; }
 .signin { color: var(--ash); text-decoration: none; opacity: .7; }
