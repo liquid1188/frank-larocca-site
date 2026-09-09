@@ -104,7 +104,7 @@ em { font-style: italic; }
   background: linear-gradient(to top left, rgba(201,166,86,.22), rgba(21,18,28,0) 55%);
   mix-blend-mode: soft-light;
 }
-.hero .staff { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; }
+.hero .staff { position: absolute; left: 0; right: 0; bottom: 6px; z-index: 3; }
 @media (max-width: 880px) {
   .hero .wrap { min-height: 0; padding-top: 0; flex-direction: column; align-items: stretch; }
   .hero-portrait picture { display: contents; }
