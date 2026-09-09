@@ -311,6 +311,8 @@ blockquote .attr { font-style: normal; }
 .affil-name { display: block; font-family: var(--display); font-size: 1.35rem; line-height: 1.15; color: var(--ink); }
 .affil-role { display: block; font-size: .9rem; color: var(--ink-2); margin-top: .15rem; }
 .affil-strip li a:hover .affil-name { color: var(--rubric); }
+.affil-strip img { transition: filter .2s; }
+.affil-strip li a:hover img { filter: grayscale(1) contrast(1.1) opacity(1); }
 
 /* forms */
 .form label { display: block; margin-bottom: 1rem; font-size: .98rem; color: var(--ash); }
@@ -378,6 +380,8 @@ body.home .site-foot { margin-top: 0; }
 @media (max-width: 720px) { .logo-row { gap: 1.5rem 2rem; } .logo-row img { height: 34px; max-width: 150px; } .logo-row li:first-child img { height: 56px; } }
 
 .press-strip li.raw img { filter: grayscale(1) opacity(.8); }
+.press-strip li.raw:hover img { filter: grayscale(1) opacity(1); }
+.press-strip img { transition: filter .2s; }
 .logo-row li.raw img { filter: grayscale(1) opacity(.85); }
 .logo-row li.square img { height: 64px; }
 .logo-row img[src*="lumen-verum"] { height: 60px; max-width: 140px; }
@@ -427,7 +431,9 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .affil-grid .affil-logo img { max-width: 100%; }
 .affil-grid .affil-name { font-family: var(--display); font-size: 1.35rem; color: var(--vellum); }
 .affil-grid .affil-role { display: block; font-size: .9rem; color: var(--ash); }
-.affil-grid li:hover img { opacity: 1; }
+.affil-grid .affil-logo img { transition: filter .2s, opacity .2s; }
+.affil-grid li:hover .affil-logo img { filter: brightness(0) invert(1) opacity(1); }
+.affil-grid li:hover .affil-logo.raw img { filter: none; opacity: 1; }
 .logo-row li.raw img { filter: none; opacity: .9; }
 
 .lede-bio { font-family: var(--display); font-size: 1.5rem; line-height: 1.35; max-width: 34ch; margin-bottom: 1.5rem; }
