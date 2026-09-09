@@ -5,6 +5,7 @@ categories:
   - "Mass settings & large works"
 forces: "chorus, orchestra, and soloists; 2018 American Prize"
 year: 2017
+image: "/images/works/a-rose-in-winter-the-life-of-st-rita-of-cascia.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/a-rose-in-winter-the-life-of-st-rita-of-cascia/"

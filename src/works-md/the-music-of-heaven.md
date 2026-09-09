@@ -6,6 +6,7 @@ categories:
   - "Choral–instrumental"
 forces: "SSAA and piano quintet"
 year: 2022
+image: "/images/works/the-music-of-heaven.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/the-music-of-heaven/"

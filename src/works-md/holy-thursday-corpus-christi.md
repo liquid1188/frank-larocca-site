@@ -8,6 +8,7 @@ audio: "https://soundcloud.com/frank-larocca/this-is-the-body"
 publisher: "Lumen Verum Music"
 lvOrder: 4
 motet: "This Is the Body"
+image: "/images/works/holy-thursday-corpus-christi.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/holy-thursday-corpus-christi/"

@@ -1,6 +1,8 @@
 <a class="card" href="{{ w.url }}" data-cats="{{ w.data.categories | join('|') }}{% if w.data.publisher %}|{{ w.data.publisher }}{% endif %}">
   {%- set vid = "" if w.data.nothumb else (w.data.thumb if w.data.thumb else (w.data.video if w.data.video else (w.data.audio if (w.data.audio and "youtu" in w.data.audio and "music.youtube" not in w.data.audio) else ""))) %}
-  {%- if vid %}
+  {%- if w.data.image %}
+  <span class="card-art"><img src="{{ w.data.image }}" alt="" loading="lazy" width="480" height="360"></span>
+  {%- elif vid %}
   <span class="card-art"><img src="https://img.youtube.com/vi/{{ vid | ytid }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"></span>
   {%- else %}
   <span class="card-art type"><span>{{ w.data.title }}</span></span>

@@ -5,6 +5,7 @@ categories:
   - "Mass settings & large works"
 forces: "chorus and the instruments of the California missions; Extraordinary Form"
 year: 2022
+image: "/images/works/missa-sancti-juniperi-serra.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/missa-sancti-juniperi-serra/"

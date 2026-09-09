@@ -7,6 +7,7 @@ categories:
 preview: "https://issuu.com/compozor/docs/ubi_caritas"
 audio: "https://soundcloud.com/frank-larocca/ubi-caritas"
 publisher: "Lumen Verum Music"
+image: "/images/works/ubi-caritas.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/ubi-caritas/"

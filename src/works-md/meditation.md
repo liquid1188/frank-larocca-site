@@ -7,6 +7,7 @@ forces: "piano solo 3'"
 audio: "https://soundcloud.com/frank-larocca/meditation"
 recording: "/recordings/#in-this-place"
 publisher: "Lumen Verum Music"
+image: "/images/works/meditation.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/meditation/"

@@ -8,6 +8,7 @@ preview: "https://issuu.com/compozor/docs/veni_issuuwm"
 audio: "https://soundcloud.com/frank-larocca/veni-sancte-spiritus"
 recording: "/recordings/#in-this-place"
 publisher: "Lumen Verum Music"
+image: "/images/works/veni-sancte-spiritus.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/veni-sancte-spiritus/"

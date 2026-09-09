@@ -7,6 +7,7 @@ forces: "two pianos 5'"
 purchase: "https://musicspoke.com/downloads/divertimento/"
 audio: "https://soundcloud.com/frank-larocca/divertimento"
 year: 1990
+image: "/images/works/divertimento.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/divertimento/"

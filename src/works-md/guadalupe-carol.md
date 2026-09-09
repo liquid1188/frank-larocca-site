@@ -5,6 +5,7 @@ categories:
   - "Choral\u2013instrumental"
 forces: "SATB and organ; text by James Matthew Wilson"
 year: 2026
+image: "/images/works/guadalupe-carol.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/guadalupe-carol/"

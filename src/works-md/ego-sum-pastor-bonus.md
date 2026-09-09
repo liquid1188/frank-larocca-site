@@ -7,6 +7,7 @@ categories:
 purchase: "https://musicspoke.com/downloads/ego-sum-pastor-bonus/"
 preview: "https://issuu.com/compozor/docs/ego_sum_pastor_bonus_score"
 audio: "https://soundcloud.com/frank-larocca/ego-sum-pastor-bonus"
+image: "/images/works/ego-sum-pastor-bonus.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/ego-sum-pastor-bonus/"

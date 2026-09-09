@@ -9,6 +9,7 @@ audio: "https://soundcloud.com/frank-larocca/expectavi-dominum"
 purchase: "http://www.sheetmusicplus.com/search?Ntt=Frank+La+Rocca"
 recording: "/recordings/#in-this-place"
 publisher: "Santa Barbara Music Publishing"
+image: "/images/works/expectavi-dominum.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/expectavi-dominum/"

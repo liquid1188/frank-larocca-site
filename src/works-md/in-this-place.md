@@ -8,6 +8,7 @@ preview: "https://issuu.com/compozor/docs/itp.final.correct_cl_tnsp.mus"
 audio: "https://soundcloud.com/frank-larocca/in-this-place"
 recording: "/recordings/#in-this-place"
 publisher: "Lumen Verum Music"
+image: "/images/works/in-this-place.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/in-this-place/"

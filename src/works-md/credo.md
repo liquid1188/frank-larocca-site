@@ -5,6 +5,7 @@ categories:
   - "SATB a cappella"
 forces: "SATB a cappella with solo incipits"
 recording: "/recordings/#in-this-place"
+image: "/images/works/credo.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/credo/"

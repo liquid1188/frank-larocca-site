@@ -4,6 +4,7 @@ slug: "precipice"
 categories:
   - "Chamber & orchestral"
 forces: "string quartet"
+image: "/images/works/precipice.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/precipice/"

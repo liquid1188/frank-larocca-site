@@ -5,6 +5,7 @@ categories:
   - "SATB a cappella"
 forces: "SATB a cappella"
 year: 2017
+image: "/images/works/remember-me.jpg"
 tags: work
 layout: work.njk
 permalink: "/works/remember-me/"
