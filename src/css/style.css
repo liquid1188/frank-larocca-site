@@ -667,3 +667,9 @@ figure.center img { margin: 0 auto; }
 .lic-table th, .lic-table td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid rgba(255,255,255,.08); white-space: nowrap; }
 .lic-table th { color: var(--ash); font-weight: 500; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
 @media (max-width: 600px) { .lic-grid { grid-template-columns: 1fr; } }
+
+/* Mobile: link to switch to the desktop layout */
+.view-toggle { display: none; font: inherit; color: inherit; background: none; border: 0; padding: 0; text-decoration: underline; text-underline-offset: .15em; cursor: pointer; }
+.view-toggle-sep { display: none; }
+@media (max-width: 880px), (pointer: coarse) { .view-toggle, .view-toggle-sep { display: inline; } }
+.force-desktop .view-toggle, .force-desktop .view-toggle-sep { display: inline; }
