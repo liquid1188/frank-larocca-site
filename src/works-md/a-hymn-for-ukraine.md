@@ -6,6 +6,7 @@ categories:
 forces: "SATB a cappella; text by James Matthew Wilson"
 year: 2023
 video: "https://www.youtube.com/watch?v=ZlPXOvU-4QQ"
+purchase: "https://musicspoke.com/downloads/a-hymn-for-ukraine/"
 tags: work
 layout: work.njk
 permalink: "/works/a-hymn-for-ukraine/"

@@ -6,6 +6,7 @@ categories:
 forces: "SATB and organ; text by James Matthew Wilson"
 year: 2024
 video: "https://www.youtube.com/watch?v=nf4dZFrUe2w"
+purchase: "https://musicspoke.com/downloads/while-all-the-earth-in-darkness-sleeps/"
 tags: work
 layout: work.njk
 permalink: "/works/while-all-the-earth-in-darkness-sleeps/"

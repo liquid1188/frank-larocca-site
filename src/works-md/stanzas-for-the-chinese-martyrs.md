@@ -6,6 +6,7 @@ categories:
 forces: "SATB a cappella; text by James Matthew Wilson"
 year: 2024
 video: "https://www.youtube.com/watch?v=mYe2jKEEsjk"
+purchase: "https://musicspoke.com/downloads/for-the-chinese-martyrs/"
 tags: work
 layout: work.njk
 permalink: "/works/stanzas-for-the-chinese-martyrs/"
