@@ -379,7 +379,7 @@ body.home .site-foot { margin-top: 0; }
 @media (max-width: 720px) { .logo-row { gap: 1.5rem 2rem; } .logo-row img { height: 34px; max-width: 150px; } .logo-row li:first-child img { height: 56px; } }
 
 .press-strip li.raw img { filter: grayscale(1) opacity(var(--fade, .8)); }
-.logo-row li.raw img { filter: grayscale(1) opacity(.85); }
+.logo-row li.raw img { filter: grayscale(1) opacity(var(--fade, .85)); }
 .logo-row li.square img { height: 64px; }
 .logo-row img[src*="lumen-verum"] { height: 60px; max-width: 140px; }
 .logo-row li.wide img { max-width: 230px; height: auto; }
@@ -388,11 +388,11 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 
 .press-strip.on-dark { border-top: 0; margin: 0 0 2.5rem; padding: 0; justify-content: flex-start; gap: 1.4rem 1.7rem; }
 .press-strip.on-dark li { color: var(--ash); font-size: 1.15rem; }
-.press-strip.on-dark img { filter: brightness(0) invert(1) opacity(.7); height: 34px; }
-.press-strip.on-dark li.raw img { filter: grayscale(1) opacity(.85); }
+.press-strip.on-dark img { filter: brightness(0) invert(1) opacity(var(--fade, .7)); height: 34px; }
+.press-strip.on-dark li.raw img { filter: grayscale(1) opacity(var(--fade, .85)); }
 .press-strip li.small img { height: 22px; }
 .press-strip li.tall img { height: 66px; }
-.press-strip.on-dark li.raw img { filter: grayscale(1) brightness(1.1) opacity(.85); }
+.press-strip.on-dark li.raw img { filter: grayscale(1) brightness(1.1) opacity(var(--fade, .85)); }
 .hero-credit { position: absolute; right: var(--gutter); bottom: 3.2rem; z-index: 3; margin: 0; font-size: .78rem; color: var(--ash); opacity: .8; }
 @media (max-width: 880px) { .hero-credit { right: var(--gutter); bottom: .3rem; font-size: .72rem; } }
 .foot-epigraph { font-family: var(--display); font-style: italic; font-size: 1.15rem; color: var(--vellum); max-width: 40ch; margin: 0 auto 2rem; }
@@ -429,7 +429,7 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .affil-grid .affil-name { font-family: var(--display); font-size: 1.35rem; color: var(--vellum); }
 .affil-grid .affil-role { display: block; font-size: .9rem; color: var(--ash); }
 .affil-grid li:hover .affil-logo img { --fade: 1; }
-.logo-row li.raw img { filter: none; opacity: .9; }
+.logo-row li.raw img { filter: none; opacity: var(--fade, .9); }
 
 .lede-bio { font-family: var(--display); font-size: 1.5rem; line-height: 1.35; max-width: 34ch; margin-bottom: 1.5rem; }
 .pub-list { list-style: none; margin: 0 0 1rem; padding: 0; max-width: 40rem; }
@@ -469,12 +469,12 @@ blockquote p + p:not(.attr) { font-size: 1.02rem; color: var(--ash); font-style:
 .writing .w-outlet { display: block; color: var(--ash); font-size: .92rem; margin-top: .15rem; }
 .writing .w-logo { display: flex; justify-content: flex-end; }
 .writing .w-logo { width: 190px; }
-.writing .w-logo img { max-height: 34px; height: auto; width: auto; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1) opacity(.78); }
-.writing .w-logo img[src*="cism"] { max-height: 64px; filter: none; opacity: .95; }
+.writing .w-logo img { max-height: 34px; height: auto; width: auto; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1) opacity(var(--fade, .78)); }
+.writing .w-logo img[src*="cism"] { max-height: 64px; filter: none; opacity: var(--fade, .8); }
 .writing .w-logo img[src*="aleteia"] { max-height: 26px; }
-.writing .w-logo.mono img { filter: brightness(0) invert(1) opacity(.75); }
+.writing .w-logo.mono img { filter: brightness(0) invert(1) opacity(var(--fade, .75)); }
 .writing .w-mark { font-family: var(--display); font-size: 1rem; letter-spacing: .02em; color: var(--ash); text-align: right; line-height: 1.2; max-width: 180px; }
-.writing .w-logo.raw img { filter: grayscale(1) brightness(1.7) opacity(.9); }
+.writing .w-logo.raw img { filter: grayscale(1) brightness(1.7) opacity(var(--fade, .9)); }
 @media (max-width: 640px) { .writing li { grid-template-columns: 3.4rem minmax(0,1fr); } .writing .w-logo { grid-column: 2; justify-content: flex-start; } }
 
 /* balanced rows: eleven affiliations as six and five, eight press as four and four */
@@ -673,3 +673,6 @@ figure.center img { margin: 0 auto; }
 .view-toggle-sep { display: none; }
 @media (max-width: 880px), (pointer: coarse) { .view-toggle, .view-toggle-sep { display: inline; } }
 .force-desktop .view-toggle, .force-desktop .view-toggle-sep { display: inline; }
+
+.writing .w-logo img { transition: filter .2s, opacity .2s; }
+.writing li:hover .w-logo img, .writing a:hover .w-logo img { --fade: 1; }
