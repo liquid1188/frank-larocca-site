@@ -5,7 +5,7 @@
   {%- elif vid %}
   <span class="card-art"><img src="https://img.youtube.com/vi/{{ vid | ytid }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"></span>
   {%- else %}
-  <span class="card-art type"><span>{{ w.data.title }}</span></span>
+  <span class="card-art type"><span>{{ w.data.cardText or w.data.title }}</span></span>
   {%- endif %}
   <span class="card-title">{{ w.data.title }}</span>
   <span class="card-meta">{{ w.data.forces or (w.data.categories | first) }}</span>

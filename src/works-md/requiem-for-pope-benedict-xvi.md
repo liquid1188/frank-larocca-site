@@ -5,6 +5,7 @@ categories:
   - "Mass settings & large works"
 forces: "Solemn Pontifical Requiem Mass, Extraordinary Form"
 year: 2027
+cardText: "Coming June 1"
 tags: work
 layout: work.njk
 permalink: "/works/requiem-for-pope-benedict-xvi/"
