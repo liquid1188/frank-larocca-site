@@ -15,8 +15,7 @@ eleventyComputed:
 {%- if purchase %}<a href="{{ purchase }}">{% if "cappella" in purchase %}Buy the album{% else %}Purchase{% endif %}</a>{%- endif %}
 {%- if recording %}<a href="{{ recording }}">Recording</a>{%- endif %}
 {%- if directors %}<a href="{{ directors }}">Scores and parish edition</a>{%- endif %}
-{%- if (publisher == "Lumen Verum Music" and not purchase) or (not perusal and not preview and not purchase and not directors) %}<a href="mailto:{{ site.materialsEmail }}?subject=Score%20request%20for%20{{ (motet or title) | urlencode }}&body=Dear%20Dr.%20La%20Rocca%2C%0A%0AI%20would%20like%20to%20request%20performance%20copies%20of%20{{ (motet or title) | urlencode }}.%0A%0AEnsemble%3A%20%0ACity%3A%20%0ANumber%20of%20copies%3A%20%0A%0AThank%20you%2C%0A">Request the score</a>{%- endif %}
-{%- if not perusal and not preview and not purchase and not directors %}<a href="/directors/">For directors</a>{%- endif %}
+{%- if publisher == "Lumen Verum Music" and not purchase %}<a href="mailto:{{ site.materialsEmail }}?subject=Score%20request%20for%20{{ (motet or title) | urlencode }}&body=Dear%20Dr.%20La%20Rocca%2C%0A%0AI%20would%20like%20to%20request%20performance%20copies%20of%20{{ (motet or title) | urlencode }}.%0A%0AEnsemble%3A%20%0ACity%3A%20%0ANumber%20of%20copies%3A%20%0A%0AThank%20you%2C%0A">Request the score</a>{%- endif %}
 </div>
 {%- if publisher %}<p class="attr" style="margin-top:.4rem">Published by {% if publisher == "Lumen Verum Music" %}<a href="/lumen-verum/">Lumen Verum Music</a>{% else %}{{ publisher }}{% endif %}</p>{%- endif %}
 {%- if content | trim %}
