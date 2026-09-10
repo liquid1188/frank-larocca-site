@@ -15,7 +15,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
       </div>
     </div>
     <div class="hero-portrait">
-      <img src="/images/frank-la-rocca-mcgladdery.jpg" alt="Frank La Rocca" width="1327" height="1327" fetchpriority="high">
+      <img src="/images/frank-la-rocca-mcgladdery.jpg" alt="Frank La Rocca" width="1327" height="1327" fetchpriority="high" sizes="(max-width: 900px) 100vw, 52vw">
       <p class="hero-credit">Photograph by Kevin McGladdery</p>
     </div>
   </div>
@@ -32,7 +32,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
 </div>
 
 <section class="feature">
-  <img class="feature-img" src="/images/mass-of-the-americas-nyc-2022.jpg" alt="" width="2397" height="1600" loading="lazy">
+  <img class="feature-img" src="/images/mass-of-the-americas-nyc-2022.jpg" alt="" width="2397" height="1600" loading="lazy" sizes="100vw">
   <div class="wrap">
     <div class="feature-copy">
       <p class="kicker">Mass of the Americas</p>
@@ -60,7 +60,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     <div class="press-strip-wrap" aria-label="Reviewed in">
     {%- for row in homepress | batch(4) %}
     <ul class="press-strip{% if not loop.first %} continued{% endif %}">
-    {%- for o in row %}<li class="{% if o.raw %}raw {% endif %}{% if o.small %}small{% endif %}">{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
+    {%- for o in row %}<li class="{% if o.raw %}raw {% endif %}{% if o.small %}small{% endif %}">{% if o.logo %}<img src="{{ o.logo }}" alt="{{ o.name }}" sizes="200px">{% else %}{{ o.name }}{% endif %}</li>{% endfor %}
     </ul>
     {%- endfor %}
     </div>
@@ -101,7 +101,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     <div class="albums">
     {%- for r in recordings | sort(true, false, "year") | batch(2) | first %}
       <div class="album">
-        {% if r.cover %}<img src="{{ r.cover }}" alt="Album cover, {{ r.title }}" width="1200" height="1200" loading="lazy">{% else %}<div class="cover-blank"></div>{% endif %}
+        {% if r.cover %}<img src="{{ r.cover }}" alt="Album cover, {{ r.title }}" width="1200" height="1200" loading="lazy" sizes="(max-width: 720px) 45vw, 260px">{% else %}<div class="cover-blank"></div>{% endif %}
         <div>
           <h3>{{ r.title | replace(" · ", "<br>") | safe }}</h3>
           <p class="label">{{ r.label }}, {{ r.year }}</p>
@@ -119,7 +119,7 @@ description: "Frank La Rocca, composer of sacred choral and instrumental music. 
     {%- set logos = [] %}{% for a in affiliations %}{% if a.logo %}{% set logos = (logos.push(a), logos) %}{% endif %}{% endfor %}
     {%- for row in logos | batch(6) %}
     <ul class="logo-row">
-    {%- for a in row %}<li class="{% if a.raw %}raw {% endif %}{% if a.mono %}mono {% endif %}{% if a.square %}square {% endif %}{% if a.wide %}wide{% endif %}"><a href="{{ a.url }}" title="{{ a.name }}, {{ a.role }}"><img src="{{ a.logo }}" alt="{{ a.name }}"></a></li>{% endfor %}
+    {%- for a in row %}<li class="{% if a.raw %}raw {% endif %}{% if a.mono %}mono {% endif %}{% if a.square %}square {% endif %}{% if a.wide %}wide{% endif %}"><a href="{{ a.url }}" title="{{ a.name }}, {{ a.role }}"><img src="{{ a.logo }}" alt="{{ a.name }}" sizes="200px"></a></li>{% endfor %}
     </ul>
     {%- endfor %}
   </div>

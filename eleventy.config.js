@@ -1,4 +1,6 @@
 import { HtmlBasePlugin } from "@11ty/eleventy";
+import fs from "node:fs";
+import path from "node:path";
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPassthroughCopy({ "src/css": "css", "src/admin": "admin", "src/assets": "assets", "src/images": "images", "src/scores": "scores", "src/CNAME": "CNAME" });
@@ -23,6 +25,40 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("latestNews", (api) => {
     const posts = api.getFilteredByTag("news").map((p) => ({ year: p.date.getFullYear(), sort: p.date.getTime(), title: p.data.title, url: p.url, outlet: "" }));
     return posts;
+  });
+
+  // Responsive images: for every local raster <img>, attach the WebP variants generated in src/images
+  // (same photos, served at the size each screen can show; never below 2x display width).
+  const variantCache = new Map();
+  function variantsFor(src) {
+    if (variantCache.has(src)) return variantCache.get(src);
+    const m = src.replace(/[?#].*$/, "").match(/^\/images\/(.+)\.(jpe?g|png)$/i);
+    let out = null;
+    if (m) {
+      const dir = path.join("src/images", path.dirname(m[1]));
+      const stem = path.basename(m[1]);
+      let files = [];
+      try { files = fs.readdirSync(dir); } catch {}
+      const ws = files.map((f) => { const mm = f.match(new RegExp("^" + stem.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "-(\\d+)\\.webp$")); return mm ? +mm[1] : null; }).filter(Boolean).sort((a, b) => a - b);
+      if (ws.length) out = ws.map((w) => `/images/${path.dirname(m[1]) === "." ? "" : path.dirname(m[1]) + "/"}${stem}-${w}.webp ${w}w`).join(", ");
+    }
+    variantCache.set(src, out);
+    return out;
+  }
+  eleventyConfig.addTransform("responsive-images", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(/<img\b([^>]*)>/g, (tag, attrs) => {
+      if (/\bsrcset=/.test(attrs)) return tag;
+      const sm = attrs.match(/\bsrc="([^"]+)"/);
+      if (!sm) return tag;
+      const srcset = variantsFor(sm[1]);
+      if (!srcset) return tag;
+      let a = attrs + ` srcset="${srcset}"`;
+      if (!/\bsizes=/.test(a)) a += ` sizes="(max-width: 900px) 100vw, 50vw"`;
+      if (!/\bloading=/.test(a) && !/\bfetchpriority=/.test(a)) a += ` loading="lazy"`;
+      if (!/\bdecoding=/.test(a)) a += ` decoding="async"`;
+      return `<img${a}>`;
+    });
   });
   return { dir: { input: "src", includes: "_includes", output: "_site" } };
 }
