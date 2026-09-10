@@ -45,6 +45,12 @@ export default function (eleventyConfig) {
     variantCache.set(src, out);
     return out;
   }
+  // YouTube: a click-to-play thumbnail instead of loading the whole player up front (about 1 MB per embed)
+  eleventyConfig.addTransform("lite-youtube", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(/<iframe loading="lazy" src="https:\/\/www\.youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]{6,})" title="([^"]*)" allowfullscreen><\/iframe>/g,
+      (m, id, title) => `<button type="button" class="yt-lite" data-id="${id}" aria-label="Play: ${title}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" srcset="https://i.ytimg.com/vi/${id}/hqdefault.jpg 480w, https://i.ytimg.com/vi/${id}/maxresdefault.jpg 1280w" sizes="(max-width: 900px) 100vw, 768px" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="yt-play" aria-hidden="true"></span></button>`);
+  });
   eleventyConfig.addTransform("responsive-images", function (content) {
     if (!(this.page.outputPath || "").endsWith(".html")) return content;
     return content.replace(/<img\b([^>]*)>/g, (tag, attrs) => {
