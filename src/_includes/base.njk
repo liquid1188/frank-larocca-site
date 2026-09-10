@@ -69,6 +69,5 @@
     (function(){var y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();})();
     (function(){if(!('IntersectionObserver' in window))return;var els=document.querySelectorAll('.band, .card, .album, .feature, .section-title');els.forEach(function(e){e.classList.add('reveal')});var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.06});els.forEach(function(e){io.observe(e)});setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},2500);})();
   </script>
-<script>document.addEventListener("click",function(e){var b=e.target.closest(".yt-lite");if(!b)return;var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.id+"?autoplay=1&rel=0";f.title=b.getAttribute("aria-label")||"Video";f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;b.replaceWith(f);});</script>
 </body>
 </html>
