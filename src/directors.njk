@@ -9,11 +9,11 @@ description: "Perusal scores, performance materials, publishers, and the parish 
 <p>Many works have a score preview on their <a href="/works/">work page</a>, which opens the full score on Issuu. Where there is no preview, request a perusal copy using the address below. Published works are available for purchase from the publishers listed on this page.</p>
 <h2 class="section-title">Mass of the Americas</h2>
 <p>Four editions: Extraordinary Form (Latin, 1962 Missal), Ordinary Form (Spanish, Latin, English, and Nahuatl), a hybrid Ordinary Form with Greek Kyrie and Latin Agnus Dei, and the parish edition for chorus and organ. Scores are licensed per printed copy and delivered electronically with a license to print; order enough for choir, conductor, and organist, sixteen at minimum. Perusal copies of any edition are free on request.</p>
-<form class="form perusal" action="https://formsubmit.co/{{ site.materialsEmail }}" method="POST" data-thanks="Thank you. Your perusal request has been sent; the score will follow by email.">
-  <input type="hidden" name="_subject" value="Perusal request, Mass of the Americas">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="{{ site.url }}/directors/?sent=1">
-  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<form class="form perusal" action="https://api.web3forms.com/submit" method="POST" data-thanks="Thank you. Your perusal request has been sent; the score will follow by email.">
+<input type="hidden" name="access_key" value="{{ site.web3formsKey }}">
+  <input type="hidden" name="subject" value="Perusal request, Mass of the Americas">
+  <input type="hidden" name="redirect" value="{{ site.url }}/directors/?sent=1">
+  <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
   <div class="two-up tight">
     <label>Your name<input type="text" name="name" required autocomplete="name"></label>
     <label>Email<input type="email" name="email" required autocomplete="email"></label>
@@ -43,12 +43,12 @@ description: "Perusal scores, performance materials, publishers, and the parish 
 <p>For commissions, works not yet in print, or questions about forces and editions, write through the <a href="/contact/">contact page</a>.</p>
 <script>
 (function(){
-  document.querySelectorAll('form[action^="https://formsubmit.co/"]').forEach(function(form){
+  document.querySelectorAll('form[action="https://api.web3forms.com/submit"]').forEach(function(form){
     form.addEventListener('submit',function(ev){
       ev.preventDefault();
       var btn=form.querySelector('button[type=submit]'); if(btn){btn.disabled=true; btn.dataset.label=btn.textContent; btn.textContent='Sending';}
       var data={}; new FormData(form).forEach(function(v,k){ if(k==='_next') return; if(data[k]!==undefined){data[k]+=', '+v;} else {data[k]=v;} });
-      fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:w3fBody(data)})
         .then(function(r){return r.json();})
         .then(function(res){ if(!(res && (res.success==='true'||res.success===true))) throw 0;
           var n=document.createElement('p'); n.className='note form-thanks'; n.setAttribute('role','status'); n.textContent=form.dataset.thanks||'Thank you. Your message has been sent.';

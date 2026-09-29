@@ -8,11 +8,11 @@ description: "Contact composer Frank La Rocca for commissions, performances, and
 <h1>Contact</h1>
 <div class="two-up">
   <div>
-    <form class="form" action="https://formsubmit.co/{{ site.contactEmail }}" method="POST" data-thanks="Thank you. Your message has been sent and Frank will reply soon.">
-      <input type="hidden" name="_subject" value="franklarocca.com contact">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="{{ site.url }}/contact/?sent=1">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <form class="form" action="https://api.web3forms.com/submit" method="POST" data-thanks="Thank you. Your message has been sent and Frank will reply soon.">
+<input type="hidden" name="access_key" value="{{ site.web3formsKey }}">
+      <input type="hidden" name="subject" value="franklarocca.com contact">
+      <input type="hidden" name="redirect" value="{{ site.url }}/contact/?sent=1">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
       <label>Your name<input type="text" name="name" required autocomplete="name"></label>
       <label>Email<input type="email" name="email" required autocomplete="email"></label>
       <label>Subject<input type="text" name="subject"></label>
@@ -32,12 +32,12 @@ description: "Contact composer Frank La Rocca for commissions, performances, and
 </div>
 <script>
 (function(){
-  document.querySelectorAll('form[action^="https://formsubmit.co/"]').forEach(function(form){
+  document.querySelectorAll('form[action="https://api.web3forms.com/submit"]').forEach(function(form){
     form.addEventListener('submit',function(ev){
       ev.preventDefault();
       var btn=form.querySelector('button[type=submit]'); if(btn){btn.disabled=true; btn.dataset.label=btn.textContent; btn.textContent='Sending';}
       var data={}; new FormData(form).forEach(function(v,k){ if(k==='_next') return; if(data[k]!==undefined){data[k]+=', '+v;} else {data[k]=v;} });
-      fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:w3fBody(data)})
         .then(function(r){return r.json();})
         .then(function(res){ if(!(res && (res.success==='true'||res.success===true))) throw 0;
           var n=document.createElement('p'); n.className='note form-thanks'; n.setAttribute('role','status'); n.textContent=form.dataset.thanks||'Thank you. Your message has been sent.';

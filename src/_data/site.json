@@ -17,5 +17,6 @@
   "instituteComposerPage": "https://benedictinstitute.org/larocca/",
   "projectGuadalupe": "https://www.projectguadalupe.org/",
   "instituteDonate": "https://benedictinstitute.org/donate/",
-  "lvCatalog": true
+  "lvCatalog": true,
+  "web3formsKey": ""
 }
